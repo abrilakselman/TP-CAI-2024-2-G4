@@ -31,13 +31,15 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.btn2login = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(340, 169);
+            this.btnLogin.Location = new System.Drawing.Point(510, 260);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(101, 43);
+            this.btnLogin.Size = new System.Drawing.Size(152, 66);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Log In";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -45,29 +47,41 @@
             // 
             // btn2login
             // 
-            this.btn2login.Location = new System.Drawing.Point(340, 218);
+            this.btn2login.Location = new System.Drawing.Point(510, 335);
+            this.btn2login.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn2login.Name = "btn2login";
-            this.btn2login.Size = new System.Drawing.Size(101, 30);
+            this.btn2login.Size = new System.Drawing.Size(152, 46);
             this.btn2login.TabIndex = 1;
             this.btn2login.Text = "Contraseña";
             this.btn2login.UseVisualStyleBackColor = true;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(134, 206);
+            this.txtUsuario.Location = new System.Drawing.Point(201, 317);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(148, 26);
             this.txtUsuario.TabIndex = 2;
             this.txtUsuario.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(201, 250);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(148, 26);
+            this.textBox1.TabIndex = 3;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.btn2login);
             this.Controls.Add(this.btnLogin);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -80,6 +94,7 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btn2login;
         private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
