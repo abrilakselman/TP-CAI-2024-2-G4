@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace TemplateTPIntegrador
 {
-    public partial class Form1 : Form
+    public partial class FormLogin : Form
     {
-        public Form1()
+        public FormLogin()
         {
             InitializeComponent();
         }
@@ -39,5 +39,24 @@ namespace TemplateTPIntegrador
             LoginNegocio loginNegocio = new LoginNegocio();
             loginNegocio.Login(usuario, "contraseña");
     }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            FormMensajeAyuda formMensajeAyuda = new FormMensajeAyuda();
+            formMensajeAyuda.ShowDialog();
+        }
+
+        private void pbPwdNotVisble_Click(object sender, EventArgs e)
+        {
+            pbPwdVisble.BringToFront();
+            textBoxContraseña.PasswordChar = '*';
+        }
+
+        private void pbPwdVisble_Click(object sender, EventArgs e)
+        {
+            pbPwdNotVisble.BringToFront();
+            textBoxContraseña.PasswordChar = '\0';
+        }
     }
 }

@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace Negocio
 {
     public class ValidacionesUtils
     {
 
+        /*comentado para que puedo compilar
         public Boolean valudarNombreUsuario(string usuario)
         {
             if (usuario.Length <=8)
@@ -22,6 +23,6 @@ namespace Negocio
 
 
 
-        }
+        } */
     }
 }
