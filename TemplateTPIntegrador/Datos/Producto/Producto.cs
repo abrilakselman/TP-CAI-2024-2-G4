@@ -21,5 +21,18 @@ namespace Datos.Producto
 
         public Guid idproveedor { get; set; }
 
+
+        public Producto(string nombre, Guid id, Guid idcategoria, DateTime fechaalta, DateTime fechabaja, double precio, int stock, Guid idusuario, Guid idproveedor)
+        {
+            this.nombre = nombre;
+            this.id = id;
+            this.idcategoria = idcategoria;
+            this.fechaalta = DateTime.Now;
+            this.fechabaja = fechabaja;
+            this.precio = precio;
+            this.stock = stock;
+            this.idusuario = idusuario;
+            this.idproveedor = idproveedor;
+        }
     }
 }
