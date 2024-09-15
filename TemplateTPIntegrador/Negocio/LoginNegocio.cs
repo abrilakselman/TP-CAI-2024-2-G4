@@ -8,11 +8,16 @@ namespace Negocio
 {
     public class LoginNegocio
     {
-        public void Login(string usuario, string contraseña)
+        private ValidacionesUtils _validacionesUtils;
+        public bool Login(string usuario, string contraseña)
         {
+            _validacionesUtils = new ValidacionesUtils();
 
-
-
+            if (_validacionesUtils.validarNombreUsuario(usuario) && _validacionesUtils.validarContraseñaUsuario(contraseña))
+            {
+                return usuario == "usuarioValido" && contraseña == "contraseñaValida";
+            }
+            return false;
 
         }
     }

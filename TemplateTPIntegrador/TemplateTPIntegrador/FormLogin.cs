@@ -16,6 +16,9 @@ namespace TemplateTPIntegrador
         public FormLogin()
         {
             InitializeComponent();
+            //evento para salida del form de login
+            this.FormClosing += new FormClosingEventHandler(FormLogin_FormClosing);
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -26,19 +29,42 @@ namespace TemplateTPIntegrador
         private void btnLogin_Click(object sender, EventArgs e)
 
         {
-            
+            //Logica del Login
+            //valido el usuario y contraseña que ingreso
+            // 1. verifico que el usuario exista
+            // 2. verifico la contraseña - 3 intentos de acceso
+            // 3. segun el perfil, abre su menu correspondiente
+
             String usuario = txtUsuario.Text;
+            String contraseña = textBoxContraseña.Text;
 
-            if (usuario=="")
+            // Verificar si los campos están vacíos
+            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contraseña))
             {
-                MessageBox.Show("el usuario no puede ser vacio");
-
-                    
+                MessageBox.Show("Por favor, ingrese un usuario y contraseña. Los campos no pueden ser vacios");
+                return; // Salir del método para evitar continuar con el inicio de sesión
             }
 
+            //Validar reglas de negocio sobre el user/contraseña
             LoginNegocio loginNegocio = new LoginNegocio();
-            loginNegocio.Login(usuario, "contraseña");
-    }
+            bool esValido = loginNegocio.Login(usuario, contraseña);
+            if (esValido)
+            {
+                MessageBox.Show("Nombre de usuario no válido. Debe tener entre 8 y 15 caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                //accede al prog
+                //para probar ahroa fuerzo el login
+
+                this.Hide();
+                FormMenuAdministrador formMenuAdministrador = new FormMenuAdministrador();
+                formMenuAdministrador.ShowDialog();
+
+            }
+
+
+        }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -47,16 +73,31 @@ namespace TemplateTPIntegrador
             formMensajeAyuda.ShowDialog();
         }
 
-        private void pbPwdNotVisble_Click(object sender, EventArgs e)
-        {
-            pbPwdVisble.BringToFront();
-            textBoxContraseña.PasswordChar = '*';
-        }
-
         private void pbPwdVisble_Click(object sender, EventArgs e)
         {
             pbPwdNotVisble.BringToFront();
-            textBoxContraseña.PasswordChar = '\0';
+            textBoxContraseña.PasswordChar = '*'; // Oculta la contraseña
+
+            //MessageBox.Show("pbPwdVisble_Click ejecutado"); control de funcionamiento
+        }
+
+        private void pbPwdNotVisble_Click(object sender, EventArgs e)
+        {
+            pbPwdVisble.BringToFront();
+            textBoxContraseña.PasswordChar = '\0'; // Muestra la contraseña
+
+            //MessageBox.Show("pbPwdNotVisble_Click ejecutado");  control de funcionamiento
+        }
+
+        //salida del formulario login
+        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Está seguro que desea salir?", "Salir", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true; // Cancela el cierre del formulario
+            }
         }
     }
 }

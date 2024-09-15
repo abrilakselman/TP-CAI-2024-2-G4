@@ -73,11 +73,10 @@
             this.textBoxContraseña.Font = new System.Drawing.Font("Microsoft Yi Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxContraseña.Location = new System.Drawing.Point(148, 218);
             this.textBoxContraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxContraseña.Multiline = true;
             this.textBoxContraseña.Name = "textBoxContraseña";
-            this.textBoxContraseña.Size = new System.Drawing.Size(160, 31);
+            this.textBoxContraseña.PasswordChar = '*';
+            this.textBoxContraseña.Size = new System.Drawing.Size(160, 26);
             this.textBoxContraseña.TabIndex = 3;
-            this.textBoxContraseña.UseSystemPasswordChar = true;
             // 
             // pictureBox1
             // 
@@ -142,7 +141,7 @@
             // pbPwdNotVisble
             // 
             this.pbPwdNotVisble.Image = ((System.Drawing.Image)(resources.GetObject("pbPwdNotVisble.Image")));
-            this.pbPwdNotVisble.Location = new System.Drawing.Point(340, 218);
+            this.pbPwdNotVisble.Location = new System.Drawing.Point(369, 218);
             this.pbPwdNotVisble.Name = "pbPwdNotVisble";
             this.pbPwdNotVisble.Size = new System.Drawing.Size(60, 38);
             this.pbPwdNotVisble.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,7 +152,7 @@
             // pbPwdVisble
             // 
             this.pbPwdVisble.Image = ((System.Drawing.Image)(resources.GetObject("pbPwdVisble.Image")));
-            this.pbPwdVisble.Location = new System.Drawing.Point(340, 218);
+            this.pbPwdVisble.Location = new System.Drawing.Point(369, 218);
             this.pbPwdVisble.Name = "pbPwdVisble";
             this.pbPwdVisble.Size = new System.Drawing.Size(60, 38);
             this.pbPwdVisble.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
