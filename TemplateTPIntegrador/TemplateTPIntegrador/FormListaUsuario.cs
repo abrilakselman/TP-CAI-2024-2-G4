@@ -29,5 +29,26 @@ namespace TemplateTPIntegrador
         {
 
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormModificacionCliente formModificacionCliente = new FormModificacionCliente();
+            formModificacionCliente.ShowDialog();
+        }
+
+        private void btnAltaUser_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAltaUsuario formAltaUsuario = new FormAltaUsuario();
+            formAltaUsuario.ShowDialog();
+        }
+
+        private void btnBaja_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormBajaUsuario formBajaUsuario = new FormBajaUsuario();
+            formBajaUsuario.ShowDialog();
+        }
     }
 }

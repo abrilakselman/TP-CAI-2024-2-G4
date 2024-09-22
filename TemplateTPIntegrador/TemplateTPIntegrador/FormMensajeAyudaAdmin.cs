@@ -16,5 +16,12 @@ namespace TemplateTPIntegrador
         {
             InitializeComponent();
         }
+
+        private void buttonMjeAyuda_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMenuAdministrador formMenuAdministrador = new FormMenuAdministrador();
+            formMenuAdministrador.ShowDialog();
+        }
     }
 }
