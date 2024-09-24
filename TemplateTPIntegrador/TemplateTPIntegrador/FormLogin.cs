@@ -62,7 +62,7 @@ namespace TemplateTPIntegrador
             
             rol = usuarioNegocio.LogInRol(usuario, contraseña);
 
-            
+
             // 1 vendedor, 2 supervisor, 3 administrador
             if (rol == 3)
             {
@@ -82,7 +82,7 @@ namespace TemplateTPIntegrador
                 FormMenuVendedores formMenuVendedor = new FormMenuVendedores();
                 formMenuVendedor.ShowDialog();
             }
-            
+
 
         }
 

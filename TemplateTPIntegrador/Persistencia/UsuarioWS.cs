@@ -123,8 +123,12 @@ namespace Persistencia
         public int RolUsuarioWS(string usuario, string idAdmin)
         {
             JToken usuarioRol = BuscarUsuarioPorNombreUsuario(usuario, idAdmin);
-            int rol = usuarioRol["host"].Value<int>();
-            return rol;
+            if (usuarioRol != null)
+            {
+                int rol = usuarioRol["host"].Value<int>(); // me aseguro que el campo sea correcto
+                return rol;
+            }
+            return 0; // Usuario no encontrado
         }
 
         //Fin
