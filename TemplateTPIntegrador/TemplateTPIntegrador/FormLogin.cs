@@ -52,17 +52,34 @@ namespace TemplateTPIntegrador
             {
                 MessageBox.Show("Nombre de usuario no válido. Debe tener entre 8 y 15 caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-            {
-                //accede al prog
-                //para probar ahroa fuerzo el login
 
+            // Creo un int rol que tome el valor del usuario que inicia sesion
+            int rol;
+
+            UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
+            rol = usuarioNegocio.LogInRol(usuario, contraseña);
+
+            
+            // 1 vendedor, 2 supervisor, 3 administrador
+            if (rol == 3)
+            {
                 this.Hide();
                 FormMenuAdministrador formMenuAdministrador = new FormMenuAdministrador();
                 formMenuAdministrador.ShowDialog();
-
             }
-
+            else if (rol == 2)
+            {
+                this.Hide();
+                FormMenuSupervisor formMenuSupervisor = new FormMenuSupervisor();
+                formMenuSupervisor.ShowDialog();
+            }
+            else if (rol == 1)
+            {
+                this.Hide();
+                FormMenuVendedores formMenuVendedor = new FormMenuVendedores();
+                formMenuVendedor.ShowDialog();
+            }
+            
 
         }
 

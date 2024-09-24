@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Datos.Usuario
 {
-    internal class Usuario
+    public class Usuario
     {
         //constructores del usuario
         public Guid Id { get; set; }
