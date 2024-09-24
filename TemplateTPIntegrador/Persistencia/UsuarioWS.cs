@@ -10,17 +10,13 @@ using Datos.Usuario;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
+
 namespace Persistencia
 {
     public class UsuarioWS
     {
-        /*
-         * Id creado y usado por el grupo
-            "nombreUsuario": "Admin091800",
-            "contraseña": "Adm1inadm1n"
-         */
-        private String idAdmin = "4f3cfd0b-ba68-4f31-a8a5-63892d7e0c6f";
-
+       
+        //metodo alternativo
         public Guid LogIn(UsuarioWSLogin usuarioLogIn)
         {
             String path = "/api/Usuario/LogIn";
@@ -56,6 +52,7 @@ namespace Persistencia
             }
         }
 
+        //segundo metodo de intento
         //metodos para saber el rol del user y derivarlo a la pantalla correcta
 
         public int Login(UsuarioWSLogin Login)
@@ -93,7 +90,7 @@ namespace Persistencia
             }
         }
 
-        public string ListaUsuarios(String idAdmin)
+       public string TraerUsuariosActivos(String idAdmin)
         {
 
             string content = "";
@@ -101,7 +98,7 @@ namespace Persistencia
 
             if (!response.IsSuccessStatusCode)
             {
-                throw new Exception("Algo salio mal.\nVerifique los datos ingresados");
+                throw new Exception("Algo salio mal");
             }
             else
             {
@@ -109,10 +106,12 @@ namespace Persistencia
             }
             return content;
         }
+
+       
         public JToken BuscarUsuarioPorNombreUsuario(string usuario, String idAdmin)
         {
             // Busca en los usuarios activos a un usuario por el id
-            string content = ListaUsuarios(idAdmin);
+            string content = TraerUsuariosActivos(idAdmin);
             // Analizar el contenido JSON
             JArray jsonArray = JArray.Parse(content);
 
@@ -120,7 +119,8 @@ namespace Persistencia
 
             return usuarioEncontrado;
         }
-        public int BuscarRol(string usuario, string idAdmin)
+
+        public int RolUsuarioWS(string usuario, string idAdmin)
         {
             JToken usuarioRol = BuscarUsuarioPorNombreUsuario(usuario, idAdmin);
             int rol = usuarioRol["host"].Value<int>();
@@ -134,7 +134,6 @@ namespace Persistencia
         /*
          * AgregarUsuario
          * CambiarContraseña
-         * TraerUsuariosActivos
          * BajaUsuario
          * ReactivarUsuario
          * */

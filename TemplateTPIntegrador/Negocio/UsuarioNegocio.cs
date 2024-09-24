@@ -32,20 +32,25 @@ namespace Negocio
             // 1. usar logica de login para comprobar si existe
             UsuarioWSLogin usuarioDatos = new UsuarioWSLogin(usuario, contraseña);
 
-            int loginComprobado = usuarioWS.Login(usuarioDatos);
+            int login = usuarioWS.Login(usuarioDatos);
 
 
             // buscar rol 
-            if (loginComprobado == 1)
+            if (login == 1)
             {
                 // 1 vendedor, 2 supervisor, 3 administrador
-                loginComprobado = usuarioWS.BuscarRol(usuario, idAdmin);
+                login = BuscarRol(usuario);
 
-            }
-
-            
-            return loginComprobado;
+            }  
+            return login;
         }
+
+        public int BuscarRol(string usuario)
+        {
+            int rol = usuarioWS.RolUsuarioWS(usuario, idAdmin);
+            return rol;
+        }
+
     }
 
 }

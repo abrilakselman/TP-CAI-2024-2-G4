@@ -13,6 +13,9 @@ namespace TemplateTPIntegrador
 {
     public partial class FormLogin : Form
     {
+
+        UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
+
         public FormLogin()
         {
             InitializeComponent();
@@ -53,10 +56,10 @@ namespace TemplateTPIntegrador
                 MessageBox.Show("Nombre de usuario no válido. Debe tener entre 8 y 15 caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            // Creo un int rol que tome el valor del usuario que inicia sesion
+            // Creo un int rol que tome el valor del perfil que inicia sesion
             int rol;
 
-            UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
+            
             rol = usuarioNegocio.LogInRol(usuario, contraseña);
 
             
