@@ -62,5 +62,10 @@ namespace TemplateTPIntegrador
                 formLogin.ShowDialog();
             }
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormReportes(this));
+        }
     }
 }

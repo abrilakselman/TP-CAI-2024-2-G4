@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuVendedores));
-            this.panelMenuSupervisor = new System.Windows.Forms.Panel();
+            this.panelMenuVendedores = new System.Windows.Forms.Panel();
             this.labelBienvenida = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -39,19 +39,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReportesVendedor = new System.Windows.Forms.Button();
             this.btnVentasVendedor = new System.Windows.Forms.Button();
-            this.panelMenuSupervisor.SuspendLayout();
+            this.panelMenuVendedores.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelMenuAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelMenuSupervisor
+            // panelMenuVendedores
             // 
-            this.panelMenuSupervisor.Controls.Add(this.labelBienvenida);
-            this.panelMenuSupervisor.Location = new System.Drawing.Point(190, 3);
-            this.panelMenuSupervisor.Name = "panelMenuSupervisor";
-            this.panelMenuSupervisor.Size = new System.Drawing.Size(883, 657);
-            this.panelMenuSupervisor.TabIndex = 10;
+            this.panelMenuVendedores.Controls.Add(this.labelBienvenida);
+            this.panelMenuVendedores.Location = new System.Drawing.Point(190, 3);
+            this.panelMenuVendedores.Name = "panelMenuVendedores";
+            this.panelMenuVendedores.Size = new System.Drawing.Size(883, 657);
+            this.panelMenuVendedores.TabIndex = 10;
             // 
             // labelBienvenida
             // 
@@ -130,6 +130,7 @@
             this.btnReportesVendedor.TabIndex = 4;
             this.btnReportesVendedor.Text = "Reportes";
             this.btnReportesVendedor.UseVisualStyleBackColor = true;
+            this.btnReportesVendedor.Click += new System.EventHandler(this.btnReportesVendedor_Click);
             // 
             // btnVentasVendedor
             // 
@@ -145,13 +146,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1085, 665);
-            this.Controls.Add(this.panelMenuSupervisor);
+            this.Controls.Add(this.panelMenuVendedores);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenuAdmin);
             this.Name = "FormMenuVendedores";
             this.Text = "Menu";
-            this.panelMenuSupervisor.ResumeLayout(false);
-            this.panelMenuSupervisor.PerformLayout();
+            this.panelMenuVendedores.ResumeLayout(false);
+            this.panelMenuVendedores.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panelMenuAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -161,7 +162,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panelMenuSupervisor;
+        private System.Windows.Forms.Panel panelMenuVendedores;
         private System.Windows.Forms.Label labelBienvenida;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSalir;

@@ -144,6 +144,7 @@
             this.btnReportesSupervisor.TabIndex = 4;
             this.btnReportesSupervisor.Text = "Reportes";
             this.btnReportesSupervisor.UseVisualStyleBackColor = true;
+            this.btnReportesSupervisor.Click += new System.EventHandler(this.btnReportesSupervisor_Click);
             // 
             // btnDevolucionesSupervisor
             // 

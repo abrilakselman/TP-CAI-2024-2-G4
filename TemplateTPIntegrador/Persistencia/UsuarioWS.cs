@@ -16,7 +16,7 @@ namespace Persistencia
     public class UsuarioWS
     {
        
-        //metodo alternativo
+        //metodo para LogIn del swagger
         public Guid LogIn(UsuarioWSLogin usuarioLogIn)
         {
             String path = "/api/Usuario/LogIn";
@@ -36,13 +36,13 @@ namespace Persistencia
                 {
                     var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
                     string respuesta = reader.ReadToEnd();
-                    throw new Exception("Cuenta inactiva");
+                    throw new Exception("Cuenta inactiva (Cod.50687). Porfavor contactese con el Administrador");
                 }
                 else
                 {
                     var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
                     string respuesta = reader.ReadToEnd();
-                    throw new Exception("Credenciales incorrectas");
+                    throw new Exception("Credenciales Ingresadas son incorrectas. Vuelva a intentar");
                 }
             }
             catch (Exception ex)
@@ -52,7 +52,7 @@ namespace Persistencia
             }
         }
 
-        //segundo metodo de intento
+        //segundo metodo de login para obtneer el rol
         //metodos para saber el rol del user y derivarlo a la pantalla correcta
 
         public int Login(UsuarioWSLogin Login)

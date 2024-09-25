@@ -16,5 +16,34 @@ namespace TemplateTPIntegrador
         {
             InitializeComponent();
         }
+
+        private void FormMenuAdministrador_Load(object sender, EventArgs e)
+        {
+            //deberia ir la funcion de mostrar stock critico en pantalla principal de los menus
+        }
+
+        //Abre los formularios dentro del panel de control en la pantalla de Menu supervisor
+        public void AbrirFormulario(Form formulario)
+        {
+            if (this.panelMenuSupervisor.Controls.Count > 0)
+            {
+                this.panelMenuSupervisor.Controls.RemoveAt(0);
+            }
+
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            formulario.Dock = DockStyle.Fill;
+            panelMenuSupervisor.Controls.Add(formulario);
+            panelMenuSupervisor.Tag = formulario;
+            formulario.Show();
+            formulario.BringToFront();
+        }
+
+      
+
+        private void btnReportesSupervisor_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormReportes(this));
+        }
     }
 }
