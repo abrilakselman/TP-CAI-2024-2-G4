@@ -21,7 +21,7 @@ namespace TemplateTPIntegrador
             InitializeComponent();
             //evento para salida del form de login
             this.FormClosing += new FormClosingEventHandler(FormLogin_FormClosing);
-            
+            pbPwdNotVisble.BringToFront();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -51,10 +51,13 @@ namespace TemplateTPIntegrador
             //Validar reglas de negocio sobre el user/contraseña
             LoginNegocio loginNegocio = new LoginNegocio();
             bool esValido = loginNegocio.Login(usuario, contraseña);
-            if (esValido)
+            if (!esValido)
             {
                 MessageBox.Show("Nombre de usuario no válido. Debe tener entre 8 y 15 caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
+
+           
 
             // Creo un int rol que tome el valor del perfil que inicia sesion
             int rol;
