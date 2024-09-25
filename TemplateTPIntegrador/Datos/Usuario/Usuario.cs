@@ -10,6 +10,8 @@ namespace Datos.Usuario
     public class Usuario
     {
         //constructores del usuario
+
+
         public Guid Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
