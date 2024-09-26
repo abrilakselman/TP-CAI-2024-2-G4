@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvListaUsuario = new System.Windows.Forms.DataGridView();
             this.btnAltaUser = new System.Windows.Forms.Button();
             this.btnBaja = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -46,19 +46,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Lista de Usuario";
             // 
-            // dataGridView1
+            // dgvListaUsuario
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 82);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(818, 361);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvListaUsuario.AllowUserToOrderColumns = true;
+            this.dgvListaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaUsuario.Location = new System.Drawing.Point(2, 83);
+            this.dgvListaUsuario.Name = "dgvListaUsuario";
+            this.dgvListaUsuario.RowHeadersWidth = 62;
+            this.dgvListaUsuario.RowTemplate.Height = 28;
+            this.dgvListaUsuario.Size = new System.Drawing.Size(899, 580);
+            this.dgvListaUsuario.TabIndex = 1;
             // 
             // btnAltaUser
             // 
-            this.btnAltaUser.Location = new System.Drawing.Point(144, 485);
+            this.btnAltaUser.Location = new System.Drawing.Point(917, 212);
             this.btnAltaUser.Name = "btnAltaUser";
             this.btnAltaUser.Size = new System.Drawing.Size(156, 54);
             this.btnAltaUser.TabIndex = 2;
@@ -68,7 +69,7 @@
             // 
             // btnBaja
             // 
-            this.btnBaja.Location = new System.Drawing.Point(354, 485);
+            this.btnBaja.Location = new System.Drawing.Point(917, 303);
             this.btnBaja.Name = "btnBaja";
             this.btnBaja.Size = new System.Drawing.Size(156, 54);
             this.btnBaja.TabIndex = 3;
@@ -78,7 +79,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(569, 485);
+            this.btnModificar.Location = new System.Drawing.Point(917, 397);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(156, 54);
             this.btnModificar.TabIndex = 4;
@@ -90,16 +91,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 573);
+            this.ClientSize = new System.Drawing.Size(1085, 675);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnBaja);
             this.Controls.Add(this.btnAltaUser);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvListaUsuario);
             this.Controls.Add(this.label1);
             this.Name = "FormListaUsuario";
             this.Text = "Lista de Usuarios";
             this.Load += new System.EventHandler(this.FormListaUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,7 +109,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListaUsuario;
         private System.Windows.Forms.Button btnAltaUser;
         private System.Windows.Forms.Button btnBaja;
         private System.Windows.Forms.Button btnModificar;

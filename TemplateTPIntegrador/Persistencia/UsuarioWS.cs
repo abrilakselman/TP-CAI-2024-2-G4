@@ -42,7 +42,7 @@ namespace Persistencia
                 {
                     var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
                     string respuesta = reader.ReadToEnd();
-                    throw new Exception("Credenciales Ingresadas son incorrectas. Vuelva a intentar");
+                    throw new Exception("Las credenciales ingresadas son incorrectas. Vuelva a intentar");
                 }
             }
             catch (Exception ex)
@@ -51,6 +51,36 @@ namespace Persistencia
                 throw new Exception(ex.Message);
             }
         }
+
+        //metodo de TraerUsuariosActivos del swagger
+
+        public List<Usuario> TraerUsuariosActivos(Guid idadmin)
+        {
+            String path = "/api/Usuario/TraerUsuariosActivos?id=" + idadmin;
+            List<Usuario> usuarios = new List<Usuario>();
+            try
+            {
+                HttpResponseMessage response = WebHelper.Get(path);
+                if (response.IsSuccessStatusCode)
+                {
+                    var contentStream = response.Content.ReadAsStringAsync().Result;
+                    List<Usuario> listadoUsuariosActivos = JsonConvert.DeserializeObject<List<Usuario>>(contentStream);
+                    return listadoUsuariosActivos;
+                }
+                else
+                {
+                    Console.WriteLine($"Código de Error: {response.StatusCode} - {response.ReasonPhrase}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+            return usuarios;
+
+        }
+
+
 
         //segundo metodo de login para obtneer el rol
         //metodos para saber el rol del user y derivarlo a la pantalla correcta

@@ -186,14 +186,14 @@
             this.panelMenu.Controls.Add(this.labelBienvenida);
             this.panelMenu.Location = new System.Drawing.Point(177, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(953, 656);
+            this.panelMenu.Size = new System.Drawing.Size(1223, 673);
             this.panelMenu.TabIndex = 4;
             // 
             // FormMenuAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1127, 659);
+            this.ClientSize = new System.Drawing.Size(1403, 673);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenuAdmin);
