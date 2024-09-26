@@ -29,7 +29,7 @@ namespace Negocio
 
         public List<Usuario> ListaTraerUsuariosActivos()
         {
-            //trate de no poner esta linea porque lo instancia afuera, pero el programa pincha
+            //trate de no poner esta linea porque lo instancia afuera, pero el programa falla.
             //asi que la agregue dentro del metodo
             UsuarioWS usuarioWS = new UsuarioWS();
 
