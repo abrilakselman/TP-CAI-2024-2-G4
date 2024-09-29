@@ -32,7 +32,6 @@ namespace Negocio
             //trate de no poner esta linea porque lo instancia afuera, pero el programa falla.
             //asi que la agregue dentro del metodo
             UsuarioWS usuarioWS = new UsuarioWS();
-
             return usuarioWS.TraerUsuariosActivos(Guid.Parse("4f3cfd0b-ba68-4f31-a8a5-63892d7e0c6f")); //paso como parametro el ID del administrador del grupo G4
         }
 

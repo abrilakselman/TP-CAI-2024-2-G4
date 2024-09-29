@@ -82,7 +82,7 @@ namespace Persistencia
 
 
 
-        //segundo metodo de login para obtneer el rol
+        //segundo metodo de login para obtener el rol
         //metodos para saber el rol del user y derivarlo a la pantalla correcta
 
         public int Login(UsuarioWSLogin Login)
