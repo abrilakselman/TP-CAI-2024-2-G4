@@ -1,6 +1,6 @@
 ﻿namespace TemplateTPIntegrador
 {
-    partial class AltaCliente
+    partial class FormAltaCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -44,6 +44,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.buttonAceptarCliente = new System.Windows.Forms.Button();
+            this.buttonVolverAC = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -176,7 +177,7 @@
             // 
             this.buttonAceptarCliente.BackColor = System.Drawing.Color.Navy;
             this.buttonAceptarCliente.ForeColor = System.Drawing.Color.White;
-            this.buttonAceptarCliente.Location = new System.Drawing.Point(569, 406);
+            this.buttonAceptarCliente.Location = new System.Drawing.Point(469, 306);
             this.buttonAceptarCliente.Name = "buttonAceptarCliente";
             this.buttonAceptarCliente.Size = new System.Drawing.Size(104, 32);
             this.buttonAceptarCliente.TabIndex = 15;
@@ -184,11 +185,24 @@
             this.buttonAceptarCliente.UseVisualStyleBackColor = false;
             this.buttonAceptarCliente.Click += new System.EventHandler(this.button1_Click);
             // 
-            // AltaUsuario
+            // buttonVolverAC
+            // 
+            this.buttonVolverAC.BackColor = System.Drawing.Color.Teal;
+            this.buttonVolverAC.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonVolverAC.Location = new System.Drawing.Point(593, 306);
+            this.buttonVolverAC.Name = "buttonVolverAC";
+            this.buttonVolverAC.Size = new System.Drawing.Size(95, 32);
+            this.buttonVolverAC.TabIndex = 16;
+            this.buttonVolverAC.Text = "Volver";
+            this.buttonVolverAC.UseVisualStyleBackColor = false;
+            this.buttonVolverAC.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // FormAltaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 350);
+            this.Controls.Add(this.buttonVolverAC);
             this.Controls.Add(this.buttonAceptarCliente);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox6);
@@ -205,8 +219,9 @@
             this.Controls.Add(this.NombreCliente);
             this.Controls.Add(this.TituloAltaCliente);
             this.Controls.Add(this.textBox1);
-            this.Name = "AltaUsuario";
+            this.Name = "FormAltaCliente";
             this.Text = "AltaUsuario";
+            this.Load += new System.EventHandler(this.FormAltaCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,5 +245,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button buttonAceptarCliente;
+        private System.Windows.Forms.Button buttonVolverAC;
     }
 }

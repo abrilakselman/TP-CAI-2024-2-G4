@@ -105,7 +105,7 @@
             this.buttonAceptarM.BackColor = System.Drawing.Color.MidnightBlue;
             this.buttonAceptarM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAceptarM.ForeColor = System.Drawing.Color.White;
-            this.buttonAceptarM.Location = new System.Drawing.Point(232, 389);
+            this.buttonAceptarM.Location = new System.Drawing.Point(389, 334);
             this.buttonAceptarM.Name = "buttonAceptarM";
             this.buttonAceptarM.Size = new System.Drawing.Size(136, 49);
             this.buttonAceptarM.TabIndex = 9;
@@ -114,10 +114,10 @@
             // 
             // buttonVolverM
             // 
-            this.buttonVolverM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttonVolverM.BackColor = System.Drawing.Color.Teal;
             this.buttonVolverM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVolverM.ForeColor = System.Drawing.Color.White;
-            this.buttonVolverM.Location = new System.Drawing.Point(374, 389);
+            this.buttonVolverM.Location = new System.Drawing.Point(531, 334);
             this.buttonVolverM.Name = "buttonVolverM";
             this.buttonVolverM.Size = new System.Drawing.Size(136, 49);
             this.buttonVolverM.TabIndex = 10;
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 450);
+            this.ClientSize = new System.Drawing.Size(711, 395);
             this.Controls.Add(this.buttonVolverM);
             this.Controls.Add(this.buttonAceptarM);
             this.Controls.Add(this.textBoxTelM);

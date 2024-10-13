@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AltaCliente.cs">
+    <Compile Include="FormAltaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltaCliente.Designer.cs">
-      <DependentUpon>AltaCliente.cs</DependentUpon>
+    <Compile Include="FormAltaCliente.Designer.cs">
+      <DependentUpon>FormAltaCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAltaUsuario.cs">
       <SubType>Form</SubType>
@@ -127,8 +127,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\ValidacionesUtils.cs" />
-    <EmbeddedResource Include="AltaCliente.resx">
-      <DependentUpon>AltaCliente.cs</DependentUpon>
+    <EmbeddedResource Include="FormAltaCliente.resx">
+      <DependentUpon>FormAltaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAltaUsuario.resx">
       <DependentUpon>FormAltaUsuario.cs</DependentUpon>

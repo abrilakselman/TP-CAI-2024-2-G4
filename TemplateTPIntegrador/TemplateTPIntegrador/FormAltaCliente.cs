@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TemplateTPIntegrador
 {
-    public partial class AltaCliente : Form
+    public partial class FormAltaCliente : Form
     {
-        public AltaCliente()
+        public FormAltaCliente()
         {
             InitializeComponent();
         }
@@ -33,6 +33,16 @@ namespace TemplateTPIntegrador
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormAltaCliente_Load(object sender, EventArgs e)
         {
 
         }
