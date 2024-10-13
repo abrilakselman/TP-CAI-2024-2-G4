@@ -32,10 +32,19 @@ namespace TemplateTPIntegrador
             evento.Handled = !esValido;
             return esValido;
         }
-
-
-
-
+        public bool validarSoloLetras(KeyPressEventArgs evento)
+        {
+            bool esValido = char.IsLetter(evento.KeyChar) || char.IsControl(evento.KeyChar);
+            evento.Handled = !esValido;
+            return esValido;
+        }
+        public bool validarSoloCorreo(KeyPressEventArgs evento)
+        {
+            // Permite letras, números, '@', '.', '-' y teclas de control como Backspace.
+            bool esValido = char.IsLetterOrDigit(evento.KeyChar) || evento.KeyChar == '@' || evento.KeyChar == '.' || evento.KeyChar == '-' || char.IsControl(evento.KeyChar);
+            evento.Handled = !esValido;
+            return esValido;
+        }
 
 
 
