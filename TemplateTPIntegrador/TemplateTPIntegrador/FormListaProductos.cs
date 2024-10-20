@@ -60,6 +60,7 @@ namespace TemplateTPIntegrador
         }
 
 
+
         private void buttonOK_Click(object sender, EventArgs e)
         {
             if (comboBoxCatProducto.SelectedIndex != 0)
