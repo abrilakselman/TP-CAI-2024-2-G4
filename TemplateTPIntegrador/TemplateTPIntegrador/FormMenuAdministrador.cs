@@ -44,6 +44,12 @@ namespace TemplateTPIntegrador
             AbrirFormulario(new FormListaUsuario(this));
         }
 
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            FormListaProveedor form = new FormListaProveedor(this);
+            AbrirFormulario(form);
+        }
+
         private void btnAyuda_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -66,6 +72,11 @@ namespace TemplateTPIntegrador
         private void btnReportes_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new FormReportes(this));
+        }
+
+        private void btnProducto_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormListaProductos(this));
         }
     }
 }

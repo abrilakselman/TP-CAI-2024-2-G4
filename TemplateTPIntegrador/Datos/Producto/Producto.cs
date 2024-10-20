@@ -21,6 +21,8 @@ namespace Datos.Producto
 
         public Guid idproveedor { get; set; }
 
+        public bool stockBajo { get; set; } //calculo del sotck bajo de cada producto segun categoria
+
 
         public Producto(string nombre, Guid id, Guid idcategoria, DateTime fechaalta, DateTime fechabaja, double precio, int stock, Guid idusuario, Guid idproveedor)
         {

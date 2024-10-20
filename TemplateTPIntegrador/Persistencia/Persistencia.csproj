@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ProductoWS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProveedorWS.cs" />
     <Compile Include="UsuarioWS.cs" />
     <Compile Include="Utils\WebHelper.cs" />
   </ItemGroup>

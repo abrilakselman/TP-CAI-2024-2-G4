@@ -11,8 +11,13 @@ namespace Datos.Proveedor
         public string cuit { get; set; }
         public string categorias { get; set; }
 
+        public string nombre { get; set; }
+
         public Proveedor(string nombre, string apellido, string email, DateTime fechaAlta, DateTime fechaBaja, string cuit, string categorias) { }
-        
+
        
+
     }
+
+
 }
