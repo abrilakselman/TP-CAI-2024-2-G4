@@ -16,7 +16,7 @@ namespace Datos.Producto
         public DateTime fechabaja { get; set; }
         public double precio { get; set; }
         public int stock { get; set; }
-        public Guid idusuario { get; set; }
+        public Guid idUsuario { get; set; }
 
 
         public Guid idproveedor { get; set; }
@@ -24,7 +24,7 @@ namespace Datos.Producto
         public bool stockBajo { get; set; } //calculo del sotck bajo de cada producto segun categoria
 
 
-        public Producto(string nombre, Guid id, Guid idcategoria, DateTime fechaalta, DateTime fechabaja, double precio, int stock, Guid idusuario, Guid idproveedor)
+        public Producto(string nombre, Guid id, Guid idcategoria, DateTime fechaalta, DateTime fechabaja, double precio, int stock, Guid idUsuario, Guid idproveedor)
         {
             this.nombre = nombre;
             this.id = id;
@@ -33,7 +33,7 @@ namespace Datos.Producto
             this.fechabaja = fechabaja;
             this.precio = precio;
             this.stock = stock;
-            this.idusuario = idusuario;
+            this.idUsuario = idUsuario;
             this.idproveedor = idproveedor;
         }
     }
