@@ -46,8 +46,10 @@ namespace TemplateTPIntegrador
 
         private void btnProveedores_Click(object sender, EventArgs e)
         {
-            FormListaProveedor form = new FormListaProveedor(this);
+            FormListaProveedores form = new FormListaProveedores(this);
             AbrirFormulario(form);
+
+            
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)

@@ -1,4 +1,4 @@
-﻿using Datos.Proveedor;
+﻿using Datos;
 using Persistencia.Utils;
 using Newtonsoft.Json;
 using System;
@@ -14,18 +14,35 @@ namespace Persistencia
     {
 
         //Lista todos los proveedores con el swagger TraerProveedores
+
+
+
         public List<Proveedor> TraerProveedores()
         {
-            String path = "/api/Proveedor/TraerProveedores";
+            //String path = "/api/Proveedor/TraerProveedores";
             List<Proveedor> proveedores = new List<Proveedor>();
             try
             {
-                HttpResponseMessage response = WebHelper.Get(path);
+                HttpResponseMessage response = WebHelper.Get("/api/Proveedor/TraerProveedores");
+                Console.WriteLine($"Response Status Code: {response.StatusCode}");
+                Console.WriteLine($"Response Reason Phrase: {response.ReasonPhrase}");
+
                 if (response.IsSuccessStatusCode)
                 {
                     var contentStream = response.Content.ReadAsStringAsync().Result;
-                    List<Proveedor> listadoProveedores = JsonConvert.DeserializeObject<List<Proveedor>>(contentStream);
-                    return listadoProveedores;
+                    if (!string.IsNullOrEmpty(contentStream))
+                    {
+                        proveedores = JsonConvert.DeserializeObject<List<Proveedor>>(contentStream);
+                        Console.WriteLine($"Número de proveedores recibidos: {proveedores.Count}");
+                        if (proveedores == null || proveedores.Count == 0)
+                        {
+                            Console.WriteLine("La lista deserializada es nula o está vacía.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("El contenido de la respuesta está vacío.");
+                    }
                 }
                 else
                 {
@@ -38,5 +55,12 @@ namespace Persistencia
             }
             return proveedores;
         }
+
+
+
+
+
+
     }
+
 }

@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Datos.Persona
-{
+
     public class Cliente : Persona
     {
         public string direccion { get; set; }
@@ -27,5 +26,5 @@ namespace Datos.Persona
 
         }
     }
-}
+
 

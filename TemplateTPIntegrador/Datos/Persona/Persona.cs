@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Datos.Persona
-{
+
     public abstract class Persona
     {
         public string nombre { get; set; }
@@ -26,7 +25,15 @@ namespace Datos.Persona
             this.fechabaja = fechabaja;
 
         }
+
+        //constructor para usar con proveedores
+        public Persona(string nombre, string apellido, string email, DateTime fechaalta, DateTime fechabaja)
+        {
+            this.id = id;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.email = email;
+            this.fechaalta = DateTime.Now;
+            this.fechabaja = fechabaja;
+        }
     }
-
-
-}

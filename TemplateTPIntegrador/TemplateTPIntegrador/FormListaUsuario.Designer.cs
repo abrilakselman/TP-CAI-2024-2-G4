@@ -54,12 +54,12 @@
             this.dgvListaUsuario.Name = "dgvListaUsuario";
             this.dgvListaUsuario.RowHeadersWidth = 62;
             this.dgvListaUsuario.RowTemplate.Height = 28;
-            this.dgvListaUsuario.Size = new System.Drawing.Size(899, 580);
+            this.dgvListaUsuario.Size = new System.Drawing.Size(1046, 632);
             this.dgvListaUsuario.TabIndex = 1;
             // 
             // btnAltaUser
             // 
-            this.btnAltaUser.Location = new System.Drawing.Point(917, 212);
+            this.btnAltaUser.Location = new System.Drawing.Point(1073, 209);
             this.btnAltaUser.Name = "btnAltaUser";
             this.btnAltaUser.Size = new System.Drawing.Size(156, 54);
             this.btnAltaUser.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             // btnBaja
             // 
-            this.btnBaja.Location = new System.Drawing.Point(917, 303);
+            this.btnBaja.Location = new System.Drawing.Point(1073, 300);
             this.btnBaja.Name = "btnBaja";
             this.btnBaja.Size = new System.Drawing.Size(156, 54);
             this.btnBaja.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(917, 397);
+            this.btnModificar.Location = new System.Drawing.Point(1073, 394);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(156, 54);
             this.btnModificar.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1085, 675);
+            this.ClientSize = new System.Drawing.Size(1241, 739);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnBaja);
             this.Controls.Add(this.btnAltaUser);

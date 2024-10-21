@@ -1,4 +1,4 @@
-﻿using Datos.Proveedor;
+﻿using Datos;
 using Negocio;
 using System;
 using System.Collections.Generic;
@@ -12,17 +12,17 @@ using System.Windows.Forms;
 
 namespace TemplateTPIntegrador
 {
-    public partial class FormListaProveedor : Form
+    public partial class FormListaProveedores : Form
     {
-        public FormMenuAdministrador FormMenuAdministrador_prov;
+        public FormMenuAdministrador FormMenuAdministrador;
 
-        public FormListaProveedor(FormMenuAdministrador formMenuAdministrador_prov)
+        public FormListaProveedores(FormMenuAdministrador formMenuAdministrador)
         {
             InitializeComponent();
             //funcion que cargue datos en lista 
-            FormMenuAdministrador_prov = formMenuAdministrador_prov;
+            
 
-            if (dgvListaProveedores == null)
+            if (dgvListaProveedores == null)  
             {
                 MessageBox.Show("dgvListaProveedores no está inicializado.");
             }
@@ -34,6 +34,8 @@ namespace TemplateTPIntegrador
 
             }
 
+            FormMenuAdministrador = formMenuAdministrador;
+
         }
 
         private void CargarListaProveedoresDVG()
@@ -42,14 +44,25 @@ namespace TemplateTPIntegrador
             ProveedorNegocio proveedorNegocio = new ProveedorNegocio();
 
             List<Proveedor> listaProveedor = proveedorNegocio.ListarProveedores();
-            listaProveedor = listaProveedor.OrderBy(Proveedor => Proveedor.nombre).ToList();
 
+            //listaProveedor = listaProveedor.OrderBy(Proveedor => Proveedor.nombre).ToList();
 
+            if (listaProveedor == null || listaProveedor.Count == 0)  //verificar los datos recibidos
+            {
+                MessageBox.Show("No se recibieron proveedores.");
+                return;
+            }
+
+                // Crear un BindingSource y asignarle la lista de personas como DataSource
+            BindingSource bindingSource1 = new BindingSource();
+            bindingSource1.DataSource = listaProveedor;
 
             if (dgvListaProveedores != null)
             {
                 MessageBox.Show("Llenando DataGridView");
-                dgvListaProveedores.DataSource = listaProveedor;
+
+                dgvListaProveedores.DataSource = bindingSource1;
+
                 dgvListaProveedores.Columns["id"].DisplayIndex = 0;
                 dgvListaProveedores.Columns["nombre"].DisplayIndex = 1;
                 dgvListaProveedores.Columns["apellido"].DisplayIndex = 2;
@@ -63,7 +76,14 @@ namespace TemplateTPIntegrador
 
         }
 
-        private void FormListaProveedor_Load(object sender, EventArgs e)
+
+
+
+
+
+
+
+        private void FormListaProveedores_Load(object sender, EventArgs e)
         {
 
         }
