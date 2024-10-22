@@ -67,11 +67,11 @@
     <Compile Include="FormBajaUsuario.Designer.cs">
       <DependentUpon>FormBajaUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormListaProductos.cs">
+    <Compile Include="FormListaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormListaProductos.Designer.cs">
-      <DependentUpon>FormListaProductos.cs</DependentUpon>
+    <Compile Include="FormListaProducto.Designer.cs">
+      <DependentUpon>FormListaProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="FormListaProveedores.cs">
       <SubType>Form</SubType>
@@ -151,8 +151,8 @@
     <EmbeddedResource Include="FormBajaUsuario.resx">
       <DependentUpon>FormBajaUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormListaProductos.resx">
-      <DependentUpon>FormListaProductos.cs</DependentUpon>
+    <EmbeddedResource Include="FormListaProducto.resx">
+      <DependentUpon>FormListaProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListaProveedores.resx">
       <DependentUpon>FormListaProveedores.cs</DependentUpon>
@@ -225,6 +225,8 @@
       <Name>Persistencia</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

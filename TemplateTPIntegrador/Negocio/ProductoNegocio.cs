@@ -1,4 +1,4 @@
-﻿using Datos.Producto;
+﻿using Datos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +14,32 @@ namespace Negocio
     {
 
         ProductoWS productoWS = new ProductoWS();
+
+
+        public List<Producto> ListarProducto()
+        {
+            ProductoWS productoWS = new ProductoWS();
+            var productos = new List<Producto>();
+            try
+            {
+                productos = productoWS.TraerProductos();
+                Console.WriteLine($"Número de productos recibidos del WS: {productos.Count}");
+
+                foreach (Producto producto in productos.Where(x => x.stock <= 10))
+                {
+                    producto.stockBajo = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Excepción: {ex.Message}");
+            }
+
+            return productos;
+        }
+
+
+        /*
         public List<Producto> ListarProducto()
         {
             var productos = productoWS.TraerProductos();
@@ -23,7 +49,9 @@ namespace Negocio
                 producto.stockBajo = true;
             }
             return productos;
-        }
+        }*/
+
+
 
         public List<Producto> ListarCategoriadeProducto(int categoria)
         {

@@ -78,7 +78,7 @@ namespace TemplateTPIntegrador
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FormListaProductos(this));
+            AbrirFormulario(new FormListaProducto(this));
         }
     }
 }

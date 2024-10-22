@@ -4,37 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Datos.Producto
+
+
+
+public class Producto
 {
-    public class Producto
+    public Guid id { get; set; }
+    public int idCategoria { get; set; }
+    public string nombre { get; set; }
+    public DateTime fechaAlta { get; set; }
+    public DateTime? fechaBaja { get; set; }
+    public int precio { get; set; }
+    public int stock { get; set; }
+    public int idUsuario { get; set; }
+    public int idProveedor { get; set; }
+    public bool stockBajo { get; set; }  //incializa siempre en false
+
+    public Producto(int idCategoria, string nombre, DateTime? fechaBaja, int precio, int stock,
+                    int idUsuario, int idProveedor)
     {
-        //aclaracion: todos los id por ahora, los pongo con GUID (a chequear)
-        public string nombre {  get; set; }
-        public Guid id { get; set; }
-        public Guid idcategoria { get; set; }
-        public DateTime fechaalta { get; set; }
-        public DateTime fechabaja { get; set; }
-        public double precio { get; set; }
-        public int stock { get; set; }
-        public Guid idUsuario { get; set; }
+        this.id = id;
+        this.idCategoria = idCategoria;
+        this.nombre = nombre;
+        this.fechaAlta = DateTime.Now;
+        this.fechaBaja = fechaBaja;
+        this.precio = precio;
+        this.stock = stock;
+        this.idUsuario = idUsuario;
+    }
 
-
-        public Guid idproveedor { get; set; }
-
-        public bool stockBajo { get; set; } //calculo del sotck bajo de cada producto segun categoria
-
-
-        public Producto(string nombre, Guid id, Guid idcategoria, DateTime fechaalta, DateTime fechabaja, double precio, int stock, Guid idUsuario, Guid idproveedor)
-        {
-            this.nombre = nombre;
-            this.id = id;
-            this.idcategoria = idcategoria;
-            this.fechaalta = DateTime.Now;
-            this.fechabaja = fechabaja;
-            this.precio = precio;
-            this.stock = stock;
-            this.idUsuario = idUsuario;
-            this.idproveedor = idproveedor;
-        }
+    public override string ToString()
+    {
+        return $"{nombre} {precio} {stock}";
     }
 }
