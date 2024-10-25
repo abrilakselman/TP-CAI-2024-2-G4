@@ -37,5 +37,10 @@ namespace TemplateTPIntegrador
         {
             AbrirFormulario(new FormVentasPorVendedor(this));
         }
+
+        private void labelBienvenida_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
