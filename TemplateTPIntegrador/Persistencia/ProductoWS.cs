@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Persistencia.Utils;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -150,6 +151,120 @@ namespace Persistencia
         }
 
 
+        //Borrar producto del swagger, pide id del producto y idusuario logueado
+
+        public async Task BajaProducto(Guid id, Guid idUsuario)
+        {
+            string path = "/api/Producto/BajaProducto";
+            var map = new Dictionary<string, string>
+            {
+                { "id", id.ToString() },
+                { "idUsuario", idUsuario.ToString() }
+            };
+            var jsonRequest = JsonConvert.SerializeObject(map);
+
+            try
+            {
+                HttpResponseMessage response = WebHelper.DeleteWithBody(path, jsonRequest);
+                string respuesta = await response.Content.ReadAsStringAsync();
+
+                if (response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine("Producto seleccionado eliminado con éxito.");
+                }
+                else
+                {
+                    Console.WriteLine($"Error encontrado: {response.StatusCode} - {response.ReasonPhrase}");
+                    throw new Exception(respuesta);
+                }
+            }
+            catch (HttpRequestException httpEx)
+            {
+                Console.WriteLine($"HTTP Request Exception: {httpEx.Message}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                throw;
+            }
+        }
+
+
+        //Modificar producto del swagger toma 4 parametros: id, idusuario, precio y stock
+        public void ModificarProducto(Guid id, Guid idUsuario, int precio, int stock)
+        {
+
+            String path = "/api/Producto/ModificarProducto";
+            Dictionary<string, string> map = new Dictionary<string, string>();
+            map.Add("id", id.ToString());
+            map.Add("idUsuario", idUsuario.ToString());
+            map.Add("precio", precio.ToString());
+            map.Add("stock", stock.ToString());
+
+            var jsonRequest = JsonConvert.SerializeObject(map);
+
+            try
+            {
+                HttpResponseMessage response = WebHelper.Patch(path, jsonRequest);
+                if (response.IsSuccessStatusCode)
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                }
+                else
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                    throw new Exception(respuesta);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                throw ex;
+            }
+
+            /*
+
+            string path = "/api/Producto/ModificarProducto";
+            var map = new Dictionary<string, string>
+                {
+                    {"id", id.ToString()},
+                    {"idUsuario", idUsuario.ToString()},
+                    {"precio", precio.ToString()},
+                    {"stock", stock.ToString()}
+                };
+            var jsonRequest = JsonConvert.SerializeObject(map);
+
+            try
+            {
+                var response = WebHelper.Patch(path, jsonRequest);
+                if (response.IsSuccessStatusCode)
+                {
+                    using (var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result))
+                    {
+                        string respuesta = reader.ReadToEnd();
+                        // Procesar la respuesta según sea necesario
+                    }
+                }
+                else
+                {
+                    using (var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result))
+                    {
+                        string respuesta = reader.ReadToEnd();
+                        Console.WriteLine($"Error encontrado: {response.StatusCode} - {response.ReasonPhrase}");
+                        throw new Exception(respuesta);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                throw;
+            }*/
+        }
 
 
 

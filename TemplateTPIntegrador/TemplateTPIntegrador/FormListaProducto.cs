@@ -1,6 +1,7 @@
 ﻿using Datos;
 using Datos;
 using Negocio;
+using Persistencia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,7 +39,11 @@ namespace TemplateTPIntegrador
             listacat.Add(new productosLista("4", "Informática"));
             listacat.Add(new productosLista("5", "Smart TV"));
 
-            
+            comboBoxCat.DisplayMember = "Valor";
+            comboBoxCat.ValueMember = "Id";
+
+            comboBoxCat.DataSource = listacat.OrderBy(x => x.Id).ToList();
+
         }
 
         private void CargarListaProductoDVG()
@@ -91,10 +96,118 @@ namespace TemplateTPIntegrador
         }
 
 
+        //Boton OK del comboBOX de la categorias
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBoxCat.SelectedIndex != 0)
+                {
+                    // SelectedValue no es nulo.
+                    if (comboBoxCat.SelectedValue == null)
+                    {
+                        MessageBox.Show("Por favor seleccione una categoría válida.");
+                        return;
+                    }
+
+                    ProductoNegocio productoNegocio = new ProductoNegocio();
+                    string categoria = comboBoxCat.SelectedValue.ToString();
+
+                    // la categoría puede convertirse a entero.
+                    if (!Int32.TryParse(categoria, out int categoriaId))
+                    {
+                        MessageBox.Show("Categoría inválida.");
+                        return;
+                    }
+
+                    List<Producto> listacat = productoNegocio.ListarCategoriadeProducto(categoriaId);
+                    listacat = listacat.OrderBy(producto => producto.nombre).ToList();
+                    dgvListaProductos.DataSource = listacat;
+                }
+                else
+                {
+                    CargarListaProductoDVG();
+                }
+            }
+            catch (Exception ex)
+            {
+                // excepciones para capturar cualquier error inesperado.
+                MessageBox.Show($"Ocurrió un error: {ex.Message}");
+            }
+        }
+
 
         private void FormListaProducto_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void buttonBajaProd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvListaProductos.SelectedCells.Count > 0)
+                {
+                    DialogResult result = MessageBox.Show("¿Desea dar de baja el producto seleccionado de la lista?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.OK)
+                    {
+                        DataGridViewRow selectedRow = dgvListaProductos.CurrentRow;
+                        object idValue = selectedRow.Cells["id"].Value;
+
+                        ProductoNegocio productoNegocio = new ProductoNegocio();
+                        productoNegocio.BajaProducto(Guid.Parse(idValue.ToString()), Sesion.Id);
+                    }
+                    CargarListaProductoDVG();
+
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione una producto para dar de baja");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonModificarProd_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                DialogResult result = MessageBox.Show("¿Desea editar el producto seleccionado?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                    if (dgvListaProductos.CurrentRow == null)
+                    {
+                        MessageBox.Show("Por favor, seleccione un producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    var selectedRow = dgvListaProductos.CurrentRow;
+                    if (selectedRow.Cells["id"].Value == null || selectedRow.Cells["nombre"].Value == null || selectedRow.Cells["stock"].Value == null)
+                    {
+                        MessageBox.Show("Datos del producto incompletos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    var idValue = selectedRow.Cells["id"].Value.ToString();
+                    var nombre = selectedRow.Cells["nombre"].Value.ToString();
+                    var stock = selectedRow.Cells["stock"].Value.ToString();
+                    var precio = selectedRow.Cells["precio"].Value.ToString();
+
+                    ProductoWS productoWS = new ProductoWS();
+                    this.Hide();
+                    FormMenuAdministrador.AbrirFormulario(new FormEditarProducto(FormMenuAdministrador, Guid.Parse(idValue), nombre, stock));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

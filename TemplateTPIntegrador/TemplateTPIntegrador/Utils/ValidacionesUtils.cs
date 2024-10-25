@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace TemplateTPIntegrador
 {
@@ -46,7 +47,23 @@ namespace TemplateTPIntegrador
             return esValido;
         }
 
+        public bool validarNumyNeg(string num)
+        {
+            if (!int.TryParse(num, out int n))
+            {
+                return true;
+            }
+            if (n <= 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 
+        }
+        
 
 
 

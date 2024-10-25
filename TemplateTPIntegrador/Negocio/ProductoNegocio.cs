@@ -67,6 +67,16 @@ namespace Negocio
 
         }
 
+        public void BajaProducto(Guid id, Guid idUsuario)
+        {
+            productoWS.BajaProducto(id, idUsuario);
+        }
+
+        public void ModificarProducto(Guid id, Guid idUsuario, int precio, int stock)
+        {
+            productoWS.ModificarProducto(id, idUsuario, precio, stock);
+        }
+
 
     }
 }

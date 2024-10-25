@@ -62,6 +62,13 @@ namespace Negocio
             return rol;
         }
 
+
+        public void BajaUsuario(Guid id, Guid idUsuario)
+        {
+            usuarioWS.BajaUsuario(id, idUsuario);
+        }
+
+
     }
 
 }

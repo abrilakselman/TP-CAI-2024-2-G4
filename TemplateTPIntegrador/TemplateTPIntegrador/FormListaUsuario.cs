@@ -74,9 +74,36 @@ namespace TemplateTPIntegrador
 
         private void btnBaja_Click(object sender, EventArgs e)
         {
-            this.Hide();
+
+            try
+            {
+                if (dgvListaUsuario.SelectedCells.Count > 0)
+                {
+                    DialogResult result = MessageBox.Show("¿Desea borrar el usuario seleccionado?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.OK)
+                    {
+                        DataGridViewRow selectedRow = dgvListaUsuario.CurrentRow;
+                        object idValue = selectedRow.Cells["id"].Value;
+                        UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
+
+                        usuarioNegocio.BajaUsuario(Guid.Parse(idValue.ToString()), Sesion.Id);
+                    }
+                    CargarListaUsuarioDVG();
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un usuario de la lista para borrarlo");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            /*this.Hide();
             FormBajaUsuario formBajaUsuario = new FormBajaUsuario();
-            formBajaUsuario.ShowDialog();
+            formBajaUsuario.ShowDialog();*/
         }
     }
 }

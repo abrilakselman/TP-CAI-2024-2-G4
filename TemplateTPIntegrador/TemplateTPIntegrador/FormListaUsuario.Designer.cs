@@ -31,8 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvListaUsuario = new System.Windows.Forms.DataGridView();
             this.btnAltaUser = new System.Windows.Forms.Button();
-            this.btnBaja = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnBajaUsuario = new System.Windows.Forms.Button();
+            this.btnModificarUser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,33 +67,33 @@
             this.btnAltaUser.UseVisualStyleBackColor = true;
             this.btnAltaUser.Click += new System.EventHandler(this.btnAltaUser_Click);
             // 
-            // btnBaja
+            // btnBajaUsuario
             // 
-            this.btnBaja.Location = new System.Drawing.Point(1073, 300);
-            this.btnBaja.Name = "btnBaja";
-            this.btnBaja.Size = new System.Drawing.Size(156, 54);
-            this.btnBaja.TabIndex = 3;
-            this.btnBaja.Text = "Baja";
-            this.btnBaja.UseVisualStyleBackColor = true;
-            this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
+            this.btnBajaUsuario.Location = new System.Drawing.Point(1073, 300);
+            this.btnBajaUsuario.Name = "btnBajaUsuario";
+            this.btnBajaUsuario.Size = new System.Drawing.Size(156, 54);
+            this.btnBajaUsuario.TabIndex = 3;
+            this.btnBajaUsuario.Text = "Baja";
+            this.btnBajaUsuario.UseVisualStyleBackColor = true;
+            this.btnBajaUsuario.Click += new System.EventHandler(this.btnBaja_Click);
             // 
-            // btnModificar
+            // btnModificarUser
             // 
-            this.btnModificar.Location = new System.Drawing.Point(1073, 394);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(156, 54);
-            this.btnModificar.TabIndex = 4;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnModificarUser.Location = new System.Drawing.Point(1073, 394);
+            this.btnModificarUser.Name = "btnModificarUser";
+            this.btnModificarUser.Size = new System.Drawing.Size(156, 54);
+            this.btnModificarUser.TabIndex = 4;
+            this.btnModificarUser.Text = "Modificar";
+            this.btnModificarUser.UseVisualStyleBackColor = true;
+            this.btnModificarUser.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // FormListaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1241, 739);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnBaja);
+            this.Controls.Add(this.btnModificarUser);
+            this.Controls.Add(this.btnBajaUsuario);
             this.Controls.Add(this.btnAltaUser);
             this.Controls.Add(this.dgvListaUsuario);
             this.Controls.Add(this.label1);
@@ -111,7 +111,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvListaUsuario;
         private System.Windows.Forms.Button btnAltaUser;
-        private System.Windows.Forms.Button btnBaja;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnBajaUsuario;
+        private System.Windows.Forms.Button btnModificarUser;
     }
 }

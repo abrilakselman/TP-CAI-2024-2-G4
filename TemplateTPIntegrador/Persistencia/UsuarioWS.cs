@@ -174,5 +174,38 @@ namespace Persistencia
 
         //Analizar como agregar el contador de los intentos de acceso
 
+        public void BajaUsuario(Guid id, Guid idUsuario)
+        {
+            String path = "/api/Usuario/BajaUsuario";
+
+            Dictionary<string, string> map = new Dictionary<string, string>();
+            map.Add("id", id.ToString());
+            map.Add("idUsuario", idUsuario.ToString());
+
+            var jsonRequest = JsonConvert.SerializeObject(map);
+            try
+            {
+                HttpResponseMessage response = WebHelper.DeleteWithBody(path, jsonRequest);
+                if (response.IsSuccessStatusCode)
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                }
+                else
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                    Console.WriteLine($"Error encontrado: {response.StatusCode} - {response.ReasonPhrase}");
+                    throw new Exception(respuesta);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                throw ex;
+            }
+        }
+
+
     }
 }

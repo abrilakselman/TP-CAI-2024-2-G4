@@ -67,6 +67,12 @@
     <Compile Include="FormBajaUsuario.Designer.cs">
       <DependentUpon>FormBajaUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarProducto.Designer.cs">
+      <DependentUpon>FormEditarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormListaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sesion.cs" />
     <Compile Include="Utils\ValidacionesUtils.cs" />
     <EmbeddedResource Include="FormAltaCliente.resx">
       <DependentUpon>FormAltaCliente.cs</DependentUpon>
@@ -150,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBajaUsuario.resx">
       <DependentUpon>FormBajaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarProducto.resx">
+      <DependentUpon>FormEditarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListaProducto.resx">
       <DependentUpon>FormListaProducto.cs</DependentUpon>
