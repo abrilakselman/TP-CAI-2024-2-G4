@@ -39,5 +39,11 @@ namespace TemplateTPIntegrador
             formVentasPorVendedor.ShowDialog();
 
         }
+
+        private void btnStockCritico_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMenuAdministrador.AbrirFormulario(new FormStockCritico(FormMenuAdministrador));
+        }
     }
 }

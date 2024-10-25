@@ -51,6 +51,7 @@
             this.btnStockCritico.TabIndex = 1;
             this.btnStockCritico.Text = "Stock Crítico";
             this.btnStockCritico.UseVisualStyleBackColor = true;
+            this.btnStockCritico.Click += new System.EventHandler(this.btnStockCritico_Click);
             // 
             // btnVtasXVendedor
             // 
