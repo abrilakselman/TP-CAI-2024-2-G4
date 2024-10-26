@@ -139,6 +139,12 @@
     <Compile Include="FormReportes.Designer.cs">
       <DependentUpon>FormReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReporteVenidoPorCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporteVenidoPorCategoria.Designer.cs">
+      <DependentUpon>FormReporteVenidoPorCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormStockCritico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormReportes.resx">
       <DependentUpon>FormReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReporteVenidoPorCategoria.resx">
+      <DependentUpon>FormReporteVenidoPorCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormStockCritico.resx">
       <DependentUpon>FormStockCritico.cs</DependentUpon>
