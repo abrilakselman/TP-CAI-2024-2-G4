@@ -174,37 +174,29 @@ namespace Persistencia
 
         //Analizar como agregar el contador de los intentos de acceso
 
-        public void BajaUsuario(Guid id, Guid idUsuario)
+        public static void BajaUsuario(string idUsuario)
         {
+            String IdUsuarioMaster = "4f3cfd0b-ba68-4f31-a8a5-63892d7e0c6f";
             String path = "/api/Usuario/BajaUsuario";
 
-            Dictionary<string, string> map = new Dictionary<string, string>();
-            map.Add("id", id.ToString());
-            map.Add("idUsuario", idUsuario.ToString());
+            Dictionary<String, String> map = new Dictionary<String, String>();
+            map.Add("id", idUsuario);
+            map.Add("idUsuario", IdUsuarioMaster);
 
             var jsonRequest = JsonConvert.SerializeObject(map);
-            try
+
+            HttpResponseMessage response = WebHelper.DeleteWithBody(path, jsonRequest);
+
+            if (!response.IsSuccessStatusCode)
             {
-                HttpResponseMessage response = WebHelper.DeleteWithBody(path, jsonRequest);
-                if (response.IsSuccessStatusCode)
-                {
-                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
-                    string respuesta = reader.ReadToEnd();
-                }
-                else
-                {
-                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
-                    string respuesta = reader.ReadToEnd();
-                    Console.WriteLine($"Error encontrado: {response.StatusCode} - {response.ReasonPhrase}");
-                    throw new Exception(respuesta);
-                }
+                throw new Exception("Algo salio mal.\nVerifique los datos ingresados");
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine($"Exception: {ex.Message}");
-                throw ex;
+                Console.WriteLine("Usuario dado de baja correctamente");
             }
         }
+
 
 
     }

@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Datos.Usuario;
 using Negocio;
 using System;
 using System.Collections.Generic;
@@ -86,6 +87,46 @@ namespace TemplateTPIntegrador
         private void FormListaProveedores_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBajaProv_Click(object sender, EventArgs e)
+        {
+            
+
+            string valor = textBoxBajaProv.Text;
+            ProveedorNegocio proveedorNegocio = new ProveedorNegocio();
+
+
+            if (valor != "")
+            {
+
+                //Da de baja el proveedor en swagger
+                Usuario proveedorSeleccionado = (Usuario)dgvListaProveedores.Rows[dgvListaProveedores.CurrentCell.RowIndex].DataBoundItem;
+                Guid GuiProveedor = proveedorSeleccionado.Id;
+                String IdProveedor = GuiProveedor.ToString();
+
+                //consulta si esta seguro de eliminar usuario
+                var result = MessageBox.Show("¿Está seguro que desea eliminar a " + proveedorSeleccionado.Apellido + ", " + proveedorSeleccionado.Nombre + "?", "", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    proveedorNegocio.BajaProveedor(IdProveedor);
+                    Console.WriteLine("Usuario eliminado");
+                    CargarListaProveedoresDVG();
+                    textBoxBajaProv.Text = "";
+                }
+            }
+            else
+            {
+                var result = MessageBox.Show("Seleccione un usuario para eliminarlo", "", MessageBoxButtons.OK);
+            }
+
+
+        }
+
+        private void dgvListaProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Proveedor proveedorSeleccionado = (Proveedor)dgvListaProveedores.Rows[dgvListaProveedores.CurrentCell.RowIndex].DataBoundItem;
+            textBoxBajaProv.Text = proveedorSeleccionado.Apellido + ", " + proveedorSeleccionado.Nombre;
         }
     }
 }

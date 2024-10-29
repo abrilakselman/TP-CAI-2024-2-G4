@@ -33,6 +33,8 @@
             this.btnAltaUser = new System.Windows.Forms.Button();
             this.btnBajaUsuario = new System.Windows.Forms.Button();
             this.btnModificarUser = new System.Windows.Forms.Button();
+            this.textBoxBajaUser = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,8 +56,9 @@
             this.dgvListaUsuario.Name = "dgvListaUsuario";
             this.dgvListaUsuario.RowHeadersWidth = 62;
             this.dgvListaUsuario.RowTemplate.Height = 28;
-            this.dgvListaUsuario.Size = new System.Drawing.Size(1046, 632);
+            this.dgvListaUsuario.Size = new System.Drawing.Size(922, 632);
             this.dgvListaUsuario.TabIndex = 1;
+            this.dgvListaUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaUsuario_CellContentClick);
             // 
             // btnAltaUser
             // 
@@ -69,7 +72,7 @@
             // 
             // btnBajaUsuario
             // 
-            this.btnBajaUsuario.Location = new System.Drawing.Point(1073, 300);
+            this.btnBajaUsuario.Location = new System.Drawing.Point(1018, 508);
             this.btnBajaUsuario.Name = "btnBajaUsuario";
             this.btnBajaUsuario.Size = new System.Drawing.Size(156, 54);
             this.btnBajaUsuario.TabIndex = 3;
@@ -79,7 +82,7 @@
             // 
             // btnModificarUser
             // 
-            this.btnModificarUser.Location = new System.Drawing.Point(1073, 394);
+            this.btnModificarUser.Location = new System.Drawing.Point(1073, 296);
             this.btnModificarUser.Name = "btnModificarUser";
             this.btnModificarUser.Size = new System.Drawing.Size(156, 54);
             this.btnModificarUser.TabIndex = 4;
@@ -87,11 +90,29 @@
             this.btnModificarUser.UseVisualStyleBackColor = true;
             this.btnModificarUser.Click += new System.EventHandler(this.btnModificar_Click);
             // 
+            // textBoxBajaUser
+            // 
+            this.textBoxBajaUser.Location = new System.Drawing.Point(961, 451);
+            this.textBoxBajaUser.Name = "textBoxBajaUser";
+            this.textBoxBajaUser.Size = new System.Drawing.Size(231, 26);
+            this.textBoxBajaUser.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(955, 408);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Usuario a Eliminar:";
+            // 
             // FormListaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1241, 739);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxBajaUser);
             this.Controls.Add(this.btnModificarUser);
             this.Controls.Add(this.btnBajaUsuario);
             this.Controls.Add(this.btnAltaUser);
@@ -113,5 +134,7 @@
         private System.Windows.Forms.Button btnAltaUser;
         private System.Windows.Forms.Button btnBajaUsuario;
         private System.Windows.Forms.Button btnModificarUser;
+        private System.Windows.Forms.TextBox textBoxBajaUser;
+        private System.Windows.Forms.Label label2;
     }
 }

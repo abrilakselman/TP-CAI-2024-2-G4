@@ -31,6 +31,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonVolver = new System.Windows.Forms.Button();
             this.buttonAceptar = new System.Windows.Forms.Button();
@@ -38,8 +42,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxPrecioNuevo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxPrecioAct = new System.Windows.Forms.TextBox();
+            this.textBoxStockActual = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(77, 49);
+            this.label2.Location = new System.Drawing.Point(24, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 20);
             this.label2.TabIndex = 1;
@@ -56,7 +60,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(77, 100);
+            this.label3.Location = new System.Drawing.Point(24, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(161, 20);
             this.label3.TabIndex = 2;
@@ -64,6 +68,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBoxStockActual);
+            this.groupBox1.Controls.Add(this.textBoxPrecioAct);
+            this.groupBox1.Controls.Add(this.textBoxNombre);
+            this.groupBox1.Controls.Add(this.textBoxID);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
@@ -74,6 +82,39 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del producto a editar:";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // textBoxNombre
+            // 
+            this.textBoxNombre.Location = new System.Drawing.Point(217, 94);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(241, 26);
+            this.textBoxNombre.TabIndex = 8;
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.Location = new System.Drawing.Point(217, 46);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(241, 26);
+            this.textBoxID.TabIndex = 7;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(490, 100);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(103, 20);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Stock Actual:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(490, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 20);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Precio Actual:";
             // 
             // groupBox2
             // 
@@ -142,23 +183,19 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Nuevo Precio:";
             // 
-            // label5
+            // textBoxPrecioAct
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(390, 49);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 20);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Precio Actual:";
+            this.textBoxPrecioAct.Location = new System.Drawing.Point(617, 45);
+            this.textBoxPrecioAct.Name = "textBoxPrecioAct";
+            this.textBoxPrecioAct.Size = new System.Drawing.Size(108, 26);
+            this.textBoxPrecioAct.TabIndex = 9;
             // 
-            // label6
+            // textBoxStockActual
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(390, 100);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 20);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Stock Actual:";
+            this.textBoxStockActual.Location = new System.Drawing.Point(617, 97);
+            this.textBoxStockActual.Name = "textBoxStockActual";
+            this.textBoxStockActual.Size = new System.Drawing.Size(108, 26);
+            this.textBoxStockActual.TabIndex = 10;
             // 
             // FormEditarProducto
             // 
@@ -191,5 +228,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.TextBox textBoxStockActual;
+        private System.Windows.Forms.TextBox textBoxPrecioAct;
     }
 }

@@ -72,38 +72,49 @@ namespace TemplateTPIntegrador
             formAltaUsuario.ShowDialog();
         }
 
+        private void dgvListaUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+
+        }
+
         private void btnBaja_Click(object sender, EventArgs e)
         {
+            
 
-            try
+            string valor = textBoxBajaUser.Text;
+            UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
+            
+
+            if (valor != "")
             {
-                if (dgvListaUsuario.SelectedCells.Count > 0)
+
+                //Da de baja el usuario en el swagger "Usuario/BajaUsuario" segun el ID ingresado
+                Usuario usuarioSeleccionado = (Usuario)dgvListaUsuario.Rows[dgvListaUsuario.CurrentCell.RowIndex].DataBoundItem;
+                Guid GuidUsuario = usuarioSeleccionado.Id;
+                String IdUsuario = GuidUsuario.ToString();
+
+                //consulta si esta seguro de eliminar usuario
+                var result = MessageBox.Show("¿Está seguro que desea eliminar a " + usuarioSeleccionado.Apellido + ", " + usuarioSeleccionado.Nombre + "?", "", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    DialogResult result = MessageBox.Show("¿Desea borrar el usuario seleccionado?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-                    if (result == DialogResult.OK)
-                    {
-                        DataGridViewRow selectedRow = dgvListaUsuario.CurrentRow;
-                        object idValue = selectedRow.Cells["id"].Value;
-                        UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
-
-                        usuarioNegocio.BajaUsuario(Guid.Parse(idValue.ToString()), Sesion.Id);
-                    }
+                    usuarioNegocio.BajaUsuario(IdUsuario);
+                    Console.WriteLine("Usuario eliminado");
                     CargarListaUsuarioDVG();
-                }
-                else
-                {
-                    MessageBox.Show("Seleccione un usuario de la lista para borrarlo");
+                    textBoxBajaUser.Text = "";
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                var result = MessageBox.Show("Seleccione un usuario para eliminarlo", "", MessageBoxButtons.OK);
             }
 
-            /*this.Hide();
-            FormBajaUsuario formBajaUsuario = new FormBajaUsuario();
-            formBajaUsuario.ShowDialog();*/
+        }
+
+        private void dgvListaUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Usuario usuarioSeleccionado = (Usuario)dgvListaUsuario.Rows[dgvListaUsuario.CurrentCell.RowIndex].DataBoundItem;
+            textBoxBajaUser.Text = usuarioSeleccionado.Apellido + ", " + usuarioSeleccionado.Nombre;
         }
     }
 }

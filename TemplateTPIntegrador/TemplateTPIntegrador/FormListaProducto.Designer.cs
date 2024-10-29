@@ -36,6 +36,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonBajaProd = new System.Windows.Forms.Button();
             this.buttonModificarProd = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxBajaProd = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,6 +50,7 @@
             this.dgvListaProductos.RowTemplate.Height = 28;
             this.dgvListaProductos.Size = new System.Drawing.Size(833, 450);
             this.dgvListaProductos.TabIndex = 0;
+            this.dgvListaProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaProductos_CellContentClick);
             // 
             // label1
             // 
@@ -79,7 +82,7 @@
             // 
             // buttonAltaProd
             // 
-            this.buttonAltaProd.Location = new System.Drawing.Point(916, 301);
+            this.buttonAltaProd.Location = new System.Drawing.Point(900, 242);
             this.buttonAltaProd.Name = "buttonAltaProd";
             this.buttonAltaProd.Size = new System.Drawing.Size(141, 52);
             this.buttonAltaProd.TabIndex = 5;
@@ -89,7 +92,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(876, 254);
+            this.label2.Location = new System.Drawing.Point(860, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 20);
             this.label2.TabIndex = 6;
@@ -97,7 +100,7 @@
             // 
             // buttonBajaProd
             // 
-            this.buttonBajaProd.Location = new System.Drawing.Point(916, 380);
+            this.buttonBajaProd.Location = new System.Drawing.Point(900, 475);
             this.buttonBajaProd.Name = "buttonBajaProd";
             this.buttonBajaProd.Size = new System.Drawing.Size(141, 52);
             this.buttonBajaProd.TabIndex = 7;
@@ -107,7 +110,7 @@
             // 
             // buttonModificarProd
             // 
-            this.buttonModificarProd.Location = new System.Drawing.Point(916, 459);
+            this.buttonModificarProd.Location = new System.Drawing.Point(900, 300);
             this.buttonModificarProd.Name = "buttonModificarProd";
             this.buttonModificarProd.Size = new System.Drawing.Size(141, 52);
             this.buttonModificarProd.TabIndex = 8;
@@ -115,11 +118,29 @@
             this.buttonModificarProd.UseVisualStyleBackColor = true;
             this.buttonModificarProd.Click += new System.EventHandler(this.buttonModificarProd_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(868, 390);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Producto a Eliminar:";
+            // 
+            // textBoxBajaProd
+            // 
+            this.textBoxBajaProd.Location = new System.Drawing.Point(874, 433);
+            this.textBoxBajaProd.Name = "textBoxBajaProd";
+            this.textBoxBajaProd.Size = new System.Drawing.Size(231, 26);
+            this.textBoxBajaProd.TabIndex = 9;
+            // 
             // FormListaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1113, 539);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBoxBajaProd);
             this.Controls.Add(this.buttonModificarProd);
             this.Controls.Add(this.buttonBajaProd);
             this.Controls.Add(this.label2);
@@ -147,5 +168,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonBajaProd;
         private System.Windows.Forms.Button buttonModificarProd;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxBajaProd;
     }
 }

@@ -15,7 +15,7 @@ namespace Negocio
 
         ProductoWS productoWS = new ProductoWS();
 
-
+        private String idAdmin = "4f3cfd0b-ba68-4f31-a8a5-63892d7e0c6f";
         public List<Producto> ListarProducto()
         {
             ProductoWS productoWS = new ProductoWS();
@@ -72,9 +72,9 @@ namespace Negocio
             productoWS.BajaProducto(id, idUsuario);
         }
 
-        public void ModificarProducto(Guid id, Guid idUsuario, int precio, int stock)
+        public void ModificarProducto(Guid id, string idAdmin, int precio, int stock)
         {
-            productoWS.ModificarProducto(id, idUsuario, precio, stock);
+            productoWS.ModificarProducto(id, idAdmin, precio, stock);
         }
 
 

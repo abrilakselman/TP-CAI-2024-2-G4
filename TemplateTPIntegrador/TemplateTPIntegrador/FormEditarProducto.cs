@@ -28,6 +28,8 @@ namespace TemplateTPIntegrador
          * 
          * */
 
+        private String idAdmin = "4f3cfd0b-ba68-4f31-a8a5-63892d7e0c6f";
+
         private FormMenuAdministrador FormMenuAdministrador;
         private Guid IdProducto;
         private string Nombre;
@@ -35,14 +37,18 @@ namespace TemplateTPIntegrador
         ValidacionesUtils validador = new ValidacionesUtils();
 
 
-        public FormEditarProducto(FormMenuAdministrador formMenuAdministrador, Guid idproducto, string nombre, string stock)
+        public FormEditarProducto(FormMenuAdministrador formMenuAdministrador, Guid idproducto, string nombre, string stock, string precio)
         {
             InitializeComponent();
             FormMenuAdministrador = formMenuAdministrador;
             IdProducto = idproducto;
             Nombre = nombre;
             Stock = stock;
-            //pending traer datos de la datagrid
+            
+            textBoxID.Text = idproducto.ToString();
+            textBoxNombre.Text = nombre.ToString();
+            textBoxPrecioAct.Text = precio.ToString();
+            textBoxStockActual.Text = stock.ToString();
         }
 
         private void FormEditarProducto_Load(object sender, EventArgs e)
@@ -68,7 +74,7 @@ namespace TemplateTPIntegrador
                 else
                 {
                     ProductoNegocio productoNegocio = new ProductoNegocio();
-                    productoNegocio.ModificarProducto(IdProducto, Sesion.Id, Int32.Parse(textBoxPrecioNuevo.Text), Int32.Parse(textBoxStockNuevo.Text));
+                    productoNegocio.ModificarProducto(IdProducto, idAdmin, Int32.Parse(textBoxPrecioNuevo.Text), Int32.Parse(textBoxStockNuevo.Text));
                     MessageBox.Show("Producto modificado exitosamente");
                     this.Hide();
                     
@@ -86,6 +92,11 @@ namespace TemplateTPIntegrador
         {
             this.Hide();
             FormMenuAdministrador.AbrirFormulario(new FormListaProducto(FormMenuAdministrador));
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+            
         }
     }
 }

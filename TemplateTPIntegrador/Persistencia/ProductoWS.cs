@@ -191,14 +191,14 @@ namespace Persistencia
         }
 
 
-        //Modificar producto del swagger toma 4 parametros: id, idusuario, precio y stock
-        public void ModificarProducto(Guid id, Guid idUsuario, int precio, int stock)
+        //Modificar producto del swagger toma 4 parametros: id, idAdmin, precio y stock
+        public void ModificarProducto(Guid id, string idAdmin, int precio, int stock)
         {
 
             String path = "/api/Producto/ModificarProducto";
             Dictionary<string, string> map = new Dictionary<string, string>();
             map.Add("id", id.ToString());
-            map.Add("idUsuario", idUsuario.ToString());
+            map.Add("idUsuario", idAdmin.ToString());
             map.Add("precio", precio.ToString());
             map.Add("stock", stock.ToString());
 

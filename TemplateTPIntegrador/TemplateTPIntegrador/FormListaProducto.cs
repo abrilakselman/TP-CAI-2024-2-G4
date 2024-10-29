@@ -1,5 +1,6 @@
 ﻿using Datos;
 using Datos;
+using Datos.Usuario;
 using Negocio;
 using Persistencia;
 using System;
@@ -19,6 +20,7 @@ namespace TemplateTPIntegrador
         //Objetivo es listar los productos por CATEGORIA
 
         public FormMenuAdministrador FormMenuAdministrador;
+        public string Producto { get; set; }
 
         public FormListaProducto(FormMenuAdministrador formMenuAdministrador)
         {
@@ -144,6 +146,7 @@ namespace TemplateTPIntegrador
 
         private void buttonBajaProd_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 if (dgvListaProductos.SelectedCells.Count > 0)
@@ -200,7 +203,7 @@ namespace TemplateTPIntegrador
 
                     ProductoWS productoWS = new ProductoWS();
                     this.Hide();
-                    FormMenuAdministrador.AbrirFormulario(new FormEditarProducto(FormMenuAdministrador, Guid.Parse(idValue), nombre, stock));
+                    FormMenuAdministrador.AbrirFormulario(new FormEditarProducto(FormMenuAdministrador, Guid.Parse(idValue), nombre, stock, precio));
                 }
             }
             catch (Exception ex)
@@ -209,5 +212,10 @@ namespace TemplateTPIntegrador
             }
         }
 
+        private void dgvListaProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Producto productoSeleccionado = (Producto)dgvListaProductos.Rows[dgvListaProductos.CurrentCell.RowIndex].DataBoundItem;
+            textBoxBajaProd.Text = productoSeleccionado.nombre;
+        }
     }
 }

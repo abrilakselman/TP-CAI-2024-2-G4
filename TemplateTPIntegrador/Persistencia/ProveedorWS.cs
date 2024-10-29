@@ -57,7 +57,27 @@ namespace Persistencia
         }
 
 
+        public static void BajaProveedor(string id, string idAdmin)
+        {
+            String path = "/api/Proveedor/BajaProveedor";
 
+            Dictionary<String, String> map = new Dictionary<String, String>();
+            map.Add("id", id);
+            map.Add("idUsuario", idAdmin);
+
+            var jsonRequest = JsonConvert.SerializeObject(map);
+
+            HttpResponseMessage response = WebHelper.DeleteWithBody(path, jsonRequest);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Algo salio mal.\nVerifique los datos ingresados");
+            }
+            else
+            {
+                Console.WriteLine("Proveedor dado de baja correctamente");
+            }
+        }
 
 
 

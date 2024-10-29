@@ -63,9 +63,9 @@ namespace Negocio
         }
 
 
-        public void BajaUsuario(Guid id, Guid idUsuario)
+        public void BajaUsuario(String idUsuario)
         {
-            usuarioWS.BajaUsuario(id, idUsuario);
+            UsuarioWS.BajaUsuario(idUsuario);
         }
 
 
