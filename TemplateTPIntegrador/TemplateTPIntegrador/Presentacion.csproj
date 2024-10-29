@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Colores.cs" />
     <Compile Include="FormAltaCliente.cs">
       <SubType>Form</SubType>
     </Compile>

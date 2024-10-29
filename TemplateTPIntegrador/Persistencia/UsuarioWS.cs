@@ -197,6 +197,35 @@ namespace Persistencia
             }
         }
 
+        public void AgregarUsuario(UsuarioPost usuarioPost)
+        {
+            String path = "/api/Usuario/AgregarUsuario";
+
+            var jsonRequest = JsonConvert.SerializeObject(usuarioPost);
+
+            try
+            {
+                HttpResponseMessage response = WebHelper.Post(path, jsonRequest);
+                if (response.IsSuccessStatusCode)
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                }
+                else
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                    throw new Exception(respuesta);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                throw ex;
+            }
+        }
+
 
 
     }

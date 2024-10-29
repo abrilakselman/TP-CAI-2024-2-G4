@@ -68,8 +68,7 @@ namespace TemplateTPIntegrador
         private void btnAltaUser_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormAltaUsuario formAltaUsuario = new FormAltaUsuario();
-            formAltaUsuario.ShowDialog();
+            FormMenuAdministrador.AbrirFormulario(new FormAltaUsuario(FormMenuAdministrador));
         }
 
         private void dgvListaUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)

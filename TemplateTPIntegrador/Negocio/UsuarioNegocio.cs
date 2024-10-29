@@ -69,6 +69,13 @@ namespace Negocio
         }
 
 
+        public void AgregarUsuario(string idUsuario, int host, string nombre, string apellido, int dni, string direccion, string telefono, string email, DateTime fechaNacimiento, string nombreUsuario, string contraseña)
+        {
+            UsuarioPost usuarioPost = new UsuarioPost(idUsuario, host, nombre, apellido, dni, direccion, telefono, email, fechaNacimiento, nombreUsuario, contraseña);
+            usuarioWS.AgregarUsuario(usuarioPost);
+        }
+
+
     }
 
 }

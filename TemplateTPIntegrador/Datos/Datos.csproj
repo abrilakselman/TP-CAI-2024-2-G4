@@ -54,6 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedor\Proveedor.cs" />
     <Compile Include="Usuario\Usuario.cs" />
+    <Compile Include="Usuario\UsuarioPost.cs" />
     <Compile Include="Usuario\UsuarioWSLogin.cs" />
     <Compile Include="Ventas\Venta.cs" />
   </ItemGroup>
