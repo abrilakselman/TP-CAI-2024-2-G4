@@ -48,6 +48,7 @@
     <Compile Include="Cliente\Cliente.cs" />
     <Compile Include="Cliente\PostCliente.cs" />
     <Compile Include="Persona\Persona.cs" />
+    <Compile Include="Persona\PersonaCliente.cs" />
     <Compile Include="productosLista.cs" />
     <Compile Include="Producto\PostProducto.cs" />
     <Compile Include="Producto\Producto.cs" />

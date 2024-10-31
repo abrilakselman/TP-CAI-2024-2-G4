@@ -168,7 +168,14 @@ namespace TemplateTPIntegrador
             textBoxContraseña.Text = string.Empty;
             comboBoxPerfil.SelectedIndex = 0;
 
-
+            //Inicializo las imagenes de error
+            pbNombreCorrecto.BringToFront();
+            pbApellidoCorrecto.BringToFront();
+            pbDireccionCorrecta.BringToFront();
+            pbTelefonoCorrecto.BringToFront();
+            pbDNICorrecto.BringToFront();
+            pbEmailCorrecto.BringToFront();
+            pbFechNacCorrecto.BringToFront();
         }
 
 

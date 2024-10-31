@@ -80,5 +80,10 @@ namespace TemplateTPIntegrador
         {
             AbrirFormulario(new FormListaProducto(this));
         }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormListaCliente(this));
+        }
     }
 }

@@ -43,6 +43,7 @@
             this.labelBienvenida = new System.Windows.Forms.Label();
             this.labelMsgStockCritico = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnCliente = new System.Windows.Forms.Button();
             this.panelMenuAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -52,6 +53,7 @@
             // panelMenuAdmin
             // 
             this.panelMenuAdmin.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panelMenuAdmin.Controls.Add(this.btnCliente);
             this.panelMenuAdmin.Controls.Add(this.pictureBox1);
             this.panelMenuAdmin.Controls.Add(this.btnReportes);
             this.panelMenuAdmin.Controls.Add(this.btnVentas);
@@ -75,7 +77,7 @@
             // 
             // btnReportes
             // 
-            this.btnReportes.Location = new System.Drawing.Point(23, 351);
+            this.btnReportes.Location = new System.Drawing.Point(22, 389);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(133, 33);
             this.btnReportes.TabIndex = 4;
@@ -85,7 +87,7 @@
             // 
             // btnVentas
             // 
-            this.btnVentas.Location = new System.Drawing.Point(23, 311);
+            this.btnVentas.Location = new System.Drawing.Point(23, 350);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(133, 33);
             this.btnVentas.TabIndex = 3;
@@ -94,7 +96,7 @@
             // 
             // btnProducto
             // 
-            this.btnProducto.Location = new System.Drawing.Point(22, 271);
+            this.btnProducto.Location = new System.Drawing.Point(23, 271);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Size = new System.Drawing.Size(134, 33);
             this.btnProducto.TabIndex = 2;
@@ -191,6 +193,16 @@
             this.panelMenu.Size = new System.Drawing.Size(1385, 673);
             this.panelMenu.TabIndex = 4;
             // 
+            // btnCliente
+            // 
+            this.btnCliente.Location = new System.Drawing.Point(23, 310);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(134, 33);
+            this.btnCliente.TabIndex = 5;
+            this.btnCliente.Text = "Clientes";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            // 
             // FormMenuAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -227,5 +239,6 @@
         private System.Windows.Forms.Label labelBienvenida;
         private System.Windows.Forms.Label labelMsgStockCritico;
         private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Button btnCliente;
     }
 }

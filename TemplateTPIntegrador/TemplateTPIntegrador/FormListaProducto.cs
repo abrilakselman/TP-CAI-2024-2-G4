@@ -217,5 +217,11 @@ namespace TemplateTPIntegrador
             Producto productoSeleccionado = (Producto)dgvListaProductos.Rows[dgvListaProductos.CurrentCell.RowIndex].DataBoundItem;
             textBoxBajaProd.Text = productoSeleccionado.nombre;
         }
+
+        private void buttonAltaProd_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMenuAdministrador.AbrirFormulario(new FormAltaProducto(FormMenuAdministrador));
+        }
     }
 }

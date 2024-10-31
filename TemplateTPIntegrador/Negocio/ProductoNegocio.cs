@@ -5,8 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Persistencia;
-using Datos;
-
+using Datos.Producto;
 
 namespace Negocio
 {
@@ -76,6 +75,14 @@ namespace Negocio
         {
             productoWS.ModificarProducto(id, idAdmin, precio, stock);
         }
+
+        public void agregarProducto(int idCategoria, string idAdmin, string idProveedor, string nombre, int precio, int stock)
+        {
+            PostProducto productoPost = new PostProducto(idCategoria, idAdmin, idProveedor, nombre, precio, stock);
+            productoWS.AgregarProducto(productoPost);
+
+        }
+
 
 
     }

@@ -56,6 +56,12 @@
     <Compile Include="FormAltaCliente.Designer.cs">
       <DependentUpon>FormAltaCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAltaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAltaProducto.Designer.cs">
+      <DependentUpon>FormAltaProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAltaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,12 @@
     </Compile>
     <Compile Include="FormEditarProducto.Designer.cs">
       <DependentUpon>FormEditarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListaCliente.Designer.cs">
+      <DependentUpon>FormListaCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FormListaProducto.cs">
       <SubType>Form</SubType>
@@ -165,6 +177,9 @@
     <EmbeddedResource Include="FormAltaCliente.resx">
       <DependentUpon>FormAltaCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAltaProducto.resx">
+      <DependentUpon>FormAltaProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAltaUsuario.resx">
       <DependentUpon>FormAltaUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditarProducto.resx">
       <DependentUpon>FormEditarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListaCliente.resx">
+      <DependentUpon>FormListaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListaProducto.resx">
       <DependentUpon>FormListaProducto.cs</DependentUpon>

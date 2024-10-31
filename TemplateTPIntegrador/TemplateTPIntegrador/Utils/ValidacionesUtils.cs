@@ -67,14 +67,56 @@ namespace TemplateTPIntegrador
 
         }
 
+        //Producto
+
+        public static string ValidarNumero(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return "Error: el valor está vacío.";
+            }
+
+            if (!int.TryParse(input, out int numero))
+            {
+                return "Error: el valor no es un número válido.";
+            }
+
+            if (numero < 0)
+            {
+                return "Error: el número no puede ser negativo.";
+            }
+
+            return numero.ToString();
+
+        }
+
+
+        public bool ValidarSoloLetras(string texto)
+        {
+            if (string.IsNullOrEmpty(texto))
+            {
+                return false; // Devuelve falso si el string está vacío
+            }
+
+            foreach (char c in texto)
+            {
+                if (!char.IsLetter(c))
+                {
+                    return false; // Devuelve falso si encuentra un carácter que no es una letra
+                }
+            }
+
+            return true; // Devuelve verdadero si todos los caracteres son letras
+        }
+
+
 
         //Usuario 
 
 
-
         public static bool ValidarPerfil(string perfilText, out int perfil)
         {
-            return int.TryParse(perfilText, out perfil);
+        return int.TryParse(perfilText, out perfil);
         }
 
 

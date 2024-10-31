@@ -55,4 +55,9 @@ public class Proveedor
         
     }
 
+    public override string ToString()
+    {
+        return $"{Nombre} {Apellido} {CUIT}";
+    }
+
 }

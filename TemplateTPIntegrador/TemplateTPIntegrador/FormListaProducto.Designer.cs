@@ -88,6 +88,7 @@
             this.buttonAltaProd.TabIndex = 5;
             this.buttonAltaProd.Text = "Alta";
             this.buttonAltaProd.UseVisualStyleBackColor = true;
+            this.buttonAltaProd.Click += new System.EventHandler(this.buttonAltaProd_Click);
             // 
             // label2
             // 
