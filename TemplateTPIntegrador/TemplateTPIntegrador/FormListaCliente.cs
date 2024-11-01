@@ -1,4 +1,5 @@
-﻿using Negocio;
+﻿using Datos.Cliente;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -19,5 +19,13 @@ namespace Datos
         }
         public string Id { get => _id; set => _id = value; }
         public string Valor { get => _valor; set => _valor = value; }
+
+        public override string ToString()
+        {
+            return Valor;
+        }
+
+
+
     }
 }

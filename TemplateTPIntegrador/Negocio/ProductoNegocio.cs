@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Persistencia;
 using Datos.Producto;
+using System.Xml.Linq;
 
 namespace Negocio
 {
@@ -83,6 +84,8 @@ namespace Negocio
 
         }
 
+
+        
 
 
     }

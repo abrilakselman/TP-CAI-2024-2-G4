@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Datos.Cliente;
+using Newtonsoft.Json;
 using Persistencia.Utils;
 using System;
 using System.Collections.Generic;
@@ -51,7 +52,7 @@ namespace Persistencia
             }
             return clientes;
         }
-
+        
 
 
 

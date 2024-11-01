@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Persistencia;
+using Datos;
+using Datos.Cliente;
 
 namespace Negocio
 {
@@ -13,7 +15,6 @@ namespace Negocio
         public List<Cliente> ListarCliente()
         {
             
-
             return clienteWS.GetCliente();
 
         }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuAdministrador));
             this.panelMenuAdmin = new System.Windows.Forms.Panel();
+            this.btnCliente = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
@@ -43,7 +44,8 @@
             this.labelBienvenida = new System.Windows.Forms.Label();
             this.labelMsgStockCritico = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnCliente = new System.Windows.Forms.Button();
+            this.textBoxStockCritico = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelMenuAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -64,6 +66,16 @@
             this.panelMenuAdmin.Name = "panelMenuAdmin";
             this.panelMenuAdmin.Size = new System.Drawing.Size(181, 437);
             this.panelMenuAdmin.TabIndex = 0;
+            // 
+            // btnCliente
+            // 
+            this.btnCliente.Location = new System.Drawing.Point(23, 310);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(134, 33);
+            this.btnCliente.TabIndex = 5;
+            this.btnCliente.Text = "Clientes";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // pictureBox1
             // 
@@ -93,6 +105,7 @@
             this.btnVentas.TabIndex = 3;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // btnProducto
             // 
@@ -178,30 +191,42 @@
             // 
             this.labelMsgStockCritico.AutoSize = true;
             this.labelMsgStockCritico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMsgStockCritico.Location = new System.Drawing.Point(45, 129);
+            this.labelMsgStockCritico.Location = new System.Drawing.Point(157, 131);
             this.labelMsgStockCritico.Name = "labelMsgStockCritico";
-            this.labelMsgStockCritico.Size = new System.Drawing.Size(401, 29);
+            this.labelMsgStockCritico.Size = new System.Drawing.Size(297, 29);
             this.labelMsgStockCritico.TabIndex = 3;
-            this.labelMsgStockCritico.Text = "Hay XXX productos con stock crítico";
+            this.labelMsgStockCritico.Text = "productos con stock crítico";
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.textBoxStockCritico);
+            this.panelMenu.Controls.Add(this.label1);
             this.panelMenu.Controls.Add(this.labelMsgStockCritico);
             this.panelMenu.Controls.Add(this.labelBienvenida);
             this.panelMenu.Location = new System.Drawing.Point(177, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1385, 673);
+            this.panelMenu.Size = new System.Drawing.Size(1377, 673);
             this.panelMenu.TabIndex = 4;
             // 
-            // btnCliente
+            // textBoxStockCritico
             // 
-            this.btnCliente.Location = new System.Drawing.Point(23, 310);
-            this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(134, 33);
-            this.btnCliente.TabIndex = 5;
-            this.btnCliente.Text = "Clientes";
-            this.btnCliente.UseVisualStyleBackColor = true;
-            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            this.textBoxStockCritico.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBoxStockCritico.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxStockCritico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxStockCritico.Location = new System.Drawing.Point(114, 129);
+            this.textBoxStockCritico.Name = "textBoxStockCritico";
+            this.textBoxStockCritico.Size = new System.Drawing.Size(44, 28);
+            this.textBoxStockCritico.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(54, 131);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 29);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Hay";
             // 
             // FormMenuAdministrador
             // 
@@ -240,5 +265,7 @@
         private System.Windows.Forms.Label labelMsgStockCritico;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button btnCliente;
+        private System.Windows.Forms.TextBox textBoxStockCritico;
+        private System.Windows.Forms.Label label1;
     }
 }

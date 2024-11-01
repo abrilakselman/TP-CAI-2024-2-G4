@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Datos.Usuario;
+using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +14,29 @@ namespace TemplateTPIntegrador
 {
     public partial class FormMenuAdministrador : Form
     {
+
+        ProductoNegocio productoNegocio = new ProductoNegocio();
+        UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
+
         public FormMenuAdministrador()
         {
             InitializeComponent();
         }
 
+
+        //carga de aviso de stock critico en Menu Admin y supervisor
         private void FormMenuAdministrador_Load(object sender, EventArgs e)
         {
-            //deberia ir la funcion de mostrar stock critico en pantalla principal de los menus
+            var productos = productoNegocio.ListarProducto().Where(x => x.stockBajo).ToList();
+            if (productos.Any())  // Any para verificar si hay algún producto en lugar de Count() > 0
+            {
+                textBoxStockCritico.Text = productos.Count.ToString();
+            }
         }
+
+
+
+
 
         //Abre los formularios dentro del panel de control en la pantalla de Menu admin
         public void AbrirFormulario(Form formulario)
@@ -84,6 +100,11 @@ namespace TemplateTPIntegrador
         private void btnCliente_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new FormListaCliente(this));
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormListaVenta(this));
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 public class Cliente : PersonaCliente
 {
 
+    
     public int idUsuario { get; set; }
     public string host { get; set; }
 
@@ -22,7 +23,7 @@ public class Cliente : PersonaCliente
     public override string ToString()
     {
         return $"{nombre} {apellido} {direccion}";
-    }
+    } 
 
 }
 
