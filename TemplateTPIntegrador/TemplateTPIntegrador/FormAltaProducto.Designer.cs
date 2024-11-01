@@ -278,7 +278,7 @@
             // 
             this.pbNombCorrecto.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbNombCorrecto.ErrorImage")));
             this.pbNombCorrecto.Image = ((System.Drawing.Image)(resources.GetObject("pbNombCorrecto.Image")));
-            this.pbNombCorrecto.Location = new System.Drawing.Point(297, 38);
+            this.pbNombCorrecto.Location = new System.Drawing.Point(296, 36);
             this.pbNombCorrecto.Name = "pbNombCorrecto";
             this.pbNombCorrecto.Size = new System.Drawing.Size(39, 38);
             this.pbNombCorrecto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

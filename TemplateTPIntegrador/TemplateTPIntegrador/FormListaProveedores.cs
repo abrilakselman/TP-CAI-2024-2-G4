@@ -128,5 +128,11 @@ namespace TemplateTPIntegrador
             Proveedor proveedorSeleccionado = (Proveedor)dgvListaProveedores.Rows[dgvListaProveedores.CurrentCell.RowIndex].DataBoundItem;
             textBoxBajaProv.Text = proveedorSeleccionado.Apellido + ", " + proveedorSeleccionado.Nombre;
         }
+
+        private void btnAltaProv_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMenuAdministrador.AbrirFormulario(new FormAltaProveedor(FormMenuAdministrador));
+        }
     }
 }

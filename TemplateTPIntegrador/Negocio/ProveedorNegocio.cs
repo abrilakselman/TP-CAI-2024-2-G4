@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Datos.Proveedor;
 using Persistencia;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,14 @@ namespace Negocio
         {
             ProveedorWS.BajaProveedor(idProveedor, idAdmin);
         }
+
+        public void agregarProveedor(string idUsuario, string nombre, string apellido, string email, string cuit)
+        {
+            PostProveedor postProveedor = new PostProveedor(idUsuario, nombre, apellido, email, cuit);
+            proveedorWS.AgregarProveedor(postProveedor);
+        }
+
+
 
     }
 }

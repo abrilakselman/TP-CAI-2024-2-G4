@@ -144,7 +144,7 @@ namespace TemplateTPIntegrador
                     int precio = Int32.Parse(textBoxPrecio.Text);
                     int stock = Int32.Parse(textBoxStock.Text);
 
-                    // Asegúrate de que los datos están formateados y convertidos correctamente
+                    // los datos están formateados y convertidos correctamente
                     productoNegocio.agregarProducto(Int32.Parse(categoria), idAdmin, idProveedor, nombre, precio, stock);
 
                     DialogResult result = MessageBox.Show("Producto agregado exitosamente. Desea agregar otro?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);

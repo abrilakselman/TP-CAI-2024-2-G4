@@ -7,6 +7,8 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using Datos.Proveedor;
 
 namespace Persistencia
 {
@@ -78,6 +80,38 @@ namespace Persistencia
                 Console.WriteLine("Proveedor dado de baja correctamente");
             }
         }
+
+
+        public void AgregarProveedor(PostProveedor postProveedor)
+        {
+            String path = "/api/Proveedor/AgregarProveedor";
+
+            var jsonRequest = JsonConvert.SerializeObject(postProveedor);
+
+            try
+            {
+                HttpResponseMessage response = WebHelper.Post(path, jsonRequest);
+                if (response.IsSuccessStatusCode)
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                }
+                else
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                    throw new Exception(respuesta);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                throw ex;
+            }
+        }
+
+
 
 
 

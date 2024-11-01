@@ -89,6 +89,7 @@ namespace TemplateTPIntegrador
             this.btnAltaProv.TabIndex = 5;
             this.btnAltaProv.Text = "Alta";
             this.btnAltaProv.UseVisualStyleBackColor = true;
+            this.btnAltaProv.Click += new System.EventHandler(this.btnAltaProv_Click);
             // 
             // label2
             // 

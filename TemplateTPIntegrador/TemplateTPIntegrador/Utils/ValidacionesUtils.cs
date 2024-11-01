@@ -67,6 +67,111 @@ namespace TemplateTPIntegrador
 
         }
 
+
+        //Proveedor
+
+        //cree uno auxiliar porque con los otros metodos no me daba bien, y no encontre problema
+        public bool ValidarSoloLetrasProv(string texto)
+        {
+            if (string.IsNullOrEmpty(texto))
+            {
+                return false; // Devuelve falso si el string está vacío
+            }
+            foreach (char c in texto)
+            {
+                if (!char.IsLetter(c))
+                {
+                    return false; // Devuelve falso si encuentra un carácter que no es una letra
+                }
+            }
+            return true; // Devuelve verdadero si todos los caracteres son letras
+        }
+
+
+        public bool ValidarCUIT(string cuit)
+        {
+            // Verifica que el CUIT no esté vacío
+            if (string.IsNullOrWhiteSpace(cuit))
+            {
+                return false;
+            }
+
+            // Verifica que el CUIT tenga exactamente 11 caracteres
+            if (cuit.Length != 11)
+            {
+                return false;
+            }
+
+            // Verifica que todos los caracteres sean números
+            foreach (char c in cuit)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+
+            // Si pasa todas las validaciones, retorna true
+            return true;
+        }
+
+
+        public static string ValidarCUIT_PB(string cuit)  //validacion creada especialmente para el picturebox
+        {
+            // Verifica que el CUIT no esté vacío
+            if (string.IsNullOrWhiteSpace(cuit))
+            {
+                return "CUIT no puede estar vacio";
+            }
+
+            // Verifica que el CUIT tenga exactamente 11 caracteres
+            if (cuit.Length != 11)
+            {
+                return "cuit no puede ser mas de 11 caracteres";
+            }
+
+            // Verifica que todos los caracteres sean números
+            foreach (char c in cuit)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return "cuit tiene que ser un numero";
+                }
+            }
+
+            // Si pasa todas las validaciones, retorna true
+            return cuit;
+        }
+
+
+        public bool ValidarEmailProv(string email)
+        {
+            // Convierte el email a minúsculas
+            email = email.ToLower();
+
+            // Verifica que no esté vacío
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                return false;
+            }
+
+            // Verifica que contenga '@'
+            if (!email.Contains("@"))
+            {
+                return false;
+            }
+
+            // Verifica que termine con '.com'
+            if (!email.EndsWith(".com") )
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+
+
         //Producto
 
         public static string ValidarNumero(string input)
@@ -173,9 +278,11 @@ namespace TemplateTPIntegrador
             return telefono;
         }
 
-        public static string ValidarEmail(string email)
+        public static string ValidarEmail(string text)
         {
-            if (!email.Contains("@") || !email.EndsWith(".com"))
+            string email = text.ToLower();
+
+            if (!email.Contains("@") || !email.EndsWith(".com") )
             {
                 email = "\nError! No es un mail válido\n";
             }
