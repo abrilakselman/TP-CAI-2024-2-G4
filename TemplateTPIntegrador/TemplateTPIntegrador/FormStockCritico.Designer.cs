@@ -85,6 +85,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormStockCritico";
             this.Text = "Reporte de Stock Crítico";
+            this.Load += new System.EventHandler(this.FormStockCritico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProdStockCritico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

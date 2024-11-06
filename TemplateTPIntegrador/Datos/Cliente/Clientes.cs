@@ -9,42 +9,63 @@ namespace Datos.Cliente
     public class Clientes
     {
 
-        public String id { get; set; }
-        public String nombre { get; set; }
-        public String apellido { get; set; }
-        public int dni { get; set; }
-        public String direccion { get; set; }
-        public String telefono { get; set; }
-        public String email { get; set; }
-        public DateTime fechaNacimiento { get; set; }
-        public DateTime fechaalta { get; set; }
-        public DateTime fechabaja { get; set; }
-        public String host { get; set; }
+        string _id;
+        String _nombre;
+        String _apellido;
+        int _dni;
+        String _direccion;
+        String _telefono;
+        String _email;
+        DateTime _fechaNacimiento;
+        DateTime _fechaAlta;
+        DateTime _fechaBaja;
+        String _host;
 
-        public Clientes() { }
-        public Clientes(string id, string nombre, string apellido, int dni, string direccion, string telefono, string email, DateTime fechanacimiento, string host)
+        public Clientes()
         {
-            id = id;
-            nombre = nombre;
-            apellido = apellido;
-            dni = dni;
-            direccion = direccion;
-            telefono = telefono;
-            email = email;
-            fechanacimiento = fechaNacimiento;
-            host = host;
+            //
         }
 
-        public Clientes(string nombre, string apellido, int dni, string direccion, string telefono, string email, DateTime fechanacimiento)
+        public Clientes(string id, string nombre, string apellido, int dni, string direccion, string telefono, string email, DateTime fechaNacimiento, DateTime fechaAlta, DateTime fechaBaja, string Host)
         {
-            nombre = nombre;
-            apellido = apellido;
-            dni = dni;
-            direccion = direccion;
-            telefono = telefono;
-            email = email;
-            fechanacimiento = fechaNacimiento;
+            _id = id;
+            _nombre = nombre;
+            _apellido = apellido;
+            _dni = dni;
+            _direccion = direccion;
+            _telefono = telefono;
+            _email = email;
+            _fechaNacimiento = fechaNacimiento;
+            _fechaAlta = fechaAlta;
+            _fechaBaja = fechaBaja;
+            _host = Host;
+        }
 
+        public string Id { get => _id; set => _id = value; }
+
+        public string Nombre { get => _nombre; set => _nombre = value; }
+
+        public string Apellido { get => _apellido; set => _apellido = value; }
+
+        public int DNI { get => _dni; set => _dni = value; }
+
+        public string Direccion { get => _direccion; set => _direccion = value; }
+
+        public string Telefono { get => _telefono; set => _telefono = value; }
+
+        public string Email { get => _email; set => _email = value; }
+
+        public DateTime FechaNacimiento { get => _fechaNacimiento; set => _fechaNacimiento = value; }
+
+        public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
+
+        public DateTime FechaBaja { get => _fechaBaja; set => _fechaBaja = value; }
+
+        public string Host { get => _host; set => _host = value; }
+
+        public String ToString()
+        {
+            return this.Apellido + ", " + this.Nombre + " (" + this.DNI + ")";
         }
     }
 }

@@ -51,6 +51,7 @@
     <Compile Include="ProveedorWS.cs" />
     <Compile Include="UsuarioWS.cs" />
     <Compile Include="Utils\WebHelper.cs" />
+    <Compile Include="VentaWS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">

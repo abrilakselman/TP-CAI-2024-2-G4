@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 public class Cliente : PersonaCliente
 {
 
-    
     public int idUsuario { get; set; }
     public string host { get; set; }
 

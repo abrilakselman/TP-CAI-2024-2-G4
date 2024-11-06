@@ -60,7 +60,10 @@
     <Compile Include="Usuario\UsuarioPost.cs" />
     <Compile Include="Usuario\UsuarioWSLogin.cs" />
     <Compile Include="Ventas\Comprobante.cs" />
+    <Compile Include="Ventas\Descuento.cs" />
     <Compile Include="Ventas\Venta.cs" />
+    <Compile Include="Ventas\VentaLista.cs" />
+    <Compile Include="Ventas\VentaPost.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

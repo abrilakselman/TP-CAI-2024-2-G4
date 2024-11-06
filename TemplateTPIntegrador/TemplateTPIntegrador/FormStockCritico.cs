@@ -82,5 +82,13 @@ namespace TemplateTPIntegrador
             this.Hide();
             FormMenuAdministrador.AbrirFormulario(new FormReportes(FormMenuAdministrador));
         }
+
+        private void FormStockCritico_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
     }
 }

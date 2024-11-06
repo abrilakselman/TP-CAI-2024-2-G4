@@ -15,11 +15,16 @@ namespace Negocio
         public List<Cliente> ListarCliente()
         {
             
-            return clienteWS.GetCliente();
+            return clienteWS.GetClientes();
 
         }
 
+        public List<Clientes> ListarCliente2()
+        {
 
+            return clienteWS.getClientes();
+
+        }
 
 
 

@@ -35,7 +35,7 @@ namespace TemplateTPIntegrador
         private void btnVtasXVendedor_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormVentasPorVendedor formVentasPorVendedor = new FormVentasPorVendedor();
+            FormVentasPorVendedor formVentasPorVendedor = new FormVentasPorVendedor(FormMenuAdministrador);
             formVentasPorVendedor.ShowDialog();
 
         }

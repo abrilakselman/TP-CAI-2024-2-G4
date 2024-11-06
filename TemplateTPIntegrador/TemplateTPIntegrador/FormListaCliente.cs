@@ -16,7 +16,7 @@ namespace TemplateTPIntegrador
     public partial class FormListaCliente : Form
     {
         public FormMenuAdministrador FormMenuAdministrador;
-
+        private ClienteNegocio ClienteNegocio = new ClienteNegocio();
 
         public FormListaCliente(FormMenuAdministrador formMenuAdministrador)
         {
@@ -31,28 +31,25 @@ namespace TemplateTPIntegrador
         {
             try
             {
-                ClienteNegocio clienteNegocio = new ClienteNegocio();
-                List<Cliente> lista = clienteNegocio.ListarCliente();
-                if (lista != null && lista.Count > 0)
-                {
-                    // Ordena la lista por nombre
-                    lista = lista.OrderBy(cliente => cliente.nombre).ToList();
-                    dgvListaCliente.DataSource = lista;
-                    dgvListaCliente.Columns["id"].DisplayIndex = 0;
-                    dgvListaCliente.Columns["nombre"].DisplayIndex = 1;
-                    dgvListaCliente.Columns["apellido"].DisplayIndex = 2;
-                    dgvListaCliente.Columns["fechaBaja"].Visible = false;
-                    dgvListaCliente.Columns["idUsuario"].Visible = false;
-                    dgvListaCliente.Refresh();
-                }
-                else
-                {
-                    MessageBox.Show("No se encontraron clientes.");
-                }
+                List<Cliente> Cliente = ClienteNegocio.ListarCliente();
+
+                
+
+                var bindingList = new BindingList<Cliente>(Cliente);
+                var source = new BindingSource(bindingList, null);
+
+                dgvListaCliente.DataSource = source;
+                dgvListaCliente.Columns["id"].Visible = false;
+                dgvListaCliente.Columns["Host"].Visible = false;
+                dgvListaCliente.Columns["fechaBaja"].Visible = false;
+                dgvListaCliente.Columns["fechaAlta"].Visible = false;
+                dgvListaCliente.Columns["fechaNacimiento"].HeaderText = "Nacimiento";
+                dgvListaCliente.Columns["Direccion"].HeaderText = "Dirección";
+                dgvListaCliente.Columns["Telefono"].HeaderText = "Teléfono";
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}");
+                MessageBox.Show("Error al cargar los clientes: " + ex.Message);
             }
         }
 

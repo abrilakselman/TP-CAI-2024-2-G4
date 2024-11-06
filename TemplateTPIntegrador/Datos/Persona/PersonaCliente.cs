@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 public abstract class PersonaCliente : Persona
 {
-
     public string direccion { get; set; }
     public string telefono { get; set; }
     public int dni { get; set; }
