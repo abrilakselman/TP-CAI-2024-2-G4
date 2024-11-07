@@ -32,6 +32,10 @@ namespace TemplateTPIntegrador
         private void btnLogin_Click(object sender, EventArgs e)
 
         {
+            //creo instanciapara el bloqueo
+            ArchivoLogin archivo = new ArchivoLogin();
+
+
             //Logica del Login
             //valido el usuario y contraseña que ingreso
             // 1. verifico que el usuario exista
@@ -63,15 +67,28 @@ namespace TemplateTPIntegrador
                 
                 try
                 {
-                   //se valida los intentos y cuando son menos de 3 accede al login segun el rol
- 
+                    //se valida los intentos y cuando son menos de 3 accede al login segun el rol
+
+                    bool tieneReintentos = archivo.TieneReintentos(txtUsuario.Text);
+
+                    if (!tieneReintentos)
+                    {
+                        MessageBox.Show("El usuario supero los 3 reintentos permitidos. Ha sido bloqueado, porfavor contactar con el Administrador (Cod. Bloque1234)");
+                        return;
+                    }
+
+                    //Pasa la verificacion de los 3 intentos
+
                     Guid idUsuario = usuarioNegocio.LogIn(usuario, contraseña);
-
-
                     rol = usuarioNegocio.LogInRol(usuario, contraseña);
 
+                    
+                    Sesion.Nombre = txtUsuario.Text;
+                    archivo.ActualizarLogin(txtUsuario.Text);
+                    
 
-                    // 1 vendedor, 2 supervisor, 3 administrador
+
+                    // se loguea a cada menu segun 1 vendedor, 2 supervisor, 3 administrador, cuando tiene menos de tres intentos
                     if (rol == 3)
                     {
                         this.Hide();
@@ -93,8 +110,28 @@ namespace TemplateTPIntegrador
                 }
                 catch (Exception ex) //entra en el catch cuando esta inactivo
                 {
-                    //metodos de validacion para intentos
-                    MessageBox.Show(ex.Message);
+
+                    if (ex.Message == "Cuenta inactiva")
+                    {
+
+                        FormReactivarCuenta formReactivar = new FormReactivarCuenta(contraseña, usuario);
+                        formReactivar.Show();
+                    }
+                    else
+                    {
+                        bool usuarioHabilitado = archivo.GuardarLoginFallido(txtUsuario.Text);
+
+                        if (!usuarioHabilitado)
+                        {
+                            MessageBox.Show("El usuario supero los 3 reintentos permitidos. Ha sido bloqueado, porfavor contactar con el Administrador (Cod. Bloque1234)");
+                            return;
+                        }
+
+                        MessageBox.Show(ex.Message);
+                    }
+
+                                        
+                   // MessageBox.Show(ex.Message);
                 }
             }
 
@@ -152,6 +189,11 @@ namespace TemplateTPIntegrador
             {
                 e.Cancel = true; // Cancela el cierre del formulario
             }
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
