@@ -227,6 +227,77 @@ namespace Persistencia
         }
 
 
+        public DateTime VerFechaAltaUsuario(string usuario, string idAdmin)
+        {
+            JToken usuariofechaAlta = BuscarUsuarioPorNombreUsuario(usuario, idAdmin);
+            DateTime fechaAlta = DateTime.Now;
+            return fechaAlta;
+        }
+
+
+        public void CambiarContraseña(String nombreUsuario, String contraseña, String contraseñaNueva)
+        {
+            String path = "/api/Usuario/CambiarContraseña";
+            Dictionary<string, string> map = new Dictionary<string, string>();
+            map.Add("nombreUsuario", nombreUsuario);
+            map.Add("contraseña", contraseña);
+            map.Add("contraseñaNueva", contraseñaNueva);
+
+            var jsonRequest = JsonConvert.SerializeObject(map);
+
+            try
+            {
+                HttpResponseMessage response = WebHelper.Patch(path, jsonRequest);
+                if (response.IsSuccessStatusCode)
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                    Console.WriteLine($"Cambio contraseña exitoso: {response.StatusCode} - {response.ReasonPhrase}");
+                }
+                else
+                {
+                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+        }
+
+
+        public void ReactivarUsuario(Guid id, Guid idUsuario)
+        {
+            String path = "/api/Usuario/ReactivarUsuario";
+
+            Dictionary<string, string> map = new Dictionary<string, string>();
+            map.Add("id", id.ToString());
+            map.Add("idUsuario", idUsuario.ToString());
+
+            var jsonRequest = JsonConvert.SerializeObject(map);
+            try
+            {
+                HttpResponseMessage response = WebHelper.Patch(path, jsonRequest);
+                if (response.IsSuccessStatusCode)
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                }
+                else
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                    throw new Exception(respuesta);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                throw ex;
+            }
+        }
+
 
     }
 }

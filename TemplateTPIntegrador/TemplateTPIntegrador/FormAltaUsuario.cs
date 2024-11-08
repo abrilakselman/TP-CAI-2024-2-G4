@@ -82,7 +82,7 @@ namespace TemplateTPIntegrador
 
             string idAdmin = "4f3cfd0b-ba68-4f31-a8a5-63892d7e0c6f"; //idadmin nuestro
 
-            //string contraseña = "PrimerLogin";
+            
 
             int host;
             if (comboBoxPerfil.SelectedValue == null || !int.TryParse(comboBoxPerfil.SelectedValue.ToString(), out host))

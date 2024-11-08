@@ -68,6 +68,18 @@ namespace TemplateTPIntegrador
         }
 
 
+        public bool validarIguales(string a, string b)
+        {
+            bool retorno = true;
+
+            if (a == b)
+            {
+                retorno = false;
+            }
+            return retorno;
+        }
+
+
         //Proveedor
 
         //cree uno auxiliar porque con los otros metodos no me daba bien, y no encontre problema
@@ -405,9 +417,14 @@ namespace TemplateTPIntegrador
             return contraseña;
 
 
-
-
         }
+
+        public bool longitudCampo(string txt, int inf, int sup)
+        {
+            bool esValido = (txt.Length < inf || txt.Length > sup);
+            return esValido;
+        }
+
 
     }
 

@@ -85,10 +85,34 @@ namespace TemplateTPIntegrador
                     
                     Sesion.Nombre = txtUsuario.Text;
                     archivo.ActualizarLogin(txtUsuario.Text);
-                    
 
 
-                    // se loguea a cada menu segun 1 vendedor, 2 supervisor, 3 administrador, cuando tiene menos de tres intentos
+                    // comprueba si es el primer login del user o si tiene la contraseña vencida
+                    //-	La contraseña debe de expirar cada 30 días solicitando al usuario una nueva y no puede ser igual a la anterior
+
+                    if (rol == 1 || rol == 2 || rol == 3)
+                    {
+                        int primerLogin = usuarioNegocio.PrimerLogin(contraseña);
+                        int contraseñaVencida = usuarioNegocio.ContraseñaVencida(usuario);
+
+                        //si es el primer login pide cambiar la contaseña
+                        //password definitiva CAI20232
+
+                        if (primerLogin == 1 || contraseñaVencida == 1)
+                        {
+                            MessageBox.Show("Debe cambiar su contraseña", "", MessageBoxButtons.OK);
+
+                            FormCambiarContraseña formCambiarContraseña = new FormCambiarContraseña();
+                            formCambiarContraseña.Usuario = usuario;
+                            formCambiarContraseña.ShowDialog();
+                        }
+                    }
+
+
+
+
+                        // se loguea a cada menu segun 1 vendedor, 2 supervisor, 3 administrador, cuando tiene menos de tres intentos
+                        //y no es primer login ni esta vencida la password
                     if (rol == 3)
                     {
                         this.Hide();

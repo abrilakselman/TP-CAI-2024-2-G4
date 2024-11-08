@@ -288,9 +288,8 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(327, 432);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(310, 20);
+            this.label11.Size = new System.Drawing.Size(0, 20);
             this.label11.TabIndex = 26;
-            this.label11.Text = "Se le asignara una contraseña por defecto";
             // 
             // pbNombreCorrecto
             // 
@@ -501,9 +500,9 @@
             this.lblInstruccionesRegistrar.Location = new System.Drawing.Point(327, 455);
             this.lblInstruccionesRegistrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInstruccionesRegistrar.Name = "lblInstruccionesRegistrar";
-            this.lblInstruccionesRegistrar.Size = new System.Drawing.Size(285, 20);
+            this.lblInstruccionesRegistrar.Size = new System.Drawing.Size(316, 20);
             this.lblInstruccionesRegistrar.TabIndex = 66;
-            this.lblInstruccionesRegistrar.Text = "Tenga en cuenta el nombre de usuario:";
+            this.lblInstruccionesRegistrar.Text = "Tenga en cuenta que el nombre de usuario:";
             // 
             // textBoxContraseña
             // 

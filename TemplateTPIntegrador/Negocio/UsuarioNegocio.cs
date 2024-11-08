@@ -76,6 +76,58 @@ namespace Negocio
         }
 
 
+        public int PrimerLogin(string contraseña)
+        {
+            int primerLogin = 0;
+            string contraseñaDefinitiva = "CAI20232";
+
+            // si el usuario hace login correcto, pero con contraseña diferente a CAI20232, entonces es primer login. 
+            if (contraseña != contraseñaDefinitiva)
+            {
+                primerLogin = 1;
+            }
+            return primerLogin;
+        }
+
+        public int ContraseñaVencida(string usuario)
+        {
+            int fecha;
+            DateTime fechaAlta = BuscarFechaAlta(usuario);
+            DateTime fechaActual = DateTime.Now;
+            TimeSpan diferenciaFechas = fechaActual - fechaAlta;
+
+            if (diferenciaFechas.TotalDays < 30)
+            {
+                fecha = 0;
+            }
+            else
+            {
+                fecha = 1;
+            }
+            return fecha;
+        }
+
+        public DateTime BuscarFechaAlta(string usuario)
+        {
+            DateTime fechaAlta = usuarioWS.VerFechaAltaUsuario(usuario, idAdmin);
+            return fechaAlta;
+        }
+
+
+        public void CambiarContraseña(string usuario, string contraseña, string contraseñaNueva)
+        {
+            usuarioWS.CambiarContraseña(usuario, contraseña, contraseñaNueva);
+        }
+
+
+        public void ReactivarUsuario(Guid id, Guid idUsuario)
+        {
+            usuarioWS.ReactivarUsuario(id, idUsuario);
+        }
+
+        
+
+
     }
 
 }
