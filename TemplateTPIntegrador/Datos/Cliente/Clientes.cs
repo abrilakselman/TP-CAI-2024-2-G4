@@ -9,7 +9,7 @@ namespace Datos.Cliente
     public class Clientes
     {
 
-        string _id;
+        Guid _id;
         String _nombre;
         String _apellido;
         int _dni;
@@ -18,17 +18,12 @@ namespace Datos.Cliente
         String _email;
         DateTime _fechaNacimiento;
         DateTime _fechaAlta;
-        DateTime _fechaBaja;
+        DateTime? _fechaBaja;
         String _host;
 
-        public Clientes()
-        {
-            //
-        }
 
-        public Clientes(string id, string nombre, string apellido, int dni, string direccion, string telefono, string email, DateTime fechaNacimiento, DateTime fechaAlta, DateTime fechaBaja, string Host)
+        public Clientes(string nombre, string apellido, int dni, string direccion, string telefono, string email, DateTime fechaNacimiento)
         {
-            _id = id;
             _nombre = nombre;
             _apellido = apellido;
             _dni = dni;
@@ -36,36 +31,24 @@ namespace Datos.Cliente
             _telefono = telefono;
             _email = email;
             _fechaNacimiento = fechaNacimiento;
-            _fechaAlta = fechaAlta;
-            _fechaBaja = fechaBaja;
-            _host = Host;
         }
 
-        public string Id { get => _id; set => _id = value; }
-
+        public Guid Id { get => _id; set => _id = value; }
         public string Nombre { get => _nombre; set => _nombre = value; }
-
         public string Apellido { get => _apellido; set => _apellido = value; }
-
-        public int DNI { get => _dni; set => _dni = value; }
-
+        public int Dni { get => _dni; set => _dni = value; }
         public string Direccion { get => _direccion; set => _direccion = value; }
-
         public string Telefono { get => _telefono; set => _telefono = value; }
-
         public string Email { get => _email; set => _email = value; }
-
         public DateTime FechaNacimiento { get => _fechaNacimiento; set => _fechaNacimiento = value; }
-
         public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
-
-        public DateTime FechaBaja { get => _fechaBaja; set => _fechaBaja = value; }
-
+        public DateTime? FechaBaja { get => _fechaBaja; set => _fechaBaja = value; }
         public string Host { get => _host; set => _host = value; }
 
-        public String ToString()
+
+        public string NombreCompleto
         {
-            return this.Apellido + ", " + this.Nombre + " (" + this.DNI + ")";
+            get { return $"{Apellido}, {Nombre} - DNI: {Dni}"; }
         }
     }
 }

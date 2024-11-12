@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Datos;
 using Datos.Ventas;
+using Datos.Cliente;
 
 namespace TemplateTPIntegrador
 {
@@ -18,6 +19,8 @@ namespace TemplateTPIntegrador
 
         private FormMenuAdministrador FormMenuAdministrador;
         private List<Comprobante> comprobantes;
+
+        private List<Clientes> clientes;
 
 
 
@@ -31,6 +34,11 @@ namespace TemplateTPIntegrador
 
             ClienteNegocio clienteNegocio = new ClienteNegocio();
 
+
+            FormMenuAdministrador = formMenuAdministrador;
+            CargarClientes();
+
+            /*
 
             List<productosLista> items = clienteNegocio.ListarCliente()
                 .Select(x => new productosLista(x.id.ToString(), x.ToString()))
@@ -47,12 +55,36 @@ namespace TemplateTPIntegrador
             btnBaja.Enabled = false;
 
             OcultarFilasVacias(dgvListaVtaCliente);
-            OcultarColumnasVacias(dgvListaVtaCliente);
+            OcultarColumnasVacias(dgvListaVtaCliente);*/
 
 
 
         }
 
+        private void CargarClientes()
+        {
+            try
+            {
+                ClienteNegocio clienteNegocio = new ClienteNegocio();
+                clientes = clienteNegocio.ListarCliente2();
+
+                if (clientes != null && clientes.Count > 0)
+                {
+                    foreach (var cliente in clientes)
+                    {
+                        comboBoxCliente.Items.Add($"{cliente.Nombre} {cliente.Apellido}");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron clientes.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar clientes: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
 
 
@@ -132,6 +164,23 @@ namespace TemplateTPIntegrador
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
+            string clienteSeleccionado = comboBoxCliente.SelectedItem?.ToString();
+
+            if (!string.IsNullOrEmpty(clienteSeleccionado))
+            {
+                Clientes cliente = clientes.Find(c => $"{c.Nombre} {c.Apellido}" == clienteSeleccionado);
+                if (cliente != null)
+                {
+                    dgvListaVtaCliente.DataSource = new List<Clientes> { cliente };
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un cliente de la lista.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            /*
+
             // Obtiene el valor seleccionado en el comboBoxCliente y lo convierte a string
             var seleccion = comboBoxCliente.SelectedValue.ToString();
 
@@ -170,7 +219,7 @@ namespace TemplateTPIntegrador
             {
                 // Muestra un mensaje de error si no se ha seleccionado un valor válido
                 MessageBox.Show("Seleccione un valor válido");
-            }
+            } */
         }
 
 

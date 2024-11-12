@@ -12,10 +12,19 @@ namespace TemplateTPIntegrador
 {
     public partial class FormAltaCliente : Form
     {
-        public FormAltaCliente()
+        ValidacionesUtils validador = new ValidacionesUtils();
+
+
+        private FormMenuAdministrador FormMenuAdministrador;
+        public FormAltaCliente(FormMenuAdministrador formMenuAdministrador)
         {
             InitializeComponent();
+            FormMenuAdministrador = formMenuAdministrador;
         }
+
+
+
+
 
         private void label1_Click(object sender, EventArgs e)
         {

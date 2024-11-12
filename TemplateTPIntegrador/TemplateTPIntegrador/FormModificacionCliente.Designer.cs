@@ -44,9 +44,10 @@
             this.labelTituloM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.labelTituloM.Font = new System.Drawing.Font("Mongolian Baiti", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTituloM.ForeColor = System.Drawing.Color.White;
-            this.labelTituloM.Location = new System.Drawing.Point(12, 18);
+            this.labelTituloM.Location = new System.Drawing.Point(18, 28);
+            this.labelTituloM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTituloM.Name = "labelTituloM";
-            this.labelTituloM.Size = new System.Drawing.Size(781, 40);
+            this.labelTituloM.Size = new System.Drawing.Size(1172, 62);
             this.labelTituloM.TabIndex = 2;
             this.labelTituloM.Text = "Modificacion de Cliente";
             // 
@@ -54,50 +55,56 @@
             // 
             this.labelEmailM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEmailM.ForeColor = System.Drawing.Color.Black;
-            this.labelEmailM.Location = new System.Drawing.Point(12, 93);
+            this.labelEmailM.Location = new System.Drawing.Point(18, 143);
+            this.labelEmailM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEmailM.Name = "labelEmailM";
-            this.labelEmailM.Size = new System.Drawing.Size(139, 28);
+            this.labelEmailM.Size = new System.Drawing.Size(208, 43);
             this.labelEmailM.TabIndex = 3;
             this.labelEmailM.Text = "Email";
             // 
             // labeltelM
             // 
             this.labeltelM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeltelM.Location = new System.Drawing.Point(15, 299);
+            this.labeltelM.Location = new System.Drawing.Point(22, 460);
+            this.labeltelM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labeltelM.Name = "labeltelM";
-            this.labeltelM.Size = new System.Drawing.Size(83, 22);
+            this.labeltelM.Size = new System.Drawing.Size(124, 34);
             this.labeltelM.TabIndex = 4;
             this.labeltelM.Text = "Teléfono";
             // 
             // labelDireccM
             // 
             this.labelDireccM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDireccM.Location = new System.Drawing.Point(12, 201);
+            this.labelDireccM.Location = new System.Drawing.Point(18, 309);
+            this.labelDireccM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDireccM.Name = "labelDireccM";
-            this.labelDireccM.Size = new System.Drawing.Size(112, 28);
+            this.labelDireccM.Size = new System.Drawing.Size(168, 43);
             this.labelDireccM.TabIndex = 5;
             this.labelDireccM.Text = "Dirección";
             this.labelDireccM.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBoxEmailM
             // 
-            this.textBoxEmailM.Location = new System.Drawing.Point(12, 111);
+            this.textBoxEmailM.Location = new System.Drawing.Point(18, 171);
+            this.textBoxEmailM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxEmailM.Name = "textBoxEmailM";
-            this.textBoxEmailM.Size = new System.Drawing.Size(204, 20);
+            this.textBoxEmailM.Size = new System.Drawing.Size(304, 26);
             this.textBoxEmailM.TabIndex = 6;
             // 
             // textBoxDireccM
             // 
-            this.textBoxDireccM.Location = new System.Drawing.Point(12, 220);
+            this.textBoxDireccM.Location = new System.Drawing.Point(18, 338);
+            this.textBoxDireccM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxDireccM.Name = "textBoxDireccM";
-            this.textBoxDireccM.Size = new System.Drawing.Size(207, 20);
+            this.textBoxDireccM.Size = new System.Drawing.Size(308, 26);
             this.textBoxDireccM.TabIndex = 7;
             // 
             // textBoxTelM
             // 
-            this.textBoxTelM.Location = new System.Drawing.Point(12, 315);
+            this.textBoxTelM.Location = new System.Drawing.Point(18, 485);
+            this.textBoxTelM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxTelM.Name = "textBoxTelM";
-            this.textBoxTelM.Size = new System.Drawing.Size(207, 20);
+            this.textBoxTelM.Size = new System.Drawing.Size(308, 26);
             this.textBoxTelM.TabIndex = 8;
             // 
             // buttonAceptarM
@@ -105,30 +112,33 @@
             this.buttonAceptarM.BackColor = System.Drawing.Color.MidnightBlue;
             this.buttonAceptarM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAceptarM.ForeColor = System.Drawing.Color.White;
-            this.buttonAceptarM.Location = new System.Drawing.Point(389, 334);
+            this.buttonAceptarM.Location = new System.Drawing.Point(584, 514);
+            this.buttonAceptarM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonAceptarM.Name = "buttonAceptarM";
-            this.buttonAceptarM.Size = new System.Drawing.Size(136, 49);
+            this.buttonAceptarM.Size = new System.Drawing.Size(204, 75);
             this.buttonAceptarM.TabIndex = 9;
             this.buttonAceptarM.Text = "Aceptar";
             this.buttonAceptarM.UseVisualStyleBackColor = false;
+            this.buttonAceptarM.Click += new System.EventHandler(this.buttonAceptarM_Click);
             // 
             // buttonVolverM
             // 
             this.buttonVolverM.BackColor = System.Drawing.Color.Teal;
             this.buttonVolverM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVolverM.ForeColor = System.Drawing.Color.White;
-            this.buttonVolverM.Location = new System.Drawing.Point(531, 334);
+            this.buttonVolverM.Location = new System.Drawing.Point(796, 514);
+            this.buttonVolverM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonVolverM.Name = "buttonVolverM";
-            this.buttonVolverM.Size = new System.Drawing.Size(136, 49);
+            this.buttonVolverM.Size = new System.Drawing.Size(204, 75);
             this.buttonVolverM.TabIndex = 10;
             this.buttonVolverM.Text = "Volver";
             this.buttonVolverM.UseVisualStyleBackColor = false;
             // 
             // FormModificacionCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 395);
+            this.ClientSize = new System.Drawing.Size(1066, 608);
             this.Controls.Add(this.buttonVolverM);
             this.Controls.Add(this.buttonAceptarM);
             this.Controls.Add(this.textBoxTelM);
@@ -138,8 +148,10 @@
             this.Controls.Add(this.labeltelM);
             this.Controls.Add(this.labelEmailM);
             this.Controls.Add(this.labelTituloM);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormModificacionCliente";
             this.Text = "FormModificacionCliente";
+            this.Load += new System.EventHandler(this.FormModificacionCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

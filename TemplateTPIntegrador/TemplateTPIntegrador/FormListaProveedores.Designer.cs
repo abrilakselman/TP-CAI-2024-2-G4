@@ -37,6 +37,7 @@ namespace TemplateTPIntegrador
             this.btnAltaProv = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxBajaProv = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProveedores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +95,7 @@ namespace TemplateTPIntegrador
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(872, 295);
+            this.label2.Location = new System.Drawing.Point(872, 270);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(158, 20);
             this.label2.TabIndex = 9;
@@ -107,11 +108,21 @@ namespace TemplateTPIntegrador
             this.textBoxBajaProv.Size = new System.Drawing.Size(231, 26);
             this.textBoxBajaProv.TabIndex = 8;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(874, 301);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(337, 20);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Haga click en el ID de la persona a dar de baja";
+            // 
             // FormListaProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1128, 528);
+            this.ClientSize = new System.Drawing.Size(1168, 528);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxBajaProv);
             this.Controls.Add(this.btnModProv);
@@ -138,5 +149,6 @@ namespace TemplateTPIntegrador
         private Button btnAltaProv;
         private Label label2;
         private TextBox textBoxBajaProv;
+        private Label label3;
     }
 }

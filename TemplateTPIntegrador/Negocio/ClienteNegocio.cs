@@ -14,7 +14,7 @@ namespace Negocio
         ClienteWS clienteWS = new ClienteWS();
         public List<Cliente> ListarCliente()
         {
-            
+            ClienteWS clienteWS = new ClienteWS();
             return clienteWS.GetClientes();
 
         }
@@ -26,6 +26,32 @@ namespace Negocio
 
         }
 
+
+        public void BajaCliente(Guid idCliente)
+        {
+            try
+            {
+                clienteWS.BajaCliente(idCliente);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar el cliente", ex);
+            }
+        }
+
+
+        public Cliente BuscarUnCliente(Guid id)
+        {
+            
+            return clienteWS.BuscarUnCliente(id);
+        }
+
+        public void ModificarCliente(Guid idCliente, string direccion, string telefono, string email)
+        {
+
+
+            clienteWS.PatchCliente(idCliente, direccion, telefono, email);
+        }
 
 
     }

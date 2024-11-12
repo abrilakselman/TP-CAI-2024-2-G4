@@ -60,9 +60,7 @@ namespace TemplateTPIntegrador
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormModificacionCliente formModificacionCliente = new FormModificacionCliente();
-            formModificacionCliente.ShowDialog();
+
         }
 
         private void btnAltaUser_Click(object sender, EventArgs e)

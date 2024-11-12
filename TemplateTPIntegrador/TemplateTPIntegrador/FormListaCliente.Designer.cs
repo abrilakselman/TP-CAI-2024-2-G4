@@ -31,10 +31,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvListaCliente = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxBajaUser = new System.Windows.Forms.TextBox();
+            this.textBoxBajaCliente = new System.Windows.Forms.TextBox();
             this.btnModificarCliente = new System.Windows.Forms.Button();
             this.btnBajaCliente = new System.Windows.Forms.Button();
             this.btnAltaCliente = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,22 +58,23 @@
             this.dgvListaCliente.RowTemplate.Height = 28;
             this.dgvListaCliente.Size = new System.Drawing.Size(759, 460);
             this.dgvListaCliente.TabIndex = 4;
+            this.dgvListaCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaCliente_CellContentClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(817, 361);
+            this.label2.Location = new System.Drawing.Point(819, 330);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "Cliente a Eliminar:";
             // 
-            // textBoxBajaUser
+            // textBoxBajaCliente
             // 
-            this.textBoxBajaUser.Location = new System.Drawing.Point(823, 404);
-            this.textBoxBajaUser.Name = "textBoxBajaUser";
-            this.textBoxBajaUser.Size = new System.Drawing.Size(231, 26);
-            this.textBoxBajaUser.TabIndex = 10;
+            this.textBoxBajaCliente.Location = new System.Drawing.Point(823, 404);
+            this.textBoxBajaCliente.Name = "textBoxBajaCliente";
+            this.textBoxBajaCliente.Size = new System.Drawing.Size(231, 26);
+            this.textBoxBajaCliente.TabIndex = 10;
             // 
             // btnModificarCliente
             // 
@@ -82,6 +84,7 @@
             this.btnModificarCliente.TabIndex = 9;
             this.btnModificarCliente.Text = "Modificar";
             this.btnModificarCliente.UseVisualStyleBackColor = true;
+            this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
             // 
             // btnBajaCliente
             // 
@@ -91,6 +94,7 @@
             this.btnBajaCliente.TabIndex = 8;
             this.btnBajaCliente.Text = "Baja";
             this.btnBajaCliente.UseVisualStyleBackColor = true;
+            this.btnBajaCliente.Click += new System.EventHandler(this.btnBajaCliente_Click);
             // 
             // btnAltaCliente
             // 
@@ -100,14 +104,25 @@
             this.btnAltaCliente.TabIndex = 7;
             this.btnAltaCliente.Text = "Alta";
             this.btnAltaCliente.UseVisualStyleBackColor = true;
+            this.btnAltaCliente.Click += new System.EventHandler(this.btnAltaCliente_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(819, 361);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(337, 20);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Haga click en el ID de la persona a dar de baja";
             // 
             // FormListaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1103, 567);
+            this.ClientSize = new System.Drawing.Size(1162, 567);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxBajaUser);
+            this.Controls.Add(this.textBoxBajaCliente);
             this.Controls.Add(this.btnModificarCliente);
             this.Controls.Add(this.btnBajaCliente);
             this.Controls.Add(this.btnAltaCliente);
@@ -127,9 +142,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvListaCliente;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxBajaUser;
+        private System.Windows.Forms.TextBox textBoxBajaCliente;
         private System.Windows.Forms.Button btnModificarCliente;
         private System.Windows.Forms.Button btnBajaCliente;
         private System.Windows.Forms.Button btnAltaCliente;
+        private System.Windows.Forms.Label label3;
     }
 }

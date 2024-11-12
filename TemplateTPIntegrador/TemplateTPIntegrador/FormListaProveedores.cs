@@ -101,7 +101,7 @@ namespace TemplateTPIntegrador
             {
 
                 //Da de baja el proveedor en swagger
-                Usuario proveedorSeleccionado = (Usuario)dgvListaProveedores.Rows[dgvListaProveedores.CurrentCell.RowIndex].DataBoundItem;
+                Proveedor proveedorSeleccionado = (Proveedor)dgvListaProveedores.Rows[dgvListaProveedores.CurrentCell.RowIndex].DataBoundItem;
                 Guid GuiProveedor = proveedorSeleccionado.Id;
                 String IdProveedor = GuiProveedor.ToString();
 
