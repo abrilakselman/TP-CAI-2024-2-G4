@@ -89,7 +89,7 @@
             this.groupBox1.Size = new System.Drawing.Size(242, 193);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Proveedor a Eliminar:";
+            this.groupBox1.Text = "Venta a Eliminar:";
             // 
             // label2
             // 
@@ -108,6 +108,7 @@
             this.buttonAlta.TabIndex = 20;
             this.buttonAlta.Text = "Alta";
             this.buttonAlta.UseVisualStyleBackColor = true;
+            this.buttonAlta.Click += new System.EventHandler(this.buttonAlta_Click);
             // 
             // buttonOK
             // 

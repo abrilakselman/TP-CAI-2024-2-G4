@@ -50,5 +50,11 @@ namespace Datos.Cliente
         {
             get { return $"{Apellido}, {Nombre} - DNI: {Dni}"; }
         }
+
+        public override string ToString()
+        {
+            return $"{Nombre} {Apellido} {Direccion}";
+        }
     }
+
 }

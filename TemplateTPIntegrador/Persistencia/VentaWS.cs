@@ -2,6 +2,7 @@
 using Persistencia.Utils;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -11,6 +12,10 @@ namespace Persistencia
 {
     public class VentaWS
     {
+
+        public string pathCrear { get; set; }
+
+
         public List<T> Listar<T>(Guid idCliente)
         {
             String path = "/api/Venta/GetVentaByCliente?id=" + idCliente;
@@ -36,6 +41,28 @@ namespace Persistencia
             }
             return resultado;
         }
+
+        public void Crear<T>(T postData)
+        {
+            var jsonRequest = JsonConvert.SerializeObject(postData);
+
+            try
+            {
+                HttpResponseMessage response = WebHelper.Post(pathCrear, jsonRequest);
+                if (!response.IsSuccessStatusCode)
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                    throw new Exception(respuesta);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
 
     }
 }
