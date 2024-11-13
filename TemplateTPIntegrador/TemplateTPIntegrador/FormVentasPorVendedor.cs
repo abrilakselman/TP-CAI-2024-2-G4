@@ -24,8 +24,8 @@ namespace TemplateTPIntegrador
             ClienteNegocio clienteNegocio = new ClienteNegocio();
 
             // Listar clientes y ordenar
-            List<productosLista> items = clienteNegocio.ListarCliente()
-                .Select(x => new productosLista(x.id.ToString(), x.ToString()))
+            List<productosLista> items = clienteNegocio.ListarCliente2()
+                .Select(x => new productosLista(x.Id.ToString(), x.ToString()))
                 .OrderBy(x => x.Valor)
                 .ToList();
             items.Insert(0, new productosLista("", "Seleccione"));
