@@ -36,7 +36,9 @@
             this.textBoxPrecioTotal = new System.Windows.Forms.TextBox();
             this.textBoxPrecioUnit = new System.Windows.Forms.TextBox();
             this.textBoxCant = new System.Windows.Forms.TextBox();
-            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnGuardarVta = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonVolver = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVta)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +69,7 @@
             this.groupBox1.Controls.Add(this.comboBoxProducto);
             this.groupBox1.Location = new System.Drawing.Point(50, 126);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(879, 295);
+            this.groupBox1.Size = new System.Drawing.Size(879, 270);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ventas para Cliente seleccionado";
@@ -79,7 +81,7 @@
             this.dataGridViewVta.Name = "dataGridViewVta";
             this.dataGridViewVta.RowHeadersWidth = 62;
             this.dataGridViewVta.RowTemplate.Height = 28;
-            this.dataGridViewVta.Size = new System.Drawing.Size(754, 181);
+            this.dataGridViewVta.Size = new System.Drawing.Size(754, 130);
             this.dataGridViewVta.TabIndex = 6;
             // 
             // buttonOK
@@ -94,7 +96,7 @@
             // 
             // textBoxPrecioTotal
             // 
-            this.textBoxPrecioTotal.Location = new System.Drawing.Point(611, 30);
+            this.textBoxPrecioTotal.Location = new System.Drawing.Point(605, 26);
             this.textBoxPrecioTotal.Name = "textBoxPrecioTotal";
             this.textBoxPrecioTotal.Size = new System.Drawing.Size(108, 26);
             this.textBoxPrecioTotal.TabIndex = 4;
@@ -115,21 +117,42 @@
             this.textBoxCant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCant_KeyPres);
             this.textBoxCant.Leave += new System.EventHandler(this.textBoxCant_Leave);
             // 
-            // btnAceptar
+            // btnGuardarVta
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(213, 449);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(127, 48);
-            this.btnAceptar.TabIndex = 3;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnGuardarVta.Location = new System.Drawing.Point(485, 438);
+            this.btnGuardarVta.Name = "btnGuardarVta";
+            this.btnGuardarVta.Size = new System.Drawing.Size(127, 48);
+            this.btnGuardarVta.TabIndex = 3;
+            this.btnGuardarVta.Text = "Guardar Venta";
+            this.btnGuardarVta.UseVisualStyleBackColor = true;
+            this.btnGuardarVta.Click += new System.EventHandler(this.btnGuardarVta_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(74, 438);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(396, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Haga click en el siguiente boton para ver comprobante:";
+            // 
+            // buttonVolver
+            // 
+            this.buttonVolver.Location = new System.Drawing.Point(802, 438);
+            this.buttonVolver.Name = "buttonVolver";
+            this.buttonVolver.Size = new System.Drawing.Size(127, 48);
+            this.buttonVolver.TabIndex = 5;
+            this.buttonVolver.Text = "Volver";
+            this.buttonVolver.UseVisualStyleBackColor = true;
             // 
             // FormVentaAlta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 517);
-            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.buttonVolver);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnGuardarVta);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBoxCliente);
             this.Name = "FormVentaAlta";
@@ -139,6 +162,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVta)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -152,6 +176,8 @@
         private System.Windows.Forms.TextBox textBoxPrecioTotal;
         private System.Windows.Forms.TextBox textBoxPrecioUnit;
         private System.Windows.Forms.TextBox textBoxCant;
-        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnGuardarVta;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonVolver;
     }
 }

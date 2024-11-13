@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Datos;
 using Datos.Ventas;
+using Datos.Cliente;
 
 namespace TemplateTPIntegrador
 {
@@ -54,10 +55,10 @@ namespace TemplateTPIntegrador
         }
 
         // Método para agregar un nuevo comprobante a la lista
-        public void Agregar(int id, Cliente cliente, string path)
+        public void Agregar(int id, Clientes cliente, string path)
         {
             var registros = RecuperarRegistros();  // Recupera los registros actuales
-            registros.Add(new Comprobante(id, cliente.id, cliente.ToString(), path, DateTime.Now));  // Agrega un nuevo comprobante
+            registros.Add(new Comprobante(id, cliente.Id, cliente.ToString(), path, DateTime.Now));  // Agrega un nuevo comprobante
 
             string json = JsonConvert.SerializeObject(registros, Formatting.Indented);  // Convierte la lista a JSON
             File.WriteAllText(rutaCompleta, json);  // Escribe el JSON en el archivo

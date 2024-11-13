@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Datos;
 using Datos.Cliente;
+using System.Diagnostics;
+using System.IO;
 
 namespace TemplateTPIntegrador
 {
@@ -185,8 +187,32 @@ namespace TemplateTPIntegrador
             }
         }
 
+        private void btnGuardarVta_Click(object sender, EventArgs e)
+        {
+            VentaNegocio ventaNegocio = new VentaNegocio();
+            var cliente = clientes.First(x => x.Id.ToString() == comboBoxCliente.SelectedValue.ToString());
 
-        
+            ComprobanteVta comprobanteVta = new ComprobanteVta();
+            var id = comprobanteVta.UltimoId();
+            var path = ventaNegocio.GenerarPDF(id, cliente, ventaLista, ventaNegocio.calcularDescuento(ventaLista));
+            comprobanteVta.Agregar(id, cliente, path);
+
+            if (File.Exists(path))
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = path,
+                    UseShellExecute = true
+                });
+            }
+            else
+            {
+                MessageBox.Show("El archivo PDF no se pudo generar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
 
     }
 }
