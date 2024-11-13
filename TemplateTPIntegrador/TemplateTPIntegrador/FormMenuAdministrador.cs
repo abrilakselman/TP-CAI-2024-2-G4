@@ -104,7 +104,12 @@ namespace TemplateTPIntegrador
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FormListaVenta(this));
+            //AbrirFormulario(new FormListaVenta(this));
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

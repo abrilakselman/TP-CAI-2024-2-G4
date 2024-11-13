@@ -33,7 +33,6 @@
             this.btnCliente = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReportes = new System.Windows.Forms.Button();
-            this.btnVentas = new System.Windows.Forms.Button();
             this.btnProducto = new System.Windows.Forms.Button();
             this.btnProveedores = new System.Windows.Forms.Button();
             this.btnUsuario = new System.Windows.Forms.Button();
@@ -58,7 +57,6 @@
             this.panelMenuAdmin.Controls.Add(this.btnCliente);
             this.panelMenuAdmin.Controls.Add(this.pictureBox1);
             this.panelMenuAdmin.Controls.Add(this.btnReportes);
-            this.panelMenuAdmin.Controls.Add(this.btnVentas);
             this.panelMenuAdmin.Controls.Add(this.btnProducto);
             this.panelMenuAdmin.Controls.Add(this.btnProveedores);
             this.panelMenuAdmin.Controls.Add(this.btnUsuario);
@@ -89,23 +87,13 @@
             // 
             // btnReportes
             // 
-            this.btnReportes.Location = new System.Drawing.Point(22, 389);
+            this.btnReportes.Location = new System.Drawing.Point(22, 358);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(133, 33);
             this.btnReportes.TabIndex = 4;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.UseVisualStyleBackColor = true;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
-            // 
-            // btnVentas
-            // 
-            this.btnVentas.Location = new System.Drawing.Point(23, 350);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(133, 33);
-            this.btnVentas.TabIndex = 3;
-            this.btnVentas.Text = "Ventas";
-            this.btnVentas.UseVisualStyleBackColor = true;
-            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // btnProducto
             // 
@@ -207,6 +195,7 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(1377, 673);
             this.panelMenu.TabIndex = 4;
+            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
             // textBoxStockCritico
             // 
@@ -254,7 +243,6 @@
         private System.Windows.Forms.Button btnUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnReportes;
-        private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnProducto;
         private System.Windows.Forms.Button btnProveedores;
         private System.Windows.Forms.Panel panel1;

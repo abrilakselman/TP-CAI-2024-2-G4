@@ -21,9 +21,9 @@ namespace TemplateTPIntegrador
         private List<Clientes> clientes = new List<Clientes>();
 
         private ValidacionesUtils validador = new ValidacionesUtils();
-        private FormMenuAdministrador FormMenuAdministrador;
+        private FormMenuVendedores FormMenuVendedores;
 
-        public FormVentaAlta(FormMenuAdministrador formMenuAdministrador)
+        public FormVentaAlta(FormMenuVendedores formMenuVendedores)
         {
             InitializeComponent();
 
@@ -54,13 +54,12 @@ namespace TemplateTPIntegrador
             comboBoxProducto.ValueMember = "Id";
             comboBoxProducto.DataSource = items;
 
-            FormMenuAdministrador = formMenuAdministrador;
+            FormMenuVendedores = formMenuVendedores;
         }
 
 
 
-
-
+        
 
 
 
@@ -69,50 +68,55 @@ namespace TemplateTPIntegrador
 
         }
 
-        private bool ValidarStock(int stock, Guid idProducto)
-        {
-            return productos.FirstOrDefault(x => x.id == idProducto).stock < stock;
-        }
-
+        
         private void buttonOK_Click(object sender, EventArgs e)
         {
             try
             {
-               
-                Producto productoSeleccionado = comboBoxProducto.SelectedItem as Producto;
-                if (productoSeleccionado != null)
+                if (!ValidarCampos())
                 {
-                    Guid idProducto = productoSeleccionado.id;
-
-                    if (!ValidarStock(Convert.ToInt32(textBoxCant.Text), idProducto))
+                    Producto productoSeleccionado = comboBoxProducto.SelectedItem as Producto;
+                    if (productoSeleccionado != null)
                     {
-                        MessageBox.Show("No hay stock para el producto");
+                        Guid idProducto = productoSeleccionado.id;
+
+                        if (!ValidarStock(Convert.ToInt32(textBoxCant.Text), idProducto))
+                        {
+                            MessageBox.Show("No hay stock para el producto");
+                            return;
+                        }
+                    }
+
+                    try
+                    {
+                        VentaNegocio ventaNegocio = new VentaNegocio();
+                        ventaNegocio.CrearVenta(Guid.Parse(comboBoxCliente.SelectedValue.ToString()), Guid.Parse(comboBoxProducto.SelectedValue.ToString()),
+                            Sesion.Id, Convert.ToInt32(textBoxCant.Text));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
                         return;
                     }
-                }
 
-                try
+
+                    ventaLista.Add(new VentaLista(
+                        new productosLista(comboBoxProducto.SelectedValue.ToString(),
+                        comboBoxProducto.SelectedItem.ToString()),
+                        Convert.ToInt32(textBoxCant.Text), Convert.ToInt32(textBoxPrecioUnit.Text),
+                        Convert.ToInt32(textBoxPrecioTotal.Text),
+                        productos.First(x => x.id == Guid.Parse(comboBoxProducto.SelectedValue.ToString())).idCategoria));
+
+                    dataGridViewVta.DataSource = null;
+
+                    dataGridViewVta.DataSource = ventaLista;
+
+
+                }
+                else
                 {
-                    VentaNegocio ventaNegocio = new VentaNegocio();
-                    ventaNegocio.CrearVenta(Guid.Parse(comboBoxCliente.SelectedValue.ToString()), Guid.Parse(comboBoxProducto.SelectedValue.ToString()), Sesion.Id, Convert.ToInt32(textBoxCant.Text));
+                    MessageBox.Show("Por favor validar los campos ingresados.");
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                    return;
-                }
-
-
-                ventaLista.Add(new VentaLista(
-                    new productosLista(comboBoxProducto.SelectedValue.ToString(),
-                    comboBoxProducto.SelectedItem.ToString()),
-                    Convert.ToInt32(textBoxCant.Text), Convert.ToInt32(textBoxPrecioUnit.Text),
-                    Convert.ToInt32(textBoxPrecioTotal.Text),
-                    productos.First(x => x.id == Guid.Parse(comboBoxProducto.SelectedValue.ToString())).idCategoria));
-
-                dataGridViewVta.DataSource = null;
-
-                dataGridViewVta.DataSource = ventaLista;
 
             }
             catch (Exception ex)
@@ -120,12 +124,36 @@ namespace TemplateTPIntegrador
                 MessageBox.Show(ex.Message);
             }
 
+
+        }
+
+
+        private bool ValidarStock(int stock, Guid idProducto)
+        {
+            return productos.FirstOrDefault(x => x.id == idProducto).stock < stock;
         }
 
 
 
-        
+        private bool ValidarCampos()
+        {
+            bool esValido = true;
 
+            esValido = validador.validarStringVacio(textBoxCant.Text);
+            esValido = validador.validarStringVacio(comboBoxCliente.SelectedValue.ToString());
+            esValido = validador.validarStringVacio(comboBoxProducto.SelectedValue.ToString());
+            esValido = validador.validarNumyNeg(textBoxCant.Text);
+            esValido = validador.validarStringVacio(textBoxCant.Text);
+
+            return esValido;
+        }
+
+
+        //eventos:
+        private void textBoxCant_KeyPres(object sender, KeyPressEventArgs e)
+        {
+            CalcularPrecio();
+        }
         private void textBoxCant_Leave(object sender, EventArgs e)
         {
   
@@ -137,6 +165,8 @@ namespace TemplateTPIntegrador
             CalcularPrecio();
         }
 
+       
+        //metodo para el total
         private void CalcularPrecio()
         {
             if (!String.IsNullOrEmpty(comboBoxProducto.SelectedValue.ToString()) && !String.IsNullOrEmpty(textBoxCant.Text))
@@ -155,9 +185,8 @@ namespace TemplateTPIntegrador
             }
         }
 
-        private void textBoxCant_KeyPres(object sender, KeyPressEventArgs e)
-        {
-            CalcularPrecio();
-        }
+
+        
+
     }
 }

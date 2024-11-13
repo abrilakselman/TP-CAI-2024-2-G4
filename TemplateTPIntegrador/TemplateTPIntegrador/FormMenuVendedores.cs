@@ -35,12 +35,29 @@ namespace TemplateTPIntegrador
         }
         private void btnReportesVendedor_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FormVentasPorVendedor(this));
+            AbrirFormulario(new FormVentasPorVendedorMenuVendedor(this));
         }
 
         private void labelBienvenida_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVentasVendedor_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormListaVenta(this));
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Está seguro que desea salir?", "Salir", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.No)
+            {
+                this.Hide();
+                FormLogin formLogin = new FormLogin();
+                formLogin.ShowDialog();
+            }
         }
     }
 }

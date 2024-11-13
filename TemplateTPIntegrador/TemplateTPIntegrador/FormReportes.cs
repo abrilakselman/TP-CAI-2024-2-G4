@@ -12,6 +12,20 @@ namespace TemplateTPIntegrador
 {
     public partial class FormReportes : Form
     {
+
+
+        //para el menu de supervisor
+
+        public FormMenuVendedores FormMenuVendedores;
+        public FormReportes(FormMenuVendedores formMenuVendedores)
+        {
+            InitializeComponent();
+            //funcion que cargue datos en lista 
+            FormMenuVendedores = formMenuVendedores;
+        }
+
+
+
         //para el menu de supervisor
 
         public FormMenuSupervisor FormMenuSupervisor;
@@ -44,6 +58,11 @@ namespace TemplateTPIntegrador
         {
             this.Hide();
             FormMenuAdministrador.AbrirFormulario(new FormStockCritico(FormMenuAdministrador));
+        }
+
+        private void FormReportes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -45,5 +45,17 @@ namespace TemplateTPIntegrador
         {
             AbrirFormulario(new FormReportes(this));
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Está seguro que desea salir?", "Salir", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.No)
+            {
+                this.Hide();
+                FormLogin formLogin = new FormLogin();
+                formLogin.ShowDialog();
+            }
+        }
     }
 }

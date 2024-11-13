@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Datos.Ventas;
+using Newtonsoft.Json;
 using Persistencia.Utils;
 using System;
 using System.Collections.Generic;
@@ -13,9 +14,7 @@ namespace Persistencia
     public class VentaWS
     {
 
-        public string pathCrear { get; set; }
-
-
+       
         public List<T> Listar<T>(Guid idCliente)
         {
             String path = "/api/Venta/GetVentaByCliente?id=" + idCliente;
@@ -42,23 +41,30 @@ namespace Persistencia
             return resultado;
         }
 
-        public void Crear<T>(T postData)
+        public void AgregarVenta(VentaPost altaVenta)
         {
-            var jsonRequest = JsonConvert.SerializeObject(postData);
+            String path = "/api/Venta/AgregarVenta";
+
+            var jsonRequest = JsonConvert.SerializeObject(altaVenta);
 
             try
             {
-                HttpResponseMessage response = WebHelper.Post(pathCrear, jsonRequest);
-                if (!response.IsSuccessStatusCode)
+                HttpResponseMessage response = WebHelper.Post(path, jsonRequest);
+                if (response.IsSuccessStatusCode)
                 {
                     var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
                     string respuesta = reader.ReadToEnd();
-                    throw new Exception(respuesta);
+                }
+                else
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    string respuesta = reader.ReadToEnd();
+                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                Console.WriteLine($"Exception: {ex.Message}");
             }
         }
 

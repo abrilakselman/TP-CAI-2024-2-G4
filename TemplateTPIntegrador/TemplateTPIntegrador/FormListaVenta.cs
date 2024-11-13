@@ -17,7 +17,7 @@ namespace TemplateTPIntegrador
     public partial class FormListaVenta : Form
     {
 
-        private FormMenuAdministrador FormMenuAdministrador;
+        private FormMenuVendedores FormMenuVendedores;
         private List<Comprobante> comprobantes;
 
         private List<Clientes> clientes;
@@ -25,7 +25,7 @@ namespace TemplateTPIntegrador
 
 
 
-        public FormListaVenta(FormMenuAdministrador formMenuAdministrador)
+        public FormListaVenta(FormMenuVendedores formMenuVendedores)
         {
             InitializeComponent();
 
@@ -48,7 +48,7 @@ namespace TemplateTPIntegrador
 
             //CargarClientes();
 
-            FormMenuAdministrador = formMenuAdministrador;
+            FormMenuVendedores = formMenuVendedores;
 
             btnBaja.Enabled = false;
 
@@ -328,7 +328,7 @@ namespace TemplateTPIntegrador
         private void buttonAlta_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormMenuAdministrador.AbrirFormulario(new FormVentaAlta(FormMenuAdministrador));
+            FormMenuVendedores.AbrirFormulario(new FormVentaAlta(FormMenuVendedores));
         }
     }
 }

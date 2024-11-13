@@ -83,6 +83,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormReportes";
             this.Text = "Reportes";
+            this.Load += new System.EventHandler(this.FormReportes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

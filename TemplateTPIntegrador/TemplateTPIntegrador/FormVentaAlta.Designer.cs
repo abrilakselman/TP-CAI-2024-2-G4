@@ -67,10 +67,10 @@
             this.groupBox1.Controls.Add(this.comboBoxProducto);
             this.groupBox1.Location = new System.Drawing.Point(50, 126);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(996, 295);
+            this.groupBox1.Size = new System.Drawing.Size(879, 295);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Ventas para Cliente seleccionado";
             // 
             // dataGridViewVta
             // 
@@ -84,7 +84,7 @@
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(852, 30);
+            this.buttonOK.Location = new System.Drawing.Point(740, 22);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(96, 45);
             this.buttonOK.TabIndex = 5;
@@ -94,21 +94,21 @@
             // 
             // textBoxPrecioTotal
             // 
-            this.textBoxPrecioTotal.Location = new System.Drawing.Point(708, 22);
+            this.textBoxPrecioTotal.Location = new System.Drawing.Point(611, 30);
             this.textBoxPrecioTotal.Name = "textBoxPrecioTotal";
             this.textBoxPrecioTotal.Size = new System.Drawing.Size(108, 26);
             this.textBoxPrecioTotal.TabIndex = 4;
             // 
             // textBoxPrecioUnit
             // 
-            this.textBoxPrecioUnit.Location = new System.Drawing.Point(563, 22);
+            this.textBoxPrecioUnit.Location = new System.Drawing.Point(467, 25);
             this.textBoxPrecioUnit.Name = "textBoxPrecioUnit";
             this.textBoxPrecioUnit.Size = new System.Drawing.Size(108, 26);
             this.textBoxPrecioUnit.TabIndex = 3;
             // 
             // textBoxCant
             // 
-            this.textBoxCant.Location = new System.Drawing.Point(394, 25);
+            this.textBoxCant.Location = new System.Drawing.Point(331, 25);
             this.textBoxCant.Name = "textBoxCant";
             this.textBoxCant.Size = new System.Drawing.Size(108, 26);
             this.textBoxCant.TabIndex = 2;
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 517);
+            this.ClientSize = new System.Drawing.Size(1010, 517);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBoxCliente);

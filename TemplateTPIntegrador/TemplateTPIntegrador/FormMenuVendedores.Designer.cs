@@ -48,20 +48,18 @@
             // panelMenuVendedores
             // 
             this.panelMenuVendedores.Controls.Add(this.labelBienvenida);
-            this.panelMenuVendedores.Location = new System.Drawing.Point(127, 2);
-            this.panelMenuVendedores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenuVendedores.Location = new System.Drawing.Point(190, 3);
             this.panelMenuVendedores.Name = "panelMenuVendedores";
-            this.panelMenuVendedores.Size = new System.Drawing.Size(589, 427);
+            this.panelMenuVendedores.Size = new System.Drawing.Size(946, 663);
             this.panelMenuVendedores.TabIndex = 10;
             // 
             // labelBienvenida
             // 
             this.labelBienvenida.AutoSize = true;
             this.labelBienvenida.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBienvenida.Location = new System.Drawing.Point(27, 15);
-            this.labelBienvenida.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelBienvenida.Location = new System.Drawing.Point(40, 23);
             this.labelBienvenida.Name = "labelBienvenida";
-            this.labelBienvenida.Size = new System.Drawing.Size(490, 32);
+            this.labelBienvenida.Size = new System.Drawing.Size(740, 49);
             this.labelBienvenida.TabIndex = 2;
             this.labelBienvenida.Text = "Bienvenido a la Aplicación ElectroHogar SA";
             this.labelBienvenida.Click += new System.EventHandler(this.labelBienvenida_Click);
@@ -72,38 +70,35 @@
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Controls.Add(this.btnPerfil);
-            this.panel1.Location = new System.Drawing.Point(3, 286);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(4, 440);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(120, 143);
+            this.panel1.Size = new System.Drawing.Size(180, 220);
             this.panel1.TabIndex = 9;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(13, 95);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Location = new System.Drawing.Point(20, 146);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(89, 21);
+            this.btnSalir.Size = new System.Drawing.Size(134, 32);
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnAyuda
             // 
-            this.btnAyuda.Location = new System.Drawing.Point(15, 60);
-            this.btnAyuda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAyuda.Location = new System.Drawing.Point(22, 92);
             this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(89, 21);
+            this.btnAyuda.Size = new System.Drawing.Size(134, 32);
             this.btnAyuda.TabIndex = 6;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = true;
             // 
             // btnPerfil
             // 
-            this.btnPerfil.Location = new System.Drawing.Point(13, 27);
-            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPerfil.Location = new System.Drawing.Point(20, 42);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(89, 21);
+            this.btnPerfil.Size = new System.Drawing.Size(134, 32);
             this.btnPerfil.TabIndex = 5;
             this.btnPerfil.Text = "Perfil";
             this.btnPerfil.UseVisualStyleBackColor = true;
@@ -114,29 +109,26 @@
             this.panelMenuAdmin.Controls.Add(this.pictureBox1);
             this.panelMenuAdmin.Controls.Add(this.btnReportesVendedor);
             this.panelMenuAdmin.Controls.Add(this.btnVentasVendedor);
-            this.panelMenuAdmin.Location = new System.Drawing.Point(2, 2);
-            this.panelMenuAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenuAdmin.Location = new System.Drawing.Point(3, 3);
             this.panelMenuAdmin.Name = "panelMenuAdmin";
-            this.panelMenuAdmin.Size = new System.Drawing.Size(121, 284);
+            this.panelMenuAdmin.Size = new System.Drawing.Size(182, 437);
             this.panelMenuAdmin.TabIndex = 8;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(25, 42);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 65);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(117, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // btnReportesVendedor
             // 
-            this.btnReportesVendedor.Location = new System.Drawing.Point(16, 209);
-            this.btnReportesVendedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReportesVendedor.Location = new System.Drawing.Point(24, 322);
             this.btnReportesVendedor.Name = "btnReportesVendedor";
-            this.btnReportesVendedor.Size = new System.Drawing.Size(89, 21);
+            this.btnReportesVendedor.Size = new System.Drawing.Size(134, 32);
             this.btnReportesVendedor.TabIndex = 4;
             this.btnReportesVendedor.Text = "Reportes";
             this.btnReportesVendedor.UseVisualStyleBackColor = true;
@@ -144,23 +136,22 @@
             // 
             // btnVentasVendedor
             // 
-            this.btnVentasVendedor.Location = new System.Drawing.Point(15, 157);
-            this.btnVentasVendedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVentasVendedor.Location = new System.Drawing.Point(22, 242);
             this.btnVentasVendedor.Name = "btnVentasVendedor";
-            this.btnVentasVendedor.Size = new System.Drawing.Size(89, 21);
+            this.btnVentasVendedor.Size = new System.Drawing.Size(134, 32);
             this.btnVentasVendedor.TabIndex = 2;
             this.btnVentasVendedor.Text = "Ventas";
             this.btnVentasVendedor.UseVisualStyleBackColor = true;
+            this.btnVentasVendedor.Click += new System.EventHandler(this.btnVentasVendedor_Click);
             // 
             // FormMenuVendedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 432);
+            this.ClientSize = new System.Drawing.Size(1182, 670);
             this.Controls.Add(this.panelMenuVendedores);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenuAdmin);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMenuVendedores";
             this.Text = "Menu";
             this.panelMenuVendedores.ResumeLayout(false);

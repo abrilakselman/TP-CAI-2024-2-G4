@@ -23,7 +23,7 @@ namespace Negocio
             
             VentaPost ventaPost = new VentaPost(idCliente, idUsuario, idProducto, cantidad);
 
-            ventaWS.Crear(ventaPost);
+            ventaWS.AgregarVenta(ventaPost);
         }
 
     }

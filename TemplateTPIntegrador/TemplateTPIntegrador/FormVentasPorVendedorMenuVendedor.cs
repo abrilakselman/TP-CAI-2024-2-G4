@@ -12,14 +12,16 @@ using System.Windows.Forms;
 
 namespace TemplateTPIntegrador
 {
-    public partial class FormVentasPorVendedor : Form
+    public partial class FormVentasPorVendedorMenuVendedor : Form
     {
-        public FormMenuAdministrador FormMenuAdministrador;
+        
+        
+        public FormMenuVendedores FormMenuVendedores;
 
-        public FormVentasPorVendedor(FormMenuAdministrador formMenuAdministrador)
+        public FormVentasPorVendedorMenuVendedor(FormMenuVendedores formMenuVendedores)
         {
             InitializeComponent();
-            FormMenuAdministrador = formMenuAdministrador;
+            FormMenuVendedores = formMenuVendedores;
 
             ClienteNegocio clienteNegocio = new ClienteNegocio();
 
@@ -78,23 +80,15 @@ namespace TemplateTPIntegrador
         }
 
 
-
-
-
-        private void FormVentasPorVendedor_Load(object sender, EventArgs e)
+        private void FormVentasPorVendedorMenuVendedor_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonVolverVxV_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormMenuAdministrador.AbrirFormulario(new FormReportes(FormMenuAdministrador));
+            FormMenuVendedores.AbrirFormulario(new FormReportes(FormMenuVendedores));
         }
     }
 }
