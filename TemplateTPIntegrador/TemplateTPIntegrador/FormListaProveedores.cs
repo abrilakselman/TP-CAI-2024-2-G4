@@ -60,7 +60,7 @@ namespace TemplateTPIntegrador
 
             if (dgvListaProveedores != null)
             {
-                MessageBox.Show("Llenando DataGridView");
+                //MessageBox.Show("Llenando DataGridView");
 
                 dgvListaProveedores.DataSource = bindingSource1;
 
@@ -133,6 +133,11 @@ namespace TemplateTPIntegrador
         {
             this.Hide();
             FormMenuAdministrador.AbrirFormulario(new FormAltaProveedor(FormMenuAdministrador));
+        }
+
+        private void btnModProv_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

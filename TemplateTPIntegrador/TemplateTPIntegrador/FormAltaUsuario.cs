@@ -176,6 +176,11 @@ namespace TemplateTPIntegrador
             pbDNICorrecto.BringToFront();
             pbEmailCorrecto.BringToFront();
             pbFechNacCorrecto.BringToFront();
+
+            lblMinUsuarioRegistrar.ForeColor = Color.Black;
+            lblNomUsuarioRegistrar.ForeColor = Color.Black;
+            lblApeUsuarioRegistrar.ForeColor = Color.Black;
+            lblMaxUsuarioRegistrar.ForeColor = Color.Black;
         }
 
 

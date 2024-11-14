@@ -16,6 +16,8 @@ namespace TemplateTPIntegrador
         {
             InitializeComponent();
         }
+
+
         //Abre los formularios dentro del panel de control en la pantalla de Menu vendedores
 
         public void AbrirFormulario(Form formulario)
@@ -52,7 +54,7 @@ namespace TemplateTPIntegrador
         {
             DialogResult result = MessageBox.Show("¿Está seguro que desea salir?", "Salir", MessageBoxButtons.YesNo);
 
-            if (result == DialogResult.No)
+            if (result == DialogResult.Yes)
             {
                 this.Hide();
                 FormLogin formLogin = new FormLogin();

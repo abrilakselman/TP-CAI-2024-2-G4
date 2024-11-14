@@ -48,7 +48,8 @@ namespace TemplateTPIntegrador
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormMenuAdministrador.AbrirFormulario(new FormListaCliente(FormMenuAdministrador));
         }
 
         private void FormAltaCliente_Load(object sender, EventArgs e)

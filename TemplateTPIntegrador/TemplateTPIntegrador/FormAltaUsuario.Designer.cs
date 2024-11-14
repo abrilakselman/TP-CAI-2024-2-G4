@@ -370,7 +370,7 @@
             this.pbTelefonoIncorrecto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbTelefonoIncorrecto.TabIndex = 34;
             this.pbTelefonoIncorrecto.TabStop = false;
-            this.toolTip1.SetToolTip(this.pbTelefonoIncorrecto, "El Teléfono debe tener entre 8 y 11 numeros");
+            this.toolTip1.SetToolTip(this.pbTelefonoIncorrecto, "El Teléfono debe tener entre 8 y 11 numeros\r\nNo debe tener caracteres especiales");
             // 
             // pbTelefonoCorrecto
             // 

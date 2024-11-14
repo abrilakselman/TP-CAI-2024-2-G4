@@ -66,96 +66,86 @@
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(69, 32);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNombre.Location = new System.Drawing.Point(104, 49);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(104, 20);
+            this.textBoxNombre.Size = new System.Drawing.Size(154, 26);
             this.textBoxNombre.TabIndex = 0;
             this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 77);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(12, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Precio:";
             // 
             // textBoxPrecio
             // 
-            this.textBoxPrecio.Location = new System.Drawing.Point(69, 75);
-            this.textBoxPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPrecio.Location = new System.Drawing.Point(104, 115);
             this.textBoxPrecio.Name = "textBoxPrecio";
-            this.textBoxPrecio.Size = new System.Drawing.Size(104, 20);
+            this.textBoxPrecio.Size = new System.Drawing.Size(154, 26);
             this.textBoxPrecio.TabIndex = 2;
             this.textBoxPrecio.TextChanged += new System.EventHandler(this.textBoxPrecio_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 118);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(12, 182);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Stock:";
             // 
             // textBoxStock
             // 
-            this.textBoxStock.Location = new System.Drawing.Point(69, 118);
-            this.textBoxStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxStock.Location = new System.Drawing.Point(104, 182);
             this.textBoxStock.Name = "textBoxStock";
-            this.textBoxStock.Size = new System.Drawing.Size(104, 20);
+            this.textBoxStock.Size = new System.Drawing.Size(154, 26);
             this.textBoxStock.TabIndex = 4;
             this.textBoxStock.TextChanged += new System.EventHandler(this.textBoxStock_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(269, 44);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(404, 68);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.Size = new System.Drawing.Size(82, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Categoria:";
             // 
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(362, 44);
-            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCategoria.Location = new System.Drawing.Point(543, 68);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(103, 21);
+            this.cmbCategoria.Size = new System.Drawing.Size(246, 28);
             this.cmbCategoria.TabIndex = 8;
             // 
             // cmbProveedor
             // 
             this.cmbProveedor.FormattingEnabled = true;
-            this.cmbProveedor.Location = new System.Drawing.Point(362, 83);
-            this.cmbProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbProveedor.Location = new System.Drawing.Point(543, 128);
             this.cmbProveedor.Name = "cmbProveedor";
-            this.cmbProveedor.Size = new System.Drawing.Size(103, 21);
+            this.cmbProveedor.Size = new System.Drawing.Size(246, 28);
             this.cmbProveedor.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(269, 84);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(404, 129);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.Size = new System.Drawing.Size(85, 20);
             this.label5.TabIndex = 9;
             this.label5.Text = "Proveedor:";
             // 
@@ -164,10 +154,9 @@
             this.btnAceptar.BackColor = System.Drawing.Color.Navy;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(69, 216);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAceptar.Location = new System.Drawing.Point(104, 332);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(111, 32);
+            this.btnAceptar.Size = new System.Drawing.Size(166, 49);
             this.btnAceptar.TabIndex = 11;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -178,10 +167,9 @@
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(203, 216);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Location = new System.Drawing.Point(304, 332);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(111, 32);
+            this.btnLimpiar.Size = new System.Drawing.Size(166, 49);
             this.btnLimpiar.TabIndex = 12;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -192,10 +180,9 @@
             this.btnVolverAtras.BackColor = System.Drawing.Color.Teal;
             this.btnVolverAtras.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolverAtras.ForeColor = System.Drawing.Color.White;
-            this.btnVolverAtras.Location = new System.Drawing.Point(336, 216);
-            this.btnVolverAtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolverAtras.Location = new System.Drawing.Point(504, 332);
             this.btnVolverAtras.Name = "btnVolverAtras";
-            this.btnVolverAtras.Size = new System.Drawing.Size(111, 32);
+            this.btnVolverAtras.Size = new System.Drawing.Size(166, 49);
             this.btnVolverAtras.TabIndex = 13;
             this.btnVolverAtras.Text = "Volver Atrás";
             this.btnVolverAtras.UseVisualStyleBackColor = false;
@@ -221,11 +208,9 @@
             this.groupBox1.Controls.Add(this.textBoxPrecio);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBoxNombre);
-            this.groupBox1.Location = new System.Drawing.Point(21, 21);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(32, 32);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(485, 168);
+            this.groupBox1.Size = new System.Drawing.Size(848, 258);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Nuevo Producto:";
@@ -234,10 +219,9 @@
             // 
             this.pbStockCorrecto.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbStockCorrecto.ErrorImage")));
             this.pbStockCorrecto.Image = ((System.Drawing.Image)(resources.GetObject("pbStockCorrecto.Image")));
-            this.pbStockCorrecto.Location = new System.Drawing.Point(195, 109);
-            this.pbStockCorrecto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbStockCorrecto.Location = new System.Drawing.Point(292, 168);
             this.pbStockCorrecto.Name = "pbStockCorrecto";
-            this.pbStockCorrecto.Size = new System.Drawing.Size(26, 25);
+            this.pbStockCorrecto.Size = new System.Drawing.Size(39, 38);
             this.pbStockCorrecto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbStockCorrecto.TabIndex = 38;
             this.pbStockCorrecto.TabStop = false;
@@ -246,10 +230,9 @@
             // 
             this.pbStockIncorrecto.ErrorImage = null;
             this.pbStockIncorrecto.Image = ((System.Drawing.Image)(resources.GetObject("pbStockIncorrecto.Image")));
-            this.pbStockIncorrecto.Location = new System.Drawing.Point(195, 109);
-            this.pbStockIncorrecto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbStockIncorrecto.Location = new System.Drawing.Point(292, 168);
             this.pbStockIncorrecto.Name = "pbStockIncorrecto";
-            this.pbStockIncorrecto.Size = new System.Drawing.Size(28, 23);
+            this.pbStockIncorrecto.Size = new System.Drawing.Size(42, 35);
             this.pbStockIncorrecto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbStockIncorrecto.TabIndex = 37;
             this.pbStockIncorrecto.TabStop = false;
@@ -259,10 +242,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(195, 109);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(292, 168);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(28, 23);
+            this.pictureBox4.Size = new System.Drawing.Size(42, 35);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 36;
             this.pictureBox4.TabStop = false;
@@ -271,10 +253,9 @@
             // 
             this.pbPrecioCorrecto.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbPrecioCorrecto.ErrorImage")));
             this.pbPrecioCorrecto.Image = ((System.Drawing.Image)(resources.GetObject("pbPrecioCorrecto.Image")));
-            this.pbPrecioCorrecto.Location = new System.Drawing.Point(195, 66);
-            this.pbPrecioCorrecto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbPrecioCorrecto.Location = new System.Drawing.Point(292, 102);
             this.pbPrecioCorrecto.Name = "pbPrecioCorrecto";
-            this.pbPrecioCorrecto.Size = new System.Drawing.Size(26, 25);
+            this.pbPrecioCorrecto.Size = new System.Drawing.Size(39, 38);
             this.pbPrecioCorrecto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPrecioCorrecto.TabIndex = 35;
             this.pbPrecioCorrecto.TabStop = false;
@@ -283,10 +264,9 @@
             // 
             this.pbPrecioIncorrecto.ErrorImage = null;
             this.pbPrecioIncorrecto.Image = ((System.Drawing.Image)(resources.GetObject("pbPrecioIncorrecto.Image")));
-            this.pbPrecioIncorrecto.Location = new System.Drawing.Point(195, 66);
-            this.pbPrecioIncorrecto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbPrecioIncorrecto.Location = new System.Drawing.Point(292, 102);
             this.pbPrecioIncorrecto.Name = "pbPrecioIncorrecto";
-            this.pbPrecioIncorrecto.Size = new System.Drawing.Size(28, 23);
+            this.pbPrecioIncorrecto.Size = new System.Drawing.Size(42, 35);
             this.pbPrecioIncorrecto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPrecioIncorrecto.TabIndex = 34;
             this.pbPrecioIncorrecto.TabStop = false;
@@ -296,10 +276,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(195, 66);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(292, 102);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(28, 23);
+            this.pictureBox3.Size = new System.Drawing.Size(42, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 33;
             this.pictureBox3.TabStop = false;
@@ -308,10 +287,9 @@
             // 
             this.pbNombCorrecto.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbNombCorrecto.ErrorImage")));
             this.pbNombCorrecto.Image = ((System.Drawing.Image)(resources.GetObject("pbNombCorrecto.Image")));
-            this.pbNombCorrecto.Location = new System.Drawing.Point(197, 23);
-            this.pbNombCorrecto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbNombCorrecto.Location = new System.Drawing.Point(296, 35);
             this.pbNombCorrecto.Name = "pbNombCorrecto";
-            this.pbNombCorrecto.Size = new System.Drawing.Size(26, 25);
+            this.pbNombCorrecto.Size = new System.Drawing.Size(39, 38);
             this.pbNombCorrecto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbNombCorrecto.TabIndex = 32;
             this.pbNombCorrecto.TabStop = false;
@@ -320,10 +298,9 @@
             // 
             this.pbNombIncorrecto.ErrorImage = null;
             this.pbNombIncorrecto.Image = ((System.Drawing.Image)(resources.GetObject("pbNombIncorrecto.Image")));
-            this.pbNombIncorrecto.Location = new System.Drawing.Point(196, 25);
-            this.pbNombIncorrecto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbNombIncorrecto.Location = new System.Drawing.Point(294, 38);
             this.pbNombIncorrecto.Name = "pbNombIncorrecto";
-            this.pbNombIncorrecto.Size = new System.Drawing.Size(28, 23);
+            this.pbNombIncorrecto.Size = new System.Drawing.Size(42, 35);
             this.pbNombIncorrecto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbNombIncorrecto.TabIndex = 30;
             this.pbNombIncorrecto.TabStop = false;
@@ -332,14 +309,13 @@
             // 
             // FormAltaProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(953, 449);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnAceptar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormAltaProducto";
             this.Text = "Alta Nuevo Producto";
             this.Load += new System.EventHandler(this.FormAltaProducto_Load);

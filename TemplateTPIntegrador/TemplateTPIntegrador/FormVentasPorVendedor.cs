@@ -45,7 +45,7 @@ namespace TemplateTPIntegrador
             }
             else
             {
-                MessageBox.Show("Seleccione un valor válido");
+                //MessageBox.Show("Seleccione un valor válido");
             }
         }
 
@@ -95,6 +95,11 @@ namespace TemplateTPIntegrador
         {
             this.Hide();
             FormMenuAdministrador.AbrirFormulario(new FormReportes(FormMenuAdministrador));
+        }
+
+        private void ButtonGenerarVxV_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -79,7 +79,7 @@ namespace TemplateTPIntegrador
         {
             DialogResult result = MessageBox.Show("¿Está seguro que desea salir?", "Salir", MessageBoxButtons.YesNo);
 
-            if (result == DialogResult.No)
+            if (result == DialogResult.Yes)
             {
                 this.Hide();
                 FormLogin formLogin = new FormLogin();

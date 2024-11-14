@@ -45,7 +45,7 @@ namespace TemplateTPIntegrador
 
             
 
-            if (!(validador.validarIguales(contraseñaNueva, contraseñaVerificar)))
+            if ((validador.validarIguales(contraseñaNueva, contraseñaVerificar)))
             {
                 labelErrorContraseñaIgual.Text = "Error. La contraseña nueva no coincide con la verificación. Por favor vuelva a intentarlo";
             }

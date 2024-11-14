@@ -145,7 +145,7 @@ namespace TemplateTPIntegrador
             esValido = validador.validarStringVacio(comboBoxCliente.SelectedValue.ToString());
             esValido = validador.validarStringVacio(comboBoxProducto.SelectedValue.ToString());
             esValido = validador.validarNumyNeg(textBoxCant.Text);
-            esValido = validador.validarStringVacio(textBoxCant.Text);
+            
 
             return esValido;
         }
@@ -211,8 +211,10 @@ namespace TemplateTPIntegrador
             }
         }
 
-
-
-
+        private void buttonVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMenuVendedores.AbrirFormulario(new FormListaVenta(FormMenuVendedores));
+        }
     }
 }

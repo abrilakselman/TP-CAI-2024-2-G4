@@ -34,7 +34,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
-            this.btnPerfil = new System.Windows.Forms.Button();
             this.panelMenuAdmin = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReportesVendedor = new System.Windows.Forms.Button();
@@ -69,7 +68,6 @@
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnAyuda);
-            this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Location = new System.Drawing.Point(4, 440);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(180, 220);
@@ -77,7 +75,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(20, 146);
+            this.btnSalir.Location = new System.Drawing.Point(21, 114);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(134, 32);
             this.btnSalir.TabIndex = 7;
@@ -87,21 +85,12 @@
             // 
             // btnAyuda
             // 
-            this.btnAyuda.Location = new System.Drawing.Point(22, 92);
+            this.btnAyuda.Location = new System.Drawing.Point(23, 60);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(134, 32);
             this.btnAyuda.TabIndex = 6;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = true;
-            // 
-            // btnPerfil
-            // 
-            this.btnPerfil.Location = new System.Drawing.Point(20, 42);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(134, 32);
-            this.btnPerfil.TabIndex = 5;
-            this.btnPerfil.Text = "Perfil";
-            this.btnPerfil.UseVisualStyleBackColor = true;
             // 
             // panelMenuAdmin
             // 
@@ -170,7 +159,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnAyuda;
-        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Panel panelMenuAdmin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnReportesVendedor;

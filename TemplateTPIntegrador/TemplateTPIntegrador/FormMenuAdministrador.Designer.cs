@@ -39,7 +39,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
-            this.btnPerfil = new System.Windows.Forms.Button();
             this.labelBienvenida = new System.Windows.Forms.Label();
             this.labelMsgStockCritico = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
@@ -130,15 +129,14 @@
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnAyuda);
-            this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Location = new System.Drawing.Point(0, 439);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(180, 220);
+            this.panel1.Size = new System.Drawing.Size(180, 236);
             this.panel1.TabIndex = 1;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(20, 146);
+            this.btnSalir.Location = new System.Drawing.Point(20, 119);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(133, 33);
             this.btnSalir.TabIndex = 7;
@@ -148,22 +146,13 @@
             // 
             // btnAyuda
             // 
-            this.btnAyuda.Location = new System.Drawing.Point(23, 92);
+            this.btnAyuda.Location = new System.Drawing.Point(20, 65);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(133, 33);
             this.btnAyuda.TabIndex = 6;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = true;
             this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
-            // 
-            // btnPerfil
-            // 
-            this.btnPerfil.Location = new System.Drawing.Point(20, 41);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(133, 33);
-            this.btnPerfil.TabIndex = 5;
-            this.btnPerfil.Text = "Perfil";
-            this.btnPerfil.UseVisualStyleBackColor = true;
             // 
             // labelBienvenida
             // 
@@ -193,7 +182,7 @@
             this.panelMenu.Controls.Add(this.labelBienvenida);
             this.panelMenu.Location = new System.Drawing.Point(177, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1377, 673);
+            this.panelMenu.Size = new System.Drawing.Size(1726, 673);
             this.panelMenu.TabIndex = 4;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
@@ -221,7 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1566, 673);
+            this.ClientSize = new System.Drawing.Size(1915, 678);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenuAdmin);
@@ -248,7 +237,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnAyuda;
-        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Label labelBienvenida;
         private System.Windows.Forms.Label labelMsgStockCritico;
         private System.Windows.Forms.Panel panelMenu;

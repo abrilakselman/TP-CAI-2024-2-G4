@@ -47,7 +47,7 @@ namespace TemplateTPIntegrador
             }
             else
             {
-                MessageBox.Show("Seleccione un valor válido");
+                //MessageBox.Show("Seleccione un valor válido");
             }
         }
 
@@ -87,8 +87,7 @@ namespace TemplateTPIntegrador
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormMenuVendedores.AbrirFormulario(new FormReportes(FormMenuVendedores));
+            
         }
     }
 }

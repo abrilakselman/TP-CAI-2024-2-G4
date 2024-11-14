@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.labelVentasxVendedor = new System.Windows.Forms.Label();
-            this.ButtonGenerarVxV = new System.Windows.Forms.Button();
             this.ButtonVolverVxV = new System.Windows.Forms.Button();
             this.cmbVentasxVendedor = new System.Windows.Forms.ComboBox();
             this.dgvVentarxVendor = new System.Windows.Forms.DataGridView();
@@ -48,18 +47,6 @@
             this.labelVentasxVendedor.TabIndex = 0;
             this.labelVentasxVendedor.Text = "Reporte de Gestion -Ventas por vendedor";
             this.labelVentasxVendedor.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // ButtonGenerarVxV
-            // 
-            this.ButtonGenerarVxV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ButtonGenerarVxV.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonGenerarVxV.Location = new System.Drawing.Point(735, 128);
-            this.ButtonGenerarVxV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ButtonGenerarVxV.Name = "ButtonGenerarVxV";
-            this.ButtonGenerarVxV.Size = new System.Drawing.Size(200, 57);
-            this.ButtonGenerarVxV.TabIndex = 1;
-            this.ButtonGenerarVxV.Text = "Generar";
-            this.ButtonGenerarVxV.UseVisualStyleBackColor = false;
             // 
             // ButtonVolverVxV
             // 
@@ -103,7 +90,6 @@
             this.Controls.Add(this.dgvVentarxVendor);
             this.Controls.Add(this.cmbVentasxVendedor);
             this.Controls.Add(this.ButtonVolverVxV);
-            this.Controls.Add(this.ButtonGenerarVxV);
             this.Controls.Add(this.labelVentasxVendedor);
             this.Name = "FormVentasPorVendedor";
             this.Text = "Ventas Por Vendedor";
@@ -117,7 +103,6 @@
         #endregion
 
         private System.Windows.Forms.Label labelVentasxVendedor;
-        private System.Windows.Forms.Button ButtonGenerarVxV;
         private System.Windows.Forms.Button ButtonVolverVxV;
         private System.Windows.Forms.ComboBox cmbVentasxVendedor;
         private System.Windows.Forms.DataGridView dgvVentarxVendor;
