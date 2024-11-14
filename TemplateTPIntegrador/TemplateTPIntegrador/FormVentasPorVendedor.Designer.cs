@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.labelVentasxVendedor = new System.Windows.Forms.Label();
-            this.ButtonVolverVxV = new System.Windows.Forms.Button();
             this.cmbVentasxVendedor = new System.Windows.Forms.ComboBox();
             this.dgvVentarxVendor = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentarxVendor)).BeginInit();
@@ -47,20 +46,6 @@
             this.labelVentasxVendedor.TabIndex = 0;
             this.labelVentasxVendedor.Text = "Reporte de Gestion -Ventas por vendedor";
             this.labelVentasxVendedor.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // ButtonVolverVxV
-            // 
-            this.ButtonVolverVxV.BackColor = System.Drawing.Color.Blue;
-            this.ButtonVolverVxV.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonVolverVxV.ForeColor = System.Drawing.SystemColors.Control;
-            this.ButtonVolverVxV.Location = new System.Drawing.Point(936, 620);
-            this.ButtonVolverVxV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ButtonVolverVxV.Name = "ButtonVolverVxV";
-            this.ButtonVolverVxV.Size = new System.Drawing.Size(200, 57);
-            this.ButtonVolverVxV.TabIndex = 2;
-            this.ButtonVolverVxV.Text = "Volver";
-            this.ButtonVolverVxV.UseVisualStyleBackColor = false;
-            this.ButtonVolverVxV.Click += new System.EventHandler(this.ButtonVolverVxV_Click);
             // 
             // cmbVentasxVendedor
             // 
@@ -89,7 +74,6 @@
             this.ClientSize = new System.Drawing.Size(1176, 692);
             this.Controls.Add(this.dgvVentarxVendor);
             this.Controls.Add(this.cmbVentasxVendedor);
-            this.Controls.Add(this.ButtonVolverVxV);
             this.Controls.Add(this.labelVentasxVendedor);
             this.Name = "FormVentasPorVendedor";
             this.Text = "Ventas Por Vendedor";
@@ -103,7 +87,6 @@
         #endregion
 
         private System.Windows.Forms.Label labelVentasxVendedor;
-        private System.Windows.Forms.Button ButtonVolverVxV;
         private System.Windows.Forms.ComboBox cmbVentasxVendedor;
         private System.Windows.Forms.DataGridView dgvVentarxVendor;
     }

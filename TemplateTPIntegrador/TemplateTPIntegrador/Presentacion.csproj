@@ -63,6 +63,12 @@
     <Compile Include="FormAltaCliente.Designer.cs">
       <DependentUpon>FormAltaCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAltaProdMenuSuperv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAltaProdMenuSuperv.Designer.cs">
+      <DependentUpon>FormAltaProdMenuSuperv.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAltaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,12 @@
     </Compile>
     <Compile Include="FormCambiarContraseña.Designer.cs">
       <DependentUpon>FormCambiarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditarProdMenuSuperv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarProdMenuSuperv.Designer.cs">
+      <DependentUpon>FormEditarProdMenuSuperv.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEditarProducto.cs">
       <SubType>Form</SubType>
@@ -129,6 +141,12 @@
     <Compile Include="FormListaVenta.Designer.cs">
       <DependentUpon>FormListaVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListoProductoMenuSuper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListoProductoMenuSuper.Designer.cs">
+      <DependentUpon>FormListoProductoMenuSuper.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +164,18 @@
     </Compile>
     <Compile Include="FormMensajeAyudaAdmin.Designer.cs">
       <DependentUpon>FormMensajeAyudaAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMensajeAyudaSupervisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMensajeAyudaSupervisor.Designer.cs">
+      <DependentUpon>FormMensajeAyudaSupervisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMensajeAyudaVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMensajeAyudaVendedor.Designer.cs">
+      <DependentUpon>FormMensajeAyudaVendedor.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMenuAdministrador.cs">
       <SubType>Form</SubType>
@@ -177,6 +207,12 @@
     <Compile Include="FormReactivarCuenta.Designer.cs">
       <DependentUpon>FormReactivarCuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReporteMenuSuperv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporteMenuSuperv.Designer.cs">
+      <DependentUpon>FormReporteMenuSuperv.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,11 +225,23 @@
     <Compile Include="FormReporteVenidoPorCategoria.Designer.cs">
       <DependentUpon>FormReporteVenidoPorCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReporteVenidoPorCategoriaSupervisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporteVenidoPorCategoriaSupervisor.Designer.cs">
+      <DependentUpon>FormReporteVenidoPorCategoriaSupervisor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormStockCritico.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormStockCritico.Designer.cs">
       <DependentUpon>FormStockCritico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStockCriticoMenuSuperv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStockCriticoMenuSuperv.Designer.cs">
+      <DependentUpon>FormStockCriticoMenuSuperv.cs</DependentUpon>
     </Compile>
     <Compile Include="FormVentaAlta.cs">
       <SubType>Form</SubType>
@@ -223,6 +271,9 @@
     <EmbeddedResource Include="FormAltaCliente.resx">
       <DependentUpon>FormAltaCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAltaProdMenuSuperv.resx">
+      <DependentUpon>FormAltaProdMenuSuperv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAltaProducto.resx">
       <DependentUpon>FormAltaProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCambiarContraseña.resx">
       <DependentUpon>FormCambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarProdMenuSuperv.resx">
+      <DependentUpon>FormEditarProdMenuSuperv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditarProducto.resx">
       <DependentUpon>FormEditarProducto.cs</DependentUpon>
@@ -256,6 +310,9 @@
     <EmbeddedResource Include="FormListaVenta.resx">
       <DependentUpon>FormListaVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormListoProductoMenuSuper.resx">
+      <DependentUpon>FormListoProductoMenuSuper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +321,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMensajeAyudaAdmin.resx">
       <DependentUpon>FormMensajeAyudaAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMensajeAyudaSupervisor.resx">
+      <DependentUpon>FormMensajeAyudaSupervisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMensajeAyudaVendedor.resx">
+      <DependentUpon>FormMensajeAyudaVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuAdministrador.resx">
       <DependentUpon>FormMenuAdministrador.cs</DependentUpon>
@@ -280,14 +343,23 @@
     <EmbeddedResource Include="FormReactivarCuenta.resx">
       <DependentUpon>FormReactivarCuenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReporteMenuSuperv.resx">
+      <DependentUpon>FormReporteMenuSuperv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormReportes.resx">
       <DependentUpon>FormReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormReporteVenidoPorCategoria.resx">
       <DependentUpon>FormReporteVenidoPorCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReporteVenidoPorCategoriaSupervisor.resx">
+      <DependentUpon>FormReporteVenidoPorCategoriaSupervisor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormStockCritico.resx">
       <DependentUpon>FormStockCritico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStockCriticoMenuSuperv.resx">
+      <DependentUpon>FormStockCriticoMenuSuperv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVentaAlta.resx">
       <DependentUpon>FormVentaAlta.cs</DependentUpon>

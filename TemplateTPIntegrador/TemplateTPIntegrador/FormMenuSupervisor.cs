@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,15 @@ namespace TemplateTPIntegrador
 {
     public partial class FormMenuSupervisor : Form
     {
+
+        ProductoNegocio productoNegocio = new ProductoNegocio();
+        UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
+
         public FormMenuSupervisor()
         {
             InitializeComponent();
         }
 
-        private void FormMenuAdministrador_Load(object sender, EventArgs e)
-        {
-            //deberia ir la funcion de mostrar stock critico en pantalla principal de los menus
-        }
 
         //Abre los formularios dentro del panel de control en la pantalla de Menu supervisor
         public void AbrirFormulario(Form formulario)
@@ -43,18 +44,39 @@ namespace TemplateTPIntegrador
 
         private void btnReportesSupervisor_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FormReportes(this));
+            AbrirFormulario(new FormReporteMenuSuperv(this));
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Está seguro que desea salir?", "Salir", MessageBoxButtons.YesNo);
 
-            if (result == DialogResult.No)
+            if (result == DialogResult.Yes)
             {
                 this.Hide();
                 FormLogin formLogin = new FormLogin();
                 formLogin.ShowDialog();
+            }
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMensajeAyudaSupervisor formMensajeAyudaSupervisor = new FormMensajeAyudaSupervisor();
+            formMensajeAyudaSupervisor.ShowDialog();
+        }
+
+        private void btnProductoSupervisor_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormListoProductoMenuSuper(this));
+        }
+
+        private void FormMenuSupervisor_Load(object sender, EventArgs e)
+        {
+            var productos = productoNegocio.ListarProducto().Where(x => x.stockBajo).ToList();
+            if (productos.Any())  // Any para verificar si hay algún producto en lugar de Count() > 0
+            {
+                textBoxStockCritico.Text = productos.Count.ToString();
             }
         }
     }

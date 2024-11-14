@@ -61,5 +61,12 @@ namespace TemplateTPIntegrador
                 formLogin.ShowDialog();
             }
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMensajeAyudaVendedor formMensajeAyudaVendedor = new FormMensajeAyudaVendedor();
+            formMensajeAyudaVendedor.ShowDialog();
+        }
     }
 }

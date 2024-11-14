@@ -1,6 +1,4 @@
 ﻿using Datos;
-using Datos;
-using Datos.Usuario;
 using Negocio;
 using Persistencia;
 using System;
@@ -15,18 +13,18 @@ using System.Windows.Forms;
 
 namespace TemplateTPIntegrador
 {
-    public partial class FormListaProducto : Form
+    public partial class FormListoProductoMenuSuper : Form
     {
         //Objetivo es listar los productos por CATEGORIA
 
-        public FormMenuAdministrador FormMenuAdministrador;
+        public FormMenuSupervisor FormMenuSupervisor;
         public string Producto { get; set; }
 
-        public FormListaProducto(FormMenuAdministrador formMenuAdministrador)
+        public FormListoProductoMenuSuper(FormMenuSupervisor formMenuSupervisor)
         {
             InitializeComponent();
             CargarListaProductoDVG();
-            FormMenuAdministrador = formMenuAdministrador;
+            FormMenuSupervisor = formMenuSupervisor;
             InicializarComboBox();
 
         }
@@ -54,8 +52,7 @@ namespace TemplateTPIntegrador
             ProductoNegocio productoNegocio = new ProductoNegocio();
 
             List<Producto> listaproducto = productoNegocio.ListarProducto();
-            //listaproducto = listaproducto.OrderBy(x => x.idcategoria).ToList();
-
+            
 
             //opciones para controlar porque no carga el dgv:
             Console.WriteLine($"Número de productos recibidos en la UI: {listaproducto?.Count ?? 0}");
@@ -98,8 +95,34 @@ namespace TemplateTPIntegrador
         }
 
 
-        //Boton OK del comboBOX de la categorias
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonBajaProd_Click(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void buttonModificarProd_Click(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void dgvListaProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void buttonAltaProd_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void FormListoProductoMenuSuper_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonOK_Click(object sender, EventArgs e)
         {
             try
             {
@@ -138,15 +161,50 @@ namespace TemplateTPIntegrador
             }
         }
 
-
-        private void FormListaProducto_Load(object sender, EventArgs e)
+        private void buttonAltaProd_Click_1(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormMenuSupervisor.AbrirFormulario(new FormAltaProdMenuSuperv(FormMenuSupervisor));
         }
 
-        private void buttonBajaProd_Click(object sender, EventArgs e)
+        private void buttonModificarProd_Click_1(object sender, EventArgs e)
         {
-            
+            try
+            {
+                DialogResult result = MessageBox.Show("¿Desea editar el producto seleccionado?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                    if (dgvListaProductos.CurrentRow == null)
+                    {
+                        MessageBox.Show("Por favor, seleccione un producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    var selectedRow = dgvListaProductos.CurrentRow;
+                    if (selectedRow.Cells["id"].Value == null || selectedRow.Cells["nombre"].Value == null || selectedRow.Cells["stock"].Value == null)
+                    {
+                        MessageBox.Show("Datos del producto incompletos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    var idValue = selectedRow.Cells["id"].Value.ToString();
+                    var nombre = selectedRow.Cells["nombre"].Value.ToString();
+                    var stock = selectedRow.Cells["stock"].Value.ToString();
+                    var precio = selectedRow.Cells["precio"].Value.ToString();
+
+                    ProductoWS productoWS = new ProductoWS();
+                    this.Hide();
+                    FormMenuSupervisor.AbrirFormulario(new FormEditarProdMenuSuperv(FormMenuSupervisor, Guid.Parse(idValue), nombre, stock, precio));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonBajaProd_Click_1(object sender, EventArgs e)
+        {
             try
             {
                 if (dgvListaProductos.SelectedCells.Count > 0)
@@ -175,58 +233,10 @@ namespace TemplateTPIntegrador
             }
         }
 
-        private void buttonModificarProd_Click(object sender, EventArgs e)
-        {
-            
-            try
-            {
-                DialogResult result = MessageBox.Show("¿Desea editar el producto seleccionado?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (result == DialogResult.OK)
-                {
-                    if (dgvListaProductos.CurrentRow == null)
-                    {
-                        MessageBox.Show("Por favor, seleccione un producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    var selectedRow = dgvListaProductos.CurrentRow;
-                    if (selectedRow.Cells["id"].Value == null || selectedRow.Cells["nombre"].Value == null || selectedRow.Cells["stock"].Value == null)
-                    {
-                        MessageBox.Show("Datos del producto incompletos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    var idValue = selectedRow.Cells["id"].Value.ToString();
-                    var nombre = selectedRow.Cells["nombre"].Value.ToString();
-                    var stock = selectedRow.Cells["stock"].Value.ToString();
-                    var precio = selectedRow.Cells["precio"].Value.ToString();
-
-                    ProductoWS productoWS = new ProductoWS();
-                    this.Hide();
-                    FormMenuAdministrador.AbrirFormulario(new FormEditarProducto(FormMenuAdministrador, Guid.Parse(idValue), nombre, stock, precio));
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void dgvListaProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvListaProductos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             Producto productoSeleccionado = (Producto)dgvListaProductos.Rows[dgvListaProductos.CurrentCell.RowIndex].DataBoundItem;
             textBoxBajaProd.Text = productoSeleccionado.nombre;
-        }
-
-        private void buttonAltaProd_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormMenuAdministrador.AbrirFormulario(new FormAltaProducto(FormMenuAdministrador));
-        }
-
-        private void textBoxBajaProd_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

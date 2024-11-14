@@ -64,5 +64,12 @@ namespace TemplateTPIntegrador
         {
 
         }
+
+        private void btnProdMasVendidoXCategoria_Click(object sender, EventArgs e)
+        {
+            
+            FormReporteVenidoPorCategoria formReporteVenidoPorCategoria = new FormReporteVenidoPorCategoria();
+            formReporteVenidoPorCategoria.ShowDialog();
+        }
     }
 }

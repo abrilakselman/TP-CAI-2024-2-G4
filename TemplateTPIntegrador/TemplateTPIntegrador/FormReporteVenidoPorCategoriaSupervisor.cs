@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace TemplateTPIntegrador
 {
-    public partial class FormMensajeAyudaAdmin : Form
+    public partial class FormReporteVenidoPorCategoriaSupervisor : Form
     {
-        public FormMensajeAyudaAdmin()
+
+        public FormMenuSupervisor FormMenuSupervisor;
+        public FormReporteVenidoPorCategoriaSupervisor()
         {
             InitializeComponent();
         }
@@ -20,11 +22,10 @@ namespace TemplateTPIntegrador
         private void buttonMjeAyuda_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormMenuAdministrador formMenuAdministrador = new FormMenuAdministrador();
-            formMenuAdministrador.ShowDialog();
+            FormMenuSupervisor.AbrirFormulario(new FormReporteMenuSuperv(FormMenuSupervisor));
         }
 
-        private void FormMensajeAyudaAdmin_Load(object sender, EventArgs e)
+        private void FormReporteVenidoPorCategoriaSupervisor_Load(object sender, EventArgs e)
         {
 
         }

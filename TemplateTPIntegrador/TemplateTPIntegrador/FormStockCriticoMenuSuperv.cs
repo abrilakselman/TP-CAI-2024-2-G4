@@ -11,17 +11,16 @@ using System.Windows.Forms;
 
 namespace TemplateTPIntegrador
 {
-    public partial class FormStockCritico : Form
+    public partial class FormStockCriticoMenuSuperv : Form
     {
-
-        public FormMenuAdministrador FormMenuAdministrador;
-        public FormStockCritico(FormMenuAdministrador formMenuAdministrador)
+        public FormMenuSupervisor FormMenuSupervisor;
+        public FormStockCriticoMenuSuperv(FormMenuSupervisor formMenuSupervisor)
         {
             // Inicializa los componentes del formulario
             InitializeComponent();
 
             // Asigna el formulario principal al atributo local
-            FormMenuAdministrador = formMenuAdministrador;
+            FormMenuSupervisor = formMenuSupervisor;
 
             // Crea una instancia de la clase ProductoNegocio
             ProductoNegocio productoNegocio = new ProductoNegocio();
@@ -34,24 +33,7 @@ namespace TemplateTPIntegrador
                 return;
             }
 
-            /* Filtra la lista para obtener productos con stock menor al 25% de su capacidad máxima y los ordena por id de categoría
-            List<Producto> listaStockCritico = lista.Where(x => x.stock < x.capacidadMaxima * 0.25)
-                                                    .OrderBy(x => x.idCategoria)
-                                                    .ToList();
-           
-            // Verifica si hay productos con stock crítico
-            if (!listaStockCritico.Any())
-            {
-                MessageBox.Show("No hay productos con stock crítico.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            } */
-
-
-            //IMPORTANTE:
-            //Pero como no se tiene como dato la capacidad maxima de cada producto.
-            //se toma como SUPUESTO que el maximo es 10 para stock critico
-
-            // Filtra la lista para obtener productos con stock crítico (<= 10) y los ordena por id de categoría
+          
             List<Producto> listaStockCritico = lista.Where(x => x.stock <= 10)
                                                     .OrderBy(x => x.idCategoria)
                                                     .ToList();
@@ -77,35 +59,21 @@ namespace TemplateTPIntegrador
 
 
 
-
-
-
-
-
         private void buttonVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormMenuAdministrador.AbrirFormulario(new FormReportes(FormMenuAdministrador));
+            FormMenuSupervisor.AbrirFormulario(new FormReporteMenuSuperv(FormMenuSupervisor));
         }
 
-        private void FormStockCritico_Load(object sender, EventArgs e)
+        private void FormStockCriticoMenuSuperv_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void buttonVolver_Click_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void dgvListaProdStockCritico_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            FormMenuSupervisor.AbrirFormulario(new FormReporteMenuSuperv(FormMenuSupervisor));
         }
     }
 }

@@ -28,88 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ButtonGenerarPvxC = new System.Windows.Forms.Button();
-            this.ButtonVolverPVxC = new System.Windows.Forms.Button();
-            this.LabelProdVendxCat = new System.Windows.Forms.Label();
-            this.cmbPVxC = new System.Windows.Forms.ComboBox();
-            this.dgvPVxC = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPVxC)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReporteVenidoPorCategoria));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonMjeAyuda = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // ButtonGenerarPvxC
+            // pictureBox1
             // 
-            this.ButtonGenerarPvxC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ButtonGenerarPvxC.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonGenerarPvxC.Location = new System.Drawing.Point(451, 68);
-            this.ButtonGenerarPvxC.Name = "ButtonGenerarPvxC";
-            this.ButtonGenerarPvxC.Size = new System.Drawing.Size(133, 37);
-            this.ButtonGenerarPvxC.TabIndex = 2;
-            this.ButtonGenerarPvxC.Text = "Generar";
-            this.ButtonGenerarPvxC.UseVisualStyleBackColor = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(43, 79);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(286, 244);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // ButtonVolverPVxC
+            // label1
             // 
-            this.ButtonVolverPVxC.BackColor = System.Drawing.Color.Blue;
-            this.ButtonVolverPVxC.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonVolverPVxC.ForeColor = System.Drawing.SystemColors.Control;
-            this.ButtonVolverPVxC.Location = new System.Drawing.Point(636, 401);
-            this.ButtonVolverPVxC.Name = "ButtonVolverPVxC";
-            this.ButtonVolverPVxC.Size = new System.Drawing.Size(133, 37);
-            this.ButtonVolverPVxC.TabIndex = 3;
-            this.ButtonVolverPVxC.Text = "Volver";
-            this.ButtonVolverPVxC.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(389, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(371, 34);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Sitio Bajo Mantenimiento";
             // 
-            // LabelProdVendxCat
+            // label2
             // 
-            this.LabelProdVendxCat.AutoSize = true;
-            this.LabelProdVendxCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelProdVendxCat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LabelProdVendxCat.Location = new System.Drawing.Point(48, 9);
-            this.LabelProdVendxCat.Name = "LabelProdVendxCat";
-            this.LabelProdVendxCat.Size = new System.Drawing.Size(721, 31);
-            this.LabelProdVendxCat.TabIndex = 4;
-            this.LabelProdVendxCat.Text = "Reporte de Gestion -Productos vendidos por categoria";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(430, 185);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(279, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Sepa disculpar las molestias";
             // 
-            // cmbPVxC
+            // buttonMjeAyuda
             // 
-            this.cmbPVxC.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.cmbPVxC.FormattingEnabled = true;
-            this.cmbPVxC.Location = new System.Drawing.Point(230, 76);
-            this.cmbPVxC.Name = "cmbPVxC";
-            this.cmbPVxC.Size = new System.Drawing.Size(195, 21);
-            this.cmbPVxC.TabIndex = 5;
-            // 
-            // dgvPVxC
-            // 
-            this.dgvPVxC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPVxC.Location = new System.Drawing.Point(65, 131);
-            this.dgvPVxC.Name = "dgvPVxC";
-            this.dgvPVxC.Size = new System.Drawing.Size(661, 238);
-            this.dgvPVxC.TabIndex = 6;
+            this.buttonMjeAyuda.BackColor = System.Drawing.Color.Navy;
+            this.buttonMjeAyuda.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMjeAyuda.ForeColor = System.Drawing.Color.White;
+            this.buttonMjeAyuda.Location = new System.Drawing.Point(485, 278);
+            this.buttonMjeAyuda.Name = "buttonMjeAyuda";
+            this.buttonMjeAyuda.Size = new System.Drawing.Size(135, 45);
+            this.buttonMjeAyuda.TabIndex = 13;
+            this.buttonMjeAyuda.Text = "Aceptar";
+            this.buttonMjeAyuda.UseVisualStyleBackColor = false;
+            this.buttonMjeAyuda.Click += new System.EventHandler(this.buttonMjeAyuda_Click);
             // 
             // FormReporteVenidoPorCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgvPVxC);
-            this.Controls.Add(this.cmbPVxC);
-            this.Controls.Add(this.LabelProdVendxCat);
-            this.Controls.Add(this.ButtonVolverPVxC);
-            this.Controls.Add(this.ButtonGenerarPvxC);
+            this.ClientSize = new System.Drawing.Size(855, 448);
+            this.Controls.Add(this.buttonMjeAyuda);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormReporteVenidoPorCategoria";
-            this.Text = "FormReporteVenidoPorCategoria";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPVxC)).EndInit();
+            this.Text = "Sitio Bajo Mantenimiento";
+            this.Load += new System.EventHandler(this.FormReporteVenidoPorCategoria_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button ButtonGenerarPvxC;
-        private System.Windows.Forms.Button ButtonVolverPVxC;
-        private System.Windows.Forms.Label LabelProdVendxCat;
-        private System.Windows.Forms.ComboBox cmbPVxC;
-        private System.Windows.Forms.DataGridView dgvPVxC;
+
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonMjeAyuda;
     }
 }

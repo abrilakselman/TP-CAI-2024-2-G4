@@ -35,12 +35,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
-            this.btnPerfil = new System.Windows.Forms.Button();
             this.panelMenuAdmin = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReportesSupervisor = new System.Windows.Forms.Button();
             this.btnDevolucionesSupervisor = new System.Windows.Forms.Button();
             this.btnProductoSupervisor = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxStockCritico = new System.Windows.Forms.TextBox();
             this.panelMenuSupervisor.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelMenuAdmin.SuspendLayout();
@@ -49,22 +50,24 @@
             // 
             // panelMenuSupervisor
             // 
+            this.panelMenuSupervisor.Controls.Add(this.textBoxStockCritico);
+            this.panelMenuSupervisor.Controls.Add(this.label1);
             this.panelMenuSupervisor.Controls.Add(this.labelMsgStockCritico);
             this.panelMenuSupervisor.Controls.Add(this.labelBienvenida);
             this.panelMenuSupervisor.Location = new System.Drawing.Point(189, 2);
             this.panelMenuSupervisor.Name = "panelMenuSupervisor";
-            this.panelMenuSupervisor.Size = new System.Drawing.Size(931, 657);
+            this.panelMenuSupervisor.Size = new System.Drawing.Size(1105, 657);
             this.panelMenuSupervisor.TabIndex = 7;
             // 
             // labelMsgStockCritico
             // 
             this.labelMsgStockCritico.AutoSize = true;
             this.labelMsgStockCritico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMsgStockCritico.Location = new System.Drawing.Point(45, 129);
+            this.labelMsgStockCritico.Location = new System.Drawing.Point(131, 129);
             this.labelMsgStockCritico.Name = "labelMsgStockCritico";
-            this.labelMsgStockCritico.Size = new System.Drawing.Size(401, 29);
+            this.labelMsgStockCritico.Size = new System.Drawing.Size(297, 29);
             this.labelMsgStockCritico.TabIndex = 3;
-            this.labelMsgStockCritico.Text = "Hay XXX productos con stock crítico";
+            this.labelMsgStockCritico.Text = "productos con stock crítico";
             // 
             // labelBienvenida
             // 
@@ -81,7 +84,6 @@
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnAyuda);
-            this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Location = new System.Drawing.Point(3, 439);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(180, 220);
@@ -89,7 +91,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(20, 146);
+            this.btnSalir.Location = new System.Drawing.Point(20, 124);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(133, 33);
             this.btnSalir.TabIndex = 7;
@@ -99,21 +101,13 @@
             // 
             // btnAyuda
             // 
-            this.btnAyuda.Location = new System.Drawing.Point(23, 92);
+            this.btnAyuda.Location = new System.Drawing.Point(23, 70);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(133, 33);
             this.btnAyuda.TabIndex = 6;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = true;
-            // 
-            // btnPerfil
-            // 
-            this.btnPerfil.Location = new System.Drawing.Point(20, 41);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(133, 33);
-            this.btnPerfil.TabIndex = 5;
-            this.btnPerfil.Text = "Perfil";
-            this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // panelMenuAdmin
             // 
@@ -164,17 +158,39 @@
             this.btnProductoSupervisor.TabIndex = 2;
             this.btnProductoSupervisor.Text = "Productos";
             this.btnProductoSupervisor.UseVisualStyleBackColor = true;
+            this.btnProductoSupervisor.Click += new System.EventHandler(this.btnProductoSupervisor_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 129);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 29);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Hay";
+            // 
+            // textBoxStockCritico
+            // 
+            this.textBoxStockCritico.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxStockCritico.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxStockCritico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxStockCritico.Location = new System.Drawing.Point(81, 132);
+            this.textBoxStockCritico.Name = "textBoxStockCritico";
+            this.textBoxStockCritico.Size = new System.Drawing.Size(48, 28);
+            this.textBoxStockCritico.TabIndex = 5;
             // 
             // FormMenuSupervisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 662);
+            this.ClientSize = new System.Drawing.Size(1306, 662);
             this.Controls.Add(this.panelMenuSupervisor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenuAdmin);
             this.Name = "FormMenuSupervisor";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.FormMenuSupervisor_Load);
             this.panelMenuSupervisor.ResumeLayout(false);
             this.panelMenuSupervisor.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -192,11 +208,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnAyuda;
-        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Panel panelMenuAdmin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnReportesSupervisor;
         private System.Windows.Forms.Button btnDevolucionesSupervisor;
         private System.Windows.Forms.Button btnProductoSupervisor;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxStockCritico;
     }
 }

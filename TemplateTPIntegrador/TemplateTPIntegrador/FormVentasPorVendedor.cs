@@ -49,6 +49,43 @@ namespace TemplateTPIntegrador
             }
         }
 
+
+        public FormMenuSupervisor FormMenuSupervisor;
+        public FormVentasPorVendedor(FormMenuSupervisor formMenuSupervisor)
+        {
+            InitializeComponent();
+            FormMenuSupervisor = formMenuSupervisor;
+
+            ClienteNegocio clienteNegocio = new ClienteNegocio();
+
+            // Listar clientes y ordenar
+            List<productosLista> items = clienteNegocio.ListarCliente2()
+                .Select(x => new productosLista(x.Id.ToString(), x.ToString()))
+                .OrderBy(x => x.Valor)
+                .ToList();
+            items.Insert(0, new productosLista("", "Seleccione"));
+
+            // Configurar ComboBox
+            cmbVentasxVendedor.DisplayMember = "Valor";
+            cmbVentasxVendedor.ValueMember = "Id";
+            cmbVentasxVendedor.DataSource = items;
+
+            // Añadir evento para cuando el ComboBox cambie de valor
+            cmbVentasxVendedor.SelectedIndexChanged += new EventHandler(cmbVentasxVendedor_SelectedIndexChanged);
+
+            // Cargar ventas inicial si hay un vendedor seleccionado
+            if (cmbVentasxVendedor.SelectedIndex != 0)
+            {
+                CargarVentas();
+            }
+            else
+            {
+                //MessageBox.Show("Seleccione un valor válido");
+            }
+
+
+        }
+
         // Evento para manejar el cambio de selección del ComboBox
         private void cmbVentasxVendedor_SelectedIndexChanged(object sender, EventArgs e)
         {

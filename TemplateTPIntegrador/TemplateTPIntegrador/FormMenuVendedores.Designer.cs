@@ -91,6 +91,7 @@
             this.btnAyuda.TabIndex = 6;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // panelMenuAdmin
             // 
