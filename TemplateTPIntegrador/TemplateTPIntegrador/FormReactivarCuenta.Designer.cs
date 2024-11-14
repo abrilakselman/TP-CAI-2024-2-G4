@@ -44,70 +44,83 @@
             // 
             // textBoxPass
             // 
-            this.textBoxPass.Location = new System.Drawing.Point(267, 146);
+            this.textBoxPass.Location = new System.Drawing.Point(178, 95);
+            this.textBoxPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPass.Name = "textBoxPass";
-            this.textBoxPass.Size = new System.Drawing.Size(232, 26);
+            this.textBoxPass.Size = new System.Drawing.Size(156, 20);
             this.textBoxPass.TabIndex = 0;
             // 
             // textBoxPassConfirmar
             // 
-            this.textBoxPassConfirmar.Location = new System.Drawing.Point(267, 230);
+            this.textBoxPassConfirmar.Location = new System.Drawing.Point(178, 150);
+            this.textBoxPassConfirmar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPassConfirmar.Name = "textBoxPassConfirmar";
-            this.textBoxPassConfirmar.Size = new System.Drawing.Size(232, 26);
+            this.textBoxPassConfirmar.Size = new System.Drawing.Size(156, 20);
             this.textBoxPassConfirmar.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 140);
+            this.label1.Location = new System.Drawing.Point(32, 91);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 20);
+            this.label1.Size = new System.Drawing.Size(96, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nueva Contraseña";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 230);
+            this.label2.Location = new System.Drawing.Point(32, 150);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 20);
+            this.label2.Size = new System.Drawing.Size(133, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Repetir Nueva Contraseña";
             // 
             // buttonActivar
             // 
-            this.buttonActivar.Location = new System.Drawing.Point(190, 334);
+            this.buttonActivar.BackColor = System.Drawing.Color.Navy;
+            this.buttonActivar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonActivar.ForeColor = System.Drawing.Color.White;
+            this.buttonActivar.Location = new System.Drawing.Point(127, 217);
+            this.buttonActivar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonActivar.Name = "buttonActivar";
-            this.buttonActivar.Size = new System.Drawing.Size(155, 49);
+            this.buttonActivar.Size = new System.Drawing.Size(103, 32);
             this.buttonActivar.TabIndex = 4;
             this.buttonActivar.Text = "Activar";
-            this.buttonActivar.UseVisualStyleBackColor = true;
+            this.buttonActivar.UseVisualStyleBackColor = false;
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(409, 334);
+            this.buttonCancelar.BackColor = System.Drawing.Color.Maroon;
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.ForeColor = System.Drawing.Color.White;
+            this.buttonCancelar.Location = new System.Drawing.Point(273, 217);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(155, 49);
+            this.buttonCancelar.Size = new System.Drawing.Size(103, 32);
             this.buttonCancelar.TabIndex = 5;
             this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 60);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(30, 39);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 20);
+            this.label3.Size = new System.Drawing.Size(82, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Reactivacion";
             // 
             // lblApeUsuarioRegistrar
             // 
             this.lblApeUsuarioRegistrar.AutoSize = true;
-            this.lblApeUsuarioRegistrar.Location = new System.Drawing.Point(522, 278);
-            this.lblApeUsuarioRegistrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblApeUsuarioRegistrar.Location = new System.Drawing.Point(348, 181);
             this.lblApeUsuarioRegistrar.Name = "lblApeUsuarioRegistrar";
-            this.lblApeUsuarioRegistrar.Size = new System.Drawing.Size(300, 24);
+            this.lblApeUsuarioRegistrar.Size = new System.Drawing.Size(207, 17);
             this.lblApeUsuarioRegistrar.TabIndex = 75;
             this.lblApeUsuarioRegistrar.Text = "No debe contener el apellido del usuario";
             this.lblApeUsuarioRegistrar.UseCompatibleTextRendering = true;
@@ -115,20 +128,18 @@
             // lblNomUsuarioRegistrar
             // 
             this.lblNomUsuarioRegistrar.AutoSize = true;
-            this.lblNomUsuarioRegistrar.Location = new System.Drawing.Point(522, 239);
-            this.lblNomUsuarioRegistrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNomUsuarioRegistrar.Location = new System.Drawing.Point(348, 155);
             this.lblNomUsuarioRegistrar.Name = "lblNomUsuarioRegistrar";
-            this.lblNomUsuarioRegistrar.Size = new System.Drawing.Size(291, 20);
+            this.lblNomUsuarioRegistrar.Size = new System.Drawing.Size(196, 13);
             this.lblNomUsuarioRegistrar.TabIndex = 74;
             this.lblNomUsuarioRegistrar.Text = "No debe contener el nombre del usuario";
             // 
             // lblMaxUsuarioRegistrar
             // 
             this.lblMaxUsuarioRegistrar.AutoSize = true;
-            this.lblMaxUsuarioRegistrar.Location = new System.Drawing.Point(522, 201);
-            this.lblMaxUsuarioRegistrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMaxUsuarioRegistrar.Location = new System.Drawing.Point(348, 131);
             this.lblMaxUsuarioRegistrar.Name = "lblMaxUsuarioRegistrar";
-            this.lblMaxUsuarioRegistrar.Size = new System.Drawing.Size(290, 20);
+            this.lblMaxUsuarioRegistrar.Size = new System.Drawing.Size(195, 13);
             this.lblMaxUsuarioRegistrar.TabIndex = 73;
             this.lblMaxUsuarioRegistrar.Text = "Debe contener menos de 15 caracteres";
             // 
@@ -136,28 +147,26 @@
             // 
             this.lblMinUsuarioRegistrar.AutoSize = true;
             this.lblMinUsuarioRegistrar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblMinUsuarioRegistrar.Location = new System.Drawing.Point(522, 162);
-            this.lblMinUsuarioRegistrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMinUsuarioRegistrar.Location = new System.Drawing.Point(348, 105);
             this.lblMinUsuarioRegistrar.Name = "lblMinUsuarioRegistrar";
-            this.lblMinUsuarioRegistrar.Size = new System.Drawing.Size(263, 20);
+            this.lblMinUsuarioRegistrar.Size = new System.Drawing.Size(177, 13);
             this.lblMinUsuarioRegistrar.TabIndex = 72;
             this.lblMinUsuarioRegistrar.Text = "Debe contener más de 8 caracteres";
             // 
             // lblInstruccionesRegistrar
             // 
             this.lblInstruccionesRegistrar.AutoSize = true;
-            this.lblInstruccionesRegistrar.Location = new System.Drawing.Point(522, 124);
-            this.lblInstruccionesRegistrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInstruccionesRegistrar.Location = new System.Drawing.Point(348, 81);
             this.lblInstruccionesRegistrar.Name = "lblInstruccionesRegistrar";
-            this.lblInstruccionesRegistrar.Size = new System.Drawing.Size(316, 20);
+            this.lblInstruccionesRegistrar.Size = new System.Drawing.Size(214, 13);
             this.lblInstruccionesRegistrar.TabIndex = 71;
             this.lblInstruccionesRegistrar.Text = "Tenga en cuenta que el nombre de usuario:";
             // 
             // FormReactivarCuenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 450);
+            this.ClientSize = new System.Drawing.Size(574, 292);
             this.Controls.Add(this.lblApeUsuarioRegistrar);
             this.Controls.Add(this.lblNomUsuarioRegistrar);
             this.Controls.Add(this.lblMaxUsuarioRegistrar);
@@ -170,6 +179,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxPassConfirmar);
             this.Controls.Add(this.textBoxPass);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormReactivarCuenta";
             this.Text = "Reactivar Cuenta";
             this.Load += new System.EventHandler(this.FormReactivarCuenta_Load);

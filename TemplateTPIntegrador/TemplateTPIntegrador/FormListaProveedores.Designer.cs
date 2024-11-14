@@ -46,7 +46,7 @@ namespace TemplateTPIntegrador
             this.dgvListaProveedores.AllowUserToOrderColumns = true;
             this.dgvListaProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaProveedores.Location = new System.Drawing.Point(8, 60);
-            this.dgvListaProveedores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvListaProveedores.Margin = new System.Windows.Forms.Padding(2);
             this.dgvListaProveedores.Name = "dgvListaProveedores";
             this.dgvListaProveedores.RowHeadersWidth = 62;
             this.dgvListaProveedores.RowTemplate.Height = 28;
@@ -67,34 +67,43 @@ namespace TemplateTPIntegrador
             // 
             // btnModProv
             // 
+            this.btnModProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnModProv.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModProv.ForeColor = System.Drawing.Color.White;
             this.btnModProv.Location = new System.Drawing.Point(596, 111);
-            this.btnModProv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModProv.Margin = new System.Windows.Forms.Padding(2);
             this.btnModProv.Name = "btnModProv";
             this.btnModProv.Size = new System.Drawing.Size(104, 35);
             this.btnModProv.TabIndex = 7;
             this.btnModProv.Text = "Modificar";
-            this.btnModProv.UseVisualStyleBackColor = true;
+            this.btnModProv.UseVisualStyleBackColor = false;
             // 
             // btnBajaProv
             // 
+            this.btnBajaProv.BackColor = System.Drawing.Color.Maroon;
+            this.btnBajaProv.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBajaProv.ForeColor = System.Drawing.Color.White;
             this.btnBajaProv.Location = new System.Drawing.Point(596, 250);
-            this.btnBajaProv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBajaProv.Margin = new System.Windows.Forms.Padding(2);
             this.btnBajaProv.Name = "btnBajaProv";
             this.btnBajaProv.Size = new System.Drawing.Size(104, 35);
             this.btnBajaProv.TabIndex = 6;
             this.btnBajaProv.Text = "Baja";
-            this.btnBajaProv.UseVisualStyleBackColor = true;
+            this.btnBajaProv.UseVisualStyleBackColor = false;
             this.btnBajaProv.Click += new System.EventHandler(this.btnBajaProv_Click);
             // 
             // btnAltaProv
             // 
+            this.btnAltaProv.BackColor = System.Drawing.Color.Navy;
+            this.btnAltaProv.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAltaProv.ForeColor = System.Drawing.Color.White;
             this.btnAltaProv.Location = new System.Drawing.Point(596, 60);
-            this.btnAltaProv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAltaProv.Margin = new System.Windows.Forms.Padding(2);
             this.btnAltaProv.Name = "btnAltaProv";
             this.btnAltaProv.Size = new System.Drawing.Size(104, 35);
             this.btnAltaProv.TabIndex = 5;
             this.btnAltaProv.Text = "Alta";
-            this.btnAltaProv.UseVisualStyleBackColor = true;
+            this.btnAltaProv.UseVisualStyleBackColor = false;
             this.btnAltaProv.Click += new System.EventHandler(this.btnAltaProv_Click);
             // 
             // label2
@@ -110,7 +119,7 @@ namespace TemplateTPIntegrador
             // textBoxBajaProv
             // 
             this.textBoxBajaProv.Location = new System.Drawing.Point(585, 220);
-            this.textBoxBajaProv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBajaProv.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBajaProv.Name = "textBoxBajaProv";
             this.textBoxBajaProv.Size = new System.Drawing.Size(155, 20);
             this.textBoxBajaProv.TabIndex = 8;
@@ -138,7 +147,7 @@ namespace TemplateTPIntegrador
             this.Controls.Add(this.btnAltaProv);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvListaProveedores);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormListaProveedores";
             this.Text = "FormListaProveedores";
             this.Load += new System.EventHandler(this.FormListaProveedores_Load);
