@@ -49,10 +49,9 @@
             // 
             // textBoxClienteNombre
             // 
-            this.textBoxClienteNombre.Location = new System.Drawing.Point(18, 169);
-            this.textBoxClienteNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxClienteNombre.Location = new System.Drawing.Point(12, 110);
             this.textBoxClienteNombre.Name = "textBoxClienteNombre";
-            this.textBoxClienteNombre.Size = new System.Drawing.Size(344, 26);
+            this.textBoxClienteNombre.Size = new System.Drawing.Size(231, 20);
             this.textBoxClienteNombre.TabIndex = 0;
             // 
             // TituloAltaCliente
@@ -60,10 +59,9 @@
             this.TituloAltaCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.TituloAltaCliente.Font = new System.Drawing.Font("Mongolian Baiti", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TituloAltaCliente.ForeColor = System.Drawing.Color.White;
-            this.TituloAltaCliente.Location = new System.Drawing.Point(9, 31);
-            this.TituloAltaCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TituloAltaCliente.Location = new System.Drawing.Point(6, 20);
             this.TituloAltaCliente.Name = "TituloAltaCliente";
-            this.TituloAltaCliente.Size = new System.Drawing.Size(1023, 62);
+            this.TituloAltaCliente.Size = new System.Drawing.Size(682, 40);
             this.TituloAltaCliente.TabIndex = 1;
             this.TituloAltaCliente.Text = "Alta de Cliente";
             this.TituloAltaCliente.Click += new System.EventHandler(this.label1_Click);
@@ -71,10 +69,9 @@
             // NombreCliente
             // 
             this.NombreCliente.AutoSize = true;
-            this.NombreCliente.Location = new System.Drawing.Point(18, 145);
-            this.NombreCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NombreCliente.Location = new System.Drawing.Point(12, 94);
             this.NombreCliente.Name = "NombreCliente";
-            this.NombreCliente.Size = new System.Drawing.Size(65, 20);
+            this.NombreCliente.Size = new System.Drawing.Size(44, 13);
             this.NombreCliente.TabIndex = 2;
             this.NombreCliente.Text = "Nombre";
             this.NombreCliente.Click += new System.EventHandler(this.label1_Click_1);
@@ -82,10 +79,9 @@
             // TituloApellidoCliente
             // 
             this.TituloApellidoCliente.AutoSize = true;
-            this.TituloApellidoCliente.Location = new System.Drawing.Point(524, 145);
-            this.TituloApellidoCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TituloApellidoCliente.Location = new System.Drawing.Point(349, 94);
             this.TituloApellidoCliente.Name = "TituloApellidoCliente";
-            this.TituloApellidoCliente.Size = new System.Drawing.Size(65, 20);
+            this.TituloApellidoCliente.Size = new System.Drawing.Size(44, 13);
             this.TituloApellidoCliente.TabIndex = 3;
             this.TituloApellidoCliente.Text = "Apellido";
             this.TituloApellidoCliente.Click += new System.EventHandler(this.label1_Click_2);
@@ -93,109 +89,98 @@
             // TituloDireccionCliente
             // 
             this.TituloDireccionCliente.AutoSize = true;
-            this.TituloDireccionCliente.Location = new System.Drawing.Point(18, 426);
-            this.TituloDireccionCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TituloDireccionCliente.Location = new System.Drawing.Point(12, 277);
             this.TituloDireccionCliente.Name = "TituloDireccionCliente";
-            this.TituloDireccionCliente.Size = new System.Drawing.Size(75, 20);
+            this.TituloDireccionCliente.Size = new System.Drawing.Size(52, 13);
             this.TituloDireccionCliente.TabIndex = 4;
             this.TituloDireccionCliente.Text = "Dirección";
             // 
             // TituloTelefonoCliente
             // 
             this.TituloTelefonoCliente.AutoSize = true;
-            this.TituloTelefonoCliente.Location = new System.Drawing.Point(18, 231);
-            this.TituloTelefonoCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TituloTelefonoCliente.Location = new System.Drawing.Point(12, 150);
             this.TituloTelefonoCliente.Name = "TituloTelefonoCliente";
-            this.TituloTelefonoCliente.Size = new System.Drawing.Size(71, 20);
+            this.TituloTelefonoCliente.Size = new System.Drawing.Size(49, 13);
             this.TituloTelefonoCliente.TabIndex = 5;
             this.TituloTelefonoCliente.Text = "Teléfono";
             // 
             // TituloEmailCliente
             // 
             this.TituloEmailCliente.AutoSize = true;
-            this.TituloEmailCliente.Location = new System.Drawing.Point(524, 231);
-            this.TituloEmailCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TituloEmailCliente.Location = new System.Drawing.Point(349, 150);
             this.TituloEmailCliente.Name = "TituloEmailCliente";
-            this.TituloEmailCliente.Size = new System.Drawing.Size(48, 20);
+            this.TituloEmailCliente.Size = new System.Drawing.Size(32, 13);
             this.TituloEmailCliente.TabIndex = 6;
             this.TituloEmailCliente.Text = "Email";
             // 
             // Titulonacimientocliente
             // 
             this.Titulonacimientocliente.AutoSize = true;
-            this.Titulonacimientocliente.Location = new System.Drawing.Point(524, 326);
-            this.Titulonacimientocliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Titulonacimientocliente.Location = new System.Drawing.Point(349, 212);
             this.Titulonacimientocliente.Name = "Titulonacimientocliente";
-            this.Titulonacimientocliente.Size = new System.Drawing.Size(159, 20);
+            this.Titulonacimientocliente.Size = new System.Drawing.Size(108, 13);
             this.Titulonacimientocliente.TabIndex = 7;
             this.Titulonacimientocliente.Text = "Fecha de Nacimiento";
             // 
             // TituloDNICliente
             // 
             this.TituloDNICliente.AutoSize = true;
-            this.TituloDNICliente.Location = new System.Drawing.Point(18, 326);
-            this.TituloDNICliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TituloDNICliente.Location = new System.Drawing.Point(12, 212);
             this.TituloDNICliente.Name = "TituloDNICliente";
-            this.TituloDNICliente.Size = new System.Drawing.Size(37, 20);
+            this.TituloDNICliente.Size = new System.Drawing.Size(26, 13);
             this.TituloDNICliente.TabIndex = 8;
             this.TituloDNICliente.Text = "DNI";
             // 
             // textBoxClienteApellido
             // 
-            this.textBoxClienteApellido.Location = new System.Drawing.Point(528, 169);
-            this.textBoxClienteApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxClienteApellido.Location = new System.Drawing.Point(352, 110);
             this.textBoxClienteApellido.Name = "textBoxClienteApellido";
-            this.textBoxClienteApellido.Size = new System.Drawing.Size(330, 26);
+            this.textBoxClienteApellido.Size = new System.Drawing.Size(221, 20);
             this.textBoxClienteApellido.TabIndex = 9;
             // 
             // textBoxClienteDNI
             // 
-            this.textBoxClienteDNI.Location = new System.Drawing.Point(18, 351);
-            this.textBoxClienteDNI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxClienteDNI.Location = new System.Drawing.Point(12, 228);
             this.textBoxClienteDNI.Name = "textBoxClienteDNI";
-            this.textBoxClienteDNI.Size = new System.Drawing.Size(344, 26);
+            this.textBoxClienteDNI.Size = new System.Drawing.Size(231, 20);
             this.textBoxClienteDNI.TabIndex = 10;
             // 
             // textBoxClienteTelefono
             // 
-            this.textBoxClienteTelefono.Location = new System.Drawing.Point(18, 255);
-            this.textBoxClienteTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxClienteTelefono.Location = new System.Drawing.Point(12, 166);
             this.textBoxClienteTelefono.Name = "textBoxClienteTelefono";
-            this.textBoxClienteTelefono.Size = new System.Drawing.Size(344, 26);
+            this.textBoxClienteTelefono.Size = new System.Drawing.Size(231, 20);
             this.textBoxClienteTelefono.TabIndex = 11;
             // 
             // textBoxClienteDireccion
             // 
-            this.textBoxClienteDireccion.Location = new System.Drawing.Point(18, 451);
-            this.textBoxClienteDireccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxClienteDireccion.Location = new System.Drawing.Point(12, 293);
             this.textBoxClienteDireccion.Name = "textBoxClienteDireccion";
-            this.textBoxClienteDireccion.Size = new System.Drawing.Size(344, 26);
+            this.textBoxClienteDireccion.Size = new System.Drawing.Size(231, 20);
             this.textBoxClienteDireccion.TabIndex = 12;
             // 
             // textBoxClienteMail
             // 
-            this.textBoxClienteMail.Location = new System.Drawing.Point(528, 255);
-            this.textBoxClienteMail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxClienteMail.Location = new System.Drawing.Point(352, 166);
             this.textBoxClienteMail.Name = "textBoxClienteMail";
-            this.textBoxClienteMail.Size = new System.Drawing.Size(330, 26);
+            this.textBoxClienteMail.Size = new System.Drawing.Size(221, 20);
             this.textBoxClienteMail.TabIndex = 13;
             // 
             // dateTimePickerCL
             // 
-            this.dateTimePickerCL.Location = new System.Drawing.Point(528, 351);
-            this.dateTimePickerCL.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePickerCL.Location = new System.Drawing.Point(352, 228);
             this.dateTimePickerCL.Name = "dateTimePickerCL";
-            this.dateTimePickerCL.Size = new System.Drawing.Size(330, 26);
+            this.dateTimePickerCL.Size = new System.Drawing.Size(221, 20);
             this.dateTimePickerCL.TabIndex = 14;
             // 
             // buttonAceptarCliente
             // 
             this.buttonAceptarCliente.BackColor = System.Drawing.Color.Navy;
+            this.buttonAceptarCliente.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAceptarCliente.ForeColor = System.Drawing.Color.White;
-            this.buttonAceptarCliente.Location = new System.Drawing.Point(704, 471);
-            this.buttonAceptarCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonAceptarCliente.Location = new System.Drawing.Point(469, 306);
             this.buttonAceptarCliente.Name = "buttonAceptarCliente";
-            this.buttonAceptarCliente.Size = new System.Drawing.Size(156, 49);
+            this.buttonAceptarCliente.Size = new System.Drawing.Size(104, 32);
             this.buttonAceptarCliente.TabIndex = 15;
             this.buttonAceptarCliente.Text = "Aceptar";
             this.buttonAceptarCliente.UseVisualStyleBackColor = false;
@@ -204,11 +189,11 @@
             // buttonVolverAC
             // 
             this.buttonVolverAC.BackColor = System.Drawing.Color.Teal;
+            this.buttonVolverAC.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVolverAC.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonVolverAC.Location = new System.Drawing.Point(890, 471);
-            this.buttonVolverAC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonVolverAC.Location = new System.Drawing.Point(593, 306);
             this.buttonVolverAC.Name = "buttonVolverAC";
-            this.buttonVolverAC.Size = new System.Drawing.Size(142, 49);
+            this.buttonVolverAC.Size = new System.Drawing.Size(95, 32);
             this.buttonVolverAC.TabIndex = 16;
             this.buttonVolverAC.Text = "Volver";
             this.buttonVolverAC.UseVisualStyleBackColor = false;
@@ -216,9 +201,9 @@
             // 
             // FormAltaCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 538);
+            this.ClientSize = new System.Drawing.Size(800, 350);
             this.Controls.Add(this.buttonVolverAC);
             this.Controls.Add(this.buttonAceptarCliente);
             this.Controls.Add(this.dateTimePickerCL);
@@ -236,7 +221,6 @@
             this.Controls.Add(this.NombreCliente);
             this.Controls.Add(this.TituloAltaCliente);
             this.Controls.Add(this.textBoxClienteNombre);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormAltaCliente";
             this.Text = "AltaUsuario";
             this.Load += new System.EventHandler(this.FormAltaCliente_Load);
