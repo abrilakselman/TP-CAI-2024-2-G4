@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuSupervisor));
             this.panelMenuSupervisor = new System.Windows.Forms.Panel();
+            this.textBoxStockCritico = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.labelMsgStockCritico = new System.Windows.Forms.Label();
             this.labelBienvenida = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -40,8 +42,6 @@
             this.btnReportesSupervisor = new System.Windows.Forms.Button();
             this.btnDevolucionesSupervisor = new System.Windows.Forms.Button();
             this.btnProductoSupervisor = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxStockCritico = new System.Windows.Forms.TextBox();
             this.panelMenuSupervisor.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelMenuAdmin.SuspendLayout();
@@ -58,6 +58,26 @@
             this.panelMenuSupervisor.Name = "panelMenuSupervisor";
             this.panelMenuSupervisor.Size = new System.Drawing.Size(1105, 657);
             this.panelMenuSupervisor.TabIndex = 7;
+            // 
+            // textBoxStockCritico
+            // 
+            this.textBoxStockCritico.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxStockCritico.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxStockCritico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxStockCritico.Location = new System.Drawing.Point(81, 132);
+            this.textBoxStockCritico.Name = "textBoxStockCritico";
+            this.textBoxStockCritico.Size = new System.Drawing.Size(48, 28);
+            this.textBoxStockCritico.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 129);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 29);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Hay";
             // 
             // labelMsgStockCritico
             // 
@@ -149,6 +169,7 @@
             this.btnDevolucionesSupervisor.TabIndex = 3;
             this.btnDevolucionesSupervisor.Text = "Devolucion";
             this.btnDevolucionesSupervisor.UseVisualStyleBackColor = true;
+            this.btnDevolucionesSupervisor.Click += new System.EventHandler(this.btnDevolucionesSupervisor_Click);
             // 
             // btnProductoSupervisor
             // 
@@ -159,26 +180,6 @@
             this.btnProductoSupervisor.Text = "Productos";
             this.btnProductoSupervisor.UseVisualStyleBackColor = true;
             this.btnProductoSupervisor.Click += new System.EventHandler(this.btnProductoSupervisor_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 29);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Hay";
-            // 
-            // textBoxStockCritico
-            // 
-            this.textBoxStockCritico.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxStockCritico.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxStockCritico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxStockCritico.Location = new System.Drawing.Point(81, 132);
-            this.textBoxStockCritico.Name = "textBoxStockCritico";
-            this.textBoxStockCritico.Size = new System.Drawing.Size(48, 28);
-            this.textBoxStockCritico.TabIndex = 5;
             // 
             // FormMenuSupervisor
             // 

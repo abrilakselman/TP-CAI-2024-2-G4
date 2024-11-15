@@ -53,7 +53,7 @@
             // ImagenAyuda
             // 
             this.ImagenAyuda.Image = ((System.Drawing.Image)(resources.GetObject("ImagenAyuda.Image")));
-            this.ImagenAyuda.Location = new System.Drawing.Point(35, 43);
+            this.ImagenAyuda.Location = new System.Drawing.Point(12, 40);
             this.ImagenAyuda.Margin = new System.Windows.Forms.Padding(3, 3, 3, 2);
             this.ImagenAyuda.Name = "ImagenAyuda";
             this.ImagenAyuda.Size = new System.Drawing.Size(185, 174);

@@ -79,5 +79,11 @@ namespace TemplateTPIntegrador
                 textBoxStockCritico.Text = productos.Count.ToString();
             }
         }
+
+        private void btnDevolucionesSupervisor_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormMantenimientoDevolucion());
+
+        }
     }
 }
