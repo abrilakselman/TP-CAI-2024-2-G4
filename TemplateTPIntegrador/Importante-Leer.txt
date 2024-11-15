@@ -1,0 +1,88 @@
+Usuarios creados para test
+	
+user: Admin091800
+pass: CAI20232
+UID nuestro: "4f3cfd0b-ba68-4f31-a8a5-63892d7e0c6f"
+
+user: VendedorG4V2
+pass: CAI20232
+
+user: SupervisorG4V2
+pass: CAI20232
+
+Directorio que se usa: C:\G4\
+
+
+**********Perfil Administrador**********
+
+Mensaje de stock critico el inicio - OK
+
+Usuario 
+	Lista de usuario - ok
+	Alta Usuario - ok
+	Modificar Usuario - Pending
+	Baja Usuario - ok
+	
+Proveedores
+	Lista de Proveedores - ok
+	Alta Proveedor - ok
+	Baja Proveedores - Pending
+	
+Producto
+	Lista Producto - ok
+	Filtrado de categorias - ok
+	Baja Producto - ok
+	Modificacion Producto - ok
+	Alta Producto - ok
+	
+Cliente
+	Lista Cliente - ok
+	Baja Cliente - ok
+	Modificar Cliente - hay un error de fechaBaja, pero se acepta y permite realizar la modificacion exitosamente.
+	Alta Cliente - Pending
+	
+Reporte
+	Stock Critico -  no se tiene una capacidad maxima de los productos como para poder calcular el 25% 
+(x => x.stock < x.capacidadMaxima * 0.25)
+Se toma el SUPUESTO de maximo de 10 unidades, es decir, si es menor o igual de 10 unidades, se considera que el producto tiene
+stock critico
+	Ventas por Vendedor - ok
+	Productos Mas vendidos por categoria - Pending, la pantalla de mantenimiento tiene un error, pero funciona despues de hacer click en continuar
+	
+
+Login: 
+Cambio de contraseña del primer login - OK
+Bloqueo/intento 3 veces - ok
+	
+	
+	
+**********Perfil Vendedor**********
+
+	Ventas - ok
+	Listado de Ventas y descargar form - ok, para que se vea en el listado, primero hacer alta de venta asi se crea el form en C:\G4\PdfPurebas\Template
+	Descuentos - ok
+	Alta Venta - ok
+	Comprobantes - ok
+
+**********Perfil Supervisor**********
+
+	Mensaje de stock critico el inicio - ok
+	
+Producto
+	Lista Producto - ok
+	Filtrado de categorias - ok
+	Baja Producto - ok
+	Modificacion Producto - ok
+	Alta Producto - ok
+	
+Reporte
+	Stock Critico -  no se tiene una capacidad maxima de los productos como para poder calcular el 25% 
+(x => x.stock < x.capacidadMaxima * 0.25)
+Se toma el SUPUESTO de maximo de 10 unidades, es decir, si es menor o igual de 10 unidades, se considera que el producto tiene
+stock critico
+	Ventas por Vendedor - ok
+	Productos Mas vendidos por categoria - Pending, la pantalla de mantenimiento tiene un error, pero funciona despues de hacer click en continuar
+	
+Devolucion - ending, la pantalla de mantenimiento tiene un error, pero funciona despues de hacer click en continuar
+	
+
